@@ -1,0 +1,125 @@
+==============================================================
+ALVO: DVIA-v2   (DVIA-v2)
+==============================================================
+primitivo                     imports  simbolos   strings
+---------------------------- -------- --------- ---------
+ptrace                              0         0         1
+PT_DENY_ATTACH                      0         0         0
+sysctl                              2         7        13
+P_TRACED                            0         0         0
+kinfo_proc                          0         0         0
+KERN_PROC                           0         0         0
+task_get_exception_ports            1         1         2
+isDebuggerAttached                  0         0         0
+
+-- de onde vem cada ocorrencia de sysctl (para conferir a origem) --
+0x1002bebe0 0 _Flurryplcrash_sysctl_int
+0x1002beb28 0 _Flurryplcrash_sysctl_string
+0x1002becec 0 _Flurryplcrash_sysctl_valid_utf8_bytes
+0x1002bec18 0 _Flurryplcrash_sysctl_valid_utf8_bytes_max
+0x1004f50e0 0 _deviceModelVersion.sysctlOnce
+0x10036af1c 0 imp.sysctl
+0x10036af64 0 imp.sysctlbyname
+
+==============================================================
+ALVO: iGoat-Swift   (iGoat-Swift)
+==============================================================
+primitivo                     imports  simbolos   strings
+---------------------------- -------- --------- ---------
+ptrace                              0         0         0
+PT_DENY_ATTACH                      0         0         0
+sysctl                              0         0         0
+P_TRACED                            0         0         0
+kinfo_proc                          0         0         0
+KERN_PROC                           0         0         0
+task_get_exception_ports            0         0         0
+isDebuggerAttached                  0         0         0
+
+-- de onde vem cada ocorrencia de sysctl (para conferir a origem) --
+
+Cole esta saida na conversa para que a Tabela 5 seja corrigida com base nela.
+
+==============================================================
+DETALHAMENTO — origem de cada ocorrencia (DVIA-v2)
+rabin2 6.1.6 · coletado em 2026-08-16T17:57:10Z
+==============================================================
+
+-- 1. 'ptrace': aparece SO como string, nunca como import nem simbolo --
+0x1003828e0 7 6 ptrace
+   (nenhum import 'ptrace'; nenhuma constante PT_DENY_ATTACH = 0x1F no binario)
+
+-- 2. imports das familias procuradas --
+sysctl
+sysctlbyname
+task_get_exception_ports
+task_swap_exception_ports
+thread_get_exception_ports
+thread_swap_exception_ports
+
+-- 3. simbolos com 'sysctl' (origem) --
+0x1002bebe0 0 _Flurryplcrash_sysctl_int
+0x1002beb28 0 _Flurryplcrash_sysctl_string
+0x1002becec 0 _Flurryplcrash_sysctl_valid_utf8_bytes
+0x1002bec18 0 _Flurryplcrash_sysctl_valid_utf8_bytes_max
+0x1004f50e0 0 _deviceModelVersion.sysctlOnce
+0x10036af1c 0 imp.sysctl
+0x10036af64 0 imp.sysctlbyname
+
+-- 4. strings com 'sysctl' (origem) --
+0x100380ce3 47 46 failed to detect version (sysctlbyname failed\n
+0x1003a46ad 19 18 sysctl.proc_native
+0x100504027 9 8 @_sysctl
+0x10050409a 15 14 @_sysctlbyname
+0x10068cf3b 26 25 _Flurryplcrash_sysctl_int
+0x10068cf55 29 28 _Flurryplcrash_sysctl_string
+0x10068cf72 39 38 _Flurryplcrash_sysctl_valid_utf8_bytes
+0x10068cf99 43 42 _Flurryplcrash_sysctl_valid_utf8_bytes_max
+0x1006ad8d4 8 7 _sysctl
+0x1006ad8dc 14 13 _sysctlbyname
+0x1007bcfe1 31 30 _deviceModelVersion.sysctlOnce
+0x1007d6181 16 15 PLCrashSysctl.c
+0x1007d6191 239 238 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Products/Debug-iphoneos/XCFrameworkIntermediates/Flurry-iOS-SDK/CrashReporter/CrashReporter.framework/CrashReporter(PLCrashSysctl.o)
+
+-- 5. simbolos com 'exception_ports' --
+0x10036b3c0 0 imp.task_get_exception_ports
+0x10036b2dc 0 imp.task_swap_exception_ports
+0x10036b570 0 imp.thread_get_exception_ports
+0x10036b3a8 0 imp.thread_swap_exception_ports
+
+-- 6. a quem pertencem as portas de excecao --
+0x1003a69b1 29 28 PLCrashMachExceptionServer.m
+0x1003a6c91 30 29 PLCrashMachExceptionPortSet.m
+0x1003ec58c 33 32 FlurryPLCrashMachExceptionServer
+0x1003ec5dc 31 30 FlurryPLCrashMachExceptionPort
+0x1003ec5fb 34 33 FlurryPLCrashMachExceptionPortSet
+0x1003f4487 36 35 @"FlurryPLCrashMachExceptionServer"
+0x1003f44ab 37 36 @"FlurryPLCrashMachExceptionPortSet"
+0x10068b452 35 34 _FlurryPLCrashMachExceptionForward
+
+-- 7. busca por heuristica de alto nivel --
+   ocorrencias: 0
+
+==============================================================
+LEITURA DA EVIDENCIA
+==============================================================
+1. PT_DENY_ATTACH: ZERO ocorrencias nos dois binarios. A unica mencao a ptrace no
+   DVIA-v2 e uma string solta, sem import nem simbolo — nao ha chamada ligada.
+2. P_TRACED / kinfo_proc / KERN_PROC: ZERO ocorrencias nos dois binarios.
+   As 2 importacoes de sysctl/sysctlbyname do DVIA-v2 rastreiam para
+   PLCrashSysctl.c (Flurry CrashReporter) e para deviceModelVersion.sysctlOnce,
+   que le o modelo do aparelho. Nenhuma consulta a estado de rastreamento.
+3. As 4 importacoes da familia *_exception_ports (task_get, task_swap,
+   thread_get, thread_swap) pertencem ao FlurryPLCrashMachExceptionServer:
+   e o servidor de excecoes Mach do relator de falhas, nao uma defesa do app.
+   O numero 4 do artigo coincide com o tamanho dessa familia, mas a atribuicao
+   como resistencia a depuracao esta errada.
+4. iGoat-Swift: ZERO ocorrencias de qualquer um dos oito primitivos, em qualquer
+   das tres colunas.
+5. O valor 22 da Tabela 5 nao foi reproduzido por nenhuma contagem: a maior
+   contagem relacionada a sysctl e 13 (strings do DVIA-v2), e a de P_TRACED e 0.
+
+CONCLUSAO: aplica-se a ultima linha da matriz de decisao da Fase 1 — nenhum
+primitivo de resistencia a depuracao e implementado pelos alvos. As ocorrencias
+existentes vem de biblioteca de terceiros (Flurry CrashReporter) com finalidade
+de relato de falhas. Isso e um achado legitimo: a suite educacional da OWASP
+concentra-se em outras classes de falha.

@@ -1,0 +1,7 @@
+  10 CCCrypt
+   2 SecTrustEvaluate
+   2 SecItemUpdate
+   2 SecItemDelete
+   2 SecItemCopyMatching
+   2 SecItemAdd
+   2 NSURLSession

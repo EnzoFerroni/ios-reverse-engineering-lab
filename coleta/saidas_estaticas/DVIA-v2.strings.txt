@@ -1,0 +1,1288 @@
+0x10037a6fa 380 379 The given mappings have not been properly initialized. You need to invoke [mappings updateWithTransaction:transaction] once in order to initialize the mappings object. You should do this after invoking [databaseConnection beginLongLivedReadTransaction]. For example code, please see YapDatabaseViewMappings.h, or see the wiki: https://github.com/yapstudios/YapDatabase/wiki/Views
+0x10037baae 17 16 aPassword != nil
+0x10037bace 56 55 Both password and the key (%d) or HMACKey (%d) are set.
+0x10037e131 623 622 The architecture surrounding mappings is designed to move from one longLivedReadTransaction to another. This allows you to freeze the data-source (databaseConnection) of your UI on a particular commit. And then atomically move the data-source from an older commit to a newer commit in response to YapDatabaseModifiedNotifications. This ensures that the data-source for your UI remains in a steady state at all times, and that updates are properly handled using the appropriate update mechanisms (and properly animated if desired). For example code, please see the wiki: https://github.com/yapstudios/YapDatabase/wiki/Views
+0x100380bee 68 67 %s -- Cannot be used in OpenSSL mode. An IV or password is required
+0x10038190b 11 10 dvpassword
+0x1003819bb 48 47 -[RNOpenSSLDecryptor initWithPassword:handler:]
+0x1003819eb 54 53 +[RNOpenSSLDecryptor decryptData:withPassword:error:]
+0x1003828e7 16 15 MobileSubstrate
+0x100382a72 10 9 aPassword
+0x100382a9d 10 9 /bin/bash
+0x100382f9c 42 41 Unable to create AES key for password: %d
+0x1003841c0 20 19 http://example.com/
+0x1003841e0 21 20 https://example.com/
+0x100384350 20 19 https://example.com
+0x1003843b0 70 69 Certificate validation failed. You will have to do better than this!!
+0x100384400 48 47 Request Sent using Public Key Pinning, lookout!
+0x100384440 49 48 Request Sent using Certificate pinning, lookout!
+0x100384552 13 12 isSSLPinning
+0x100384560 19 18 isPublicKeyPinning
+0x100384990 20 19 Jailbreak Detection
+0x1003849b0 24 23 /Applications/Cydia.app
+0x1003849d0 47 46 /Library/MobileSubstrate/MobileSubstrate.dylib
+0x100384a08 9 8 /etc/apt
+0x100384a20 23 22 /private/jailbreak.txt
+0x100384a40 36 35 cydia://package/com.example.package
+0x100384a70 47 46 DVIA_v2/JailbreakDetectionViewController.swift
+0x100384b80 47 46 _TtC7DVIA_v232JailbreakDetectionViewController
+0x100384c80 23 22 realmPasswordTextField
+0x100384cd0 44 43 T@"UITextField",N,&,VrealmPasswordTextField
+0x100384dd0 18 17 passwordTextField
+0x100384e20 39 38 T@"UITextField",N,&,VpasswordTextField
+0x1003850d0 56 55 Congrats! You've found the right username and password!
+0x100385160 25 24 cookiesPasswordTextField
+0x1003851b0 46 45 T@"UITextField",N,&,VcookiesPasswordTextField
+0x1003851e0 29 28 http://highaltitudehacks.com
+0x100386380 9 8 password
+0x1003863e0 31 30 Incorrect Username or Password
+0x1003867b0 19 18 JailbreakDetection
+0x100386bd0 92 91 http://highaltitudehacks.com/2013/11/08/ios-application-security-part-21-arm-and-gdb-basics
+0x100386dd0 44 43 https://www.youtube.com/watch?v=HsV6jaA5J2I
+0x100386e00 31 30 http://www.thejuniperfund.org/
+0x1003876d0 9 8 Keychain
+0x1003876e0 37 36 DVIA_v2/KeychainViewController.swift
+0x100387710 23 22 Data saved in Keychain
+0x100387727 14 13 keychainValue
+0x100387740 37 36 _TtC7DVIA_v222KeychainViewController
+0x100387770 18 17 keychainTextField
+0x100387790 39 38 T@"UITextField",N,&,VkeychainTextField
+0x100387890 18 17 couchbasePassword
+0x1003878e0 39 38 T@"UITextField",N,&,VcouchbasePassword
+0x1003879c0 56 55 To continue, enter the password for "test123@gmail.com"
+0x100387a90 71 70 To continue, enter the password for your Apple ID 'test123@gmail.com'.
+0x100387b76 9 8 Password
+0x100387f80 22 21 Password is incorrect
+0x100387fc0 24 23 Please enter a password
+0x100388080 31 30 returningUserPasswordTextField
+0x100388140 52 51 T@"UITextField",N,W,VreturningUserPasswordTextField
+0x100388180 39 38 T@"UITextField",N,W,VpasswordTextField
+0x100388380 32 31 http://damnvulnerableiosapp.com
+0x1003883b0 32 31 https://twitter.com/prateekg147
+0x100388660 19 18 http://google.com?
+0x100388cd0 20 19 yapDatabasePassword
+0x100388d20 41 40 T@"UITextField",N,&,VyapDatabasePassword
+0x100388e10 110 109 http://highaltitudehacks.com/2014/01/17/ios-application-security-part-28-patching-ios-application-with-hopper
+0x100388e80 127 126 http://highaltitudehacks.com/2013/12/17/ios-application-security-part-26-patching-ios-applications-using-ida-pro-and-hex-fiend
+0x100388f00 121 120 http://highaltitudehacks.com/2013/08/20/ios-application-security-part-11-analyzing-network-traffic-over-http-slash-https
+0x100388f80 95 94 http://highaltitudehacks.com/2014/03/07/ios-application-security-part-30-attacking-url-schemes
+0x100388fe0 117 116 http://highaltitudehacks.com/2013/12/17/ios-application-security-part-22-runtime-analysis-and-manipulation-using-gdb
+0x100389060 125 124 http://highaltitudehacks.com/2013/09/17/ios-application-security-part-16-runtime-analysis-of-ios-applications-using-inalyzer
+0x1003890e0 103 102 http://highaltitudehacks.com/2013/07/25/ios-application-security-part-8-method-swizzling-using-cycript
+0x100389150 147 146 http://highaltitudehacks.com/2013/07/02/ios-application-security-part-5-advanced-runtime-analysis-and-manipulation-using-cycript-yahoo-weather-app
+0x1003891f0 127 126 http://highaltitudehacks.com/2013/07/02/ios-aios-appllication-security-part-4-runtime-analysis-using-cycript-yahoo-weather-app
+0x100389270 110 109 http://highaltitudehacks.com/2013/06/16/ios-application-security-part-3-understanding-the-objective-c-runtime
+0x1003892e0 105 104 http://highaltitudehacks.com/2013/12/17/ios-application-security-part-24-jailbreak-detection-and-evasion
+0x100389350 107 106 http://highaltitudehacks.com/2013/10/26/ios-application-security-part-20-local-data-storage-nsuserdefaults
+0x100389426 13 12 /secret-data
+0x100389540 52 51 T@"UITextField",N,&,VreturningUserPasswordTextField
+0x100389670 24 23 keychainSegueIdentifier
+0x10038a261 24 23 T^{__SecCertificate=},R
+0x10038a3b2 37 36 T^{__SecCertificate=},R,V_serverCert
+0x10038acb6 52 51 Unexpected error %d deleting identity from keychain
+0x10038ad99 39 38 SecItemCopyMatching failed; input = %@
+0x10038dc28 9 8 id_token
+0x10038dc31 14 13 refresh_token
+0x10038dc4a 29 28 _oidc_refresh?refresh_token=
+0x10038dcaa 37 36 Server didn't return an OpenID token
+0x10038de8a 49 48 -[CBLOpenIDConnectAuthorizer keychainAttributes]
+0x10038df51 25 24 %@ OpenID Connect tokens
+0x10038df6a 34 33 %@: No ID token found in Keychain
+0x10038df8c 41 40 -[CBLOpenIDConnectAuthorizer loadTokens]
+0x10038dfb5 40 39 %@: Couldn't load ID token: OSStatus %d
+0x10038dfdd 32 31 %@: Read ID token from Keychain
+0x10038dffd 21 20 OpenID Connect token
+0x10038e012 48 47 -[CBLOpenIDConnectAuthorizer saveTokens:error:]
+0x10038e042 40 39 %@: Couldn't save ID token: OSStatus %d
+0x10038e06a 36 35 Unable to save ID token to Keychain
+0x10038e08e 31 30 %@: Saved ID token to Keychain
+0x10038e0ad 33 32 %@: Deleted tokens from Keychain
+0x10038e0ce 44 43 -[CBLOpenIDConnectAuthorizer deleteTokens:]
+0x10038e0fa 42 41 %@: Couldn't delete ID token: OSStatus %d
+0x10038e124 29 28 Unable to delete auth tokens
+0x10038ef14 17 16 certificateChain
+0x10038ef25 33 32 T@"NSArray",R,V_certificateChain
+0x10038f0f3 13 12 access_token
+0x100391245 93 92 -[CBLOAuth1Authorizer initWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:]
+0x1003912f7 45 44 -[CBLPasswordAuthorizer initWithCredential:]
+0x100391393 23 22 credential.hasPassword
+0x100393781 16 15 consumer_secret
+0x100393791 6 5 token
+0x100393797 13 12 token_secret
+0x100394c33 18 17 serverCertificate
+0x100394c45 44 43 T^{__SecCertificate=},R,V_serverCertificate
+0x1003953f3 34 33 %@: Untrustworthy SSL certificate
+0x100395415 30 29 Untrustworthy SSL certificate
+0x1003966b5 49 48 -[CBLSymmetricKey initWithPassword:salt:rounds:]
+0x1003967a7 42 41 -[CBLSymmetricKey initWithKeyOrPassword:]
+0x1003967d1 46 45 [keyOrPassword isKindOfClass: [NSData class]]
+0x10039681e 48 47 -[CBLSymmetricKey saveKeychainItemNamed:error:]
+0x10039684e 40 39 CBLSymmetricKey: SecItemAdd returned %d
+0x100397667 7 6 secret
+0x10039766e 23 22 T@"NSString",C,Vsecret
+0x100397a18 27 26 SSLIdentityAndCertificates
+0x100397aec 21 20 SSLExtraCertificates
+0x100397b01 39 38 T@"NSArray",&,N,V_SSLExtraCertificates
+0x100398718 12 11 oauth_token
+0x100398724 19 18 oauth_token_secret
+0x10039874c 21 20 oauth_token_duration
+0x100398761 23 22 oauth_token_attributes
+0x100398778 22 21 oauth_token_renewable
+0x1003987b0 21 20 Key "%@" Secret:"%@"
+0x1003987d9 23 22 T@"NSString",&,Vsecret
+0x100399cd3 43 42 unallowed token at this point in JSON text
+0x100399cfe 30 29 invalid token, internal error
+0x10039b642 47 46 Huh, couldn't get password of %@; trying again
+0x10039b691 44 43 %@: Unable to get password of credential %@
+0x10039bd94 22 21 SSLClientCertificates
+0x10039bdaa 40 39 T@"NSArray",&,N,V_SSLClientCertificates
+0x10039f1a0 386 385         CREATE VIRTUAL TABLE IF NOT EXISTS fulltext             USING fts4(content, tokenize=unicodesn %@);        CREATE INDEX IF NOT EXISTS  'maps_#_by_fulltext' ON 'maps_#'(fulltext_id);         CREATE TRIGGER IF NOT EXISTS 'del_maps_#_fulltext'             DELETE ON 'maps_#' WHEN old.fulltext_id not null BEGIN                 DELETE FROM fulltext WHERE rowid=old.fulltext_id| END
+0x1003a0b22 28 27 SELECT fts3_tokenizer(?, ?)
+0x1003a0b70 12 11 tokenchars=
+0x1003a242d 21 20 invalid access_token
+0x1003a2442 49 48 required fields: access_token, email, remote_url
+0x1003a26cc 22 21 http://%@.couchbase./
+0x1003a3552 27 26 Error in SSLSetCertificate
+0x1003a356d 75 74 Invalid value for kCFStreamSSLCertificates. Value must be of type NSArray.
+0x1003a35b8 44 43 Invalid value for kCFStreamSSLCertificates.
+0x1003a3bec 107 106 Security option unavailable - kCFStreamSSLValidatesCertificateChain - You must use manual trust evaluation
+0x1003a3c57 68 67 Security option unavailable - kCFStreamSSLValidatesCertificateChain
+0x1003a3c9b 107 106 Security option unavailable - kCFStreamSSLAllowsExpiredCertificates - You must use manual trust evaluation
+0x1003a3d06 68 67 Security option unavailable - kCFStreamSSLAllowsExpiredCertificates
+0x1003a7273 7 6 apiKey
+0x1003a745a 13 12 FlurryAPIKey
+0x1003a7467 69 68 +[FlurryReportingSource initialTimestampWithApiKey:withStartUpTime:]
+0x1003a7566 60 59 +[FlurryReportingSource initialTimestampFilePathForAPIKey:]
+0x1003a76d5 37 36 https://cfg.flurry.com/sdk/v1/config
+0x1003a8161 10 9 fl.apikey
+0x1003a89d9 17 16 X-Flurry-Api-Key
+0x1003a940f 50 49 https://api.login.yahoo.com/oauth2/device_session
+0x1003a94be 23 22 flurry_project_api_key
+0x1003aa140 34 33 https://data.flurry.com/v1/flr.do
+0x1003aa69c 45 44 Flurry: Start session called with apiKey[%@]
+0x1003aa6f9 48 47 Flurry: Finish starting session with apiKey[%@]
+0x1003ab4de 133 132 BDTkcHQIaUBKLpbX/RC+7eaLOp5bzaD+hg4vCf+0mLUVET36dJu19hfeNyB6DxvPAiiBmpqZR7nAeSUWOKnjABS9QoygX8/x1wMJcq+r6pb0KuG4IhYmG7adOlm8T6YEvg==
+0x1003afcbb 133 132 %@ %@ %s (%@:%d): iAd campaign tracking disabled because the iAd framework is not linked. See http://goo.gl/426NGa for instructions.
+0x1003b0f20 41 40 https://ssl.google-analytics.com/collect
+0x1003b0f49 40 39 http://www.google-analytics.com/collect
+0x1003b0f71 39 38 https://ssl.google-analytics.com/batch
+0x1003b0f98 38 37 http://www.google-analytics.com/batch
+0x1003b22dd 23 22 https://www.google.com
+0x1003b39b0 41 40 decryptData:withSettings:password:error:
+0x1003b3a0f 32 31 decryptData:withPassword:error:
+0x1003b3aa3 10 9 _password
+0x1003b3b05 28 27 T@"NSString",C,N,V_password
+0x1003b4484 19 18 setNumberOfTokens:
+0x1003b4522 21 20 Ti,N,VnumberOfTokens
+0x1003b65f1 31 30 T^{_CCCryptor=},R,N,V__cryptor
+0x1003b6bc6 18 17 _keychainBindings
+0x1003b702b 41 40 encryptData:withSettings:password:error:
+0x1003b7054 68 67 encryptData:withSettings:password:IV:encryptionSalt:HMACSalt:error:
+0x1003b805c 23 22 sharedKeychainBindings
+0x1003b90de 21 20 sendUsingSSLPinning:
+0x1003b90f3 27 26 sendUsingPublicKeyPinning:
+0x1003b94d2 22 21 jailbreakTest1Tapped:
+0x1003b94e8 22 21 jailbreakTest2Tapped:
+0x1003b94fe 22 21 jailbreakTest3Tapped:
+0x1003b9514 22 21 jailbreakTest4Tapped:
+0x1003b952a 22 21 jailbreakTest5Tapped:
+0x1003b9572 23 22 realmPasswordTextField
+0x1003b9589 27 26 setRealmPasswordTextField:
+0x1003b95f7 18 17 passwordTextField
+0x1003b9609 22 21 setPasswordTextField:
+0x1003b9694 25 24 cookiesPasswordTextField
+0x1003b96ad 29 28 setCookiesPasswordTextField:
+0x1003b9f7f 62 61 application:didRegisterForRemoteNotificationsWithDeviceToken:
+0x1003ba673 21 20 jailbreakTestTapped:
+0x1003baee6 18 17 keychainTextField
+0x1003baef8 22 21 setKeychainTextField:
+0x1003baf0e 22 21 saveInKeychainTapped:
+0x1003baf85 18 17 couchbasePassword
+0x1003baf97 22 21 setCouchbasePassword:
+0x1003bb312 31 30 returningUserPasswordTextField
+0x1003bb331 35 34 setReturningUserPasswordTextField:
+0x1003bb955 20 19 yapDatabasePassword
+0x1003bb969 24 23 setYapDatabasePassword:
+0x1003be126 17 16 certificateChain
+0x1003be783 11 10 loadTokens
+0x1003be7a1 14 13 deleteTokens:
+0x1003be7af 17 16 parseTokensFrom:
+0x1003be7c0 18 17 saveTokens:error:
+0x1003be817 19 18 keychainAttributes
+0x1003be852 14 13 _deleteTokens
+0x1003be860 31 30 forgetIDTokensForServer:error:
+0x1003be8d7 15 14 _checkedTokens
+0x1003be8fa 9 8 _IDToken
+0x1003be903 14 13 _refreshToken
+0x1003bef7f 12 11 hasPassword
+0x1003bf617 49 48 credentialWithIdentity:certificates:persistence:
+0x1003bf69e 18 17 _certificateChain
+0x1003bf70e 23 22 initWithUser:password:
+0x1003bf747 70 69 initWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:
+0x1003bf7c5 37 36 basicAuthenticatorWithName:password:
+0x1003bf7ea 32 31 facebookAuthenticatorWithToken:
+0x1003bf82d 85 84 OAuth1AuthenticatorWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:
+0x1003c0984 40 39 tagsInRange:scheme:options:tokenRanges:
+0x1003c0a9a 6 5 token
+0x1003c0aa0 39 38 registerToken:forEmailAddress:forSite:
+0x1003c0ae4 20 19 initWithKey:secret:
+0x1003c0af8 52 51 initWithURL:consumer:token:realm:signatureProvider:
+0x1003c0b36 7 6 _token
+0x1003c0b50 26 25 signClearText:withSecret:
+0x1003c0b6a 41 40 credentialWithUser:password:persistence:
+0x1003c1d50 23 22 initWithKeyOrPassword:
+0x1003c3e3b 18 17 serverCertificate
+0x1003c3f98 19 18 _serverCertificate
+0x1003c45ea 50 49 checkClientCertificateAuthentication:fromAddress:
+0x1003c46d5 14 13 setPasswords:
+0x1003c46e3 27 26 SSLIdentityAndCertificates
+0x1003c46fe 46 45 acceptOnInterface:port:SSLCertificates:error:
+0x1003c4f2e 30 29 initWithPassword:salt:rounds:
+0x1003c4f4c 18 17 initWithPassword:
+0x1003c4f6e 31 30 deleteKeychainItemNamed:error:
+0x1003c4f8d 33 32 initWithKeychainItemNamed:error:
+0x1003c4fb6 29 28 saveKeychainItemNamed:error:
+0x1003c5a05 11 10 setSecret:
+0x1003c5a23 7 6 secret
+0x1003c5bd7 17 16 passwordForUser:
+0x1003c5bf8 25 24 setSSLExtraCertificates:
+0x1003c5c75 21 20 SSLExtraCertificates
+0x1003c5c98 11 10 _passwords
+0x1003c5cc5 22 21 _SSLExtraCertificates
+0x1003c60eb 68 67 initWithURL:consumer:token:realm:signatureProvider:nonce:timestamp:
+0x1003c62b1 66 65 initWithKey:secret:session:duration:attributes:created:renewable:
+0x1003c63e3 16 15 isEqualToToken:
+0x1003c7585 37 36 serverWithHost:port:SSLCertificates:
+0x1003c7604 34 33 fromRequest:getUsername:password:
+0x1003c7838 22 21 SSLClientCertificates
+0x1003c7981 13 12 certificates
+0x1003c798e 26 25 setSSLClientCertificates:
+0x1003c7eab 23 22 _SSLClientCertificates
+0x1003c83a9 35 34 initWithHost:port:SSLCertificates:
+0x1003c861c 17 16 _SSLCertificates
+0x1003c9736 27 26 sslIdentityAndCertificates
+0x1003c9892 21 20 isPasswordProtected:
+0x1003caa42 23 22 do_POST_facebook_token
+0x1003ceac7 7 6 apiKey
+0x1003cec69 19 18 startUpWithApiKey:
+0x1003cf14b 12 11 deviceToken
+0x1003cf171 42 41 messagingInfoWithDeviceToken:pushEnabled:
+0x1003cf305 62 61 onqueue_createInitialTimestampIfNeededWithApiKey:startUpTime:
+0x1003cf61d 44 43 initialTimestampWithApiKey:withStartUpTime:
+0x1003cf670 31 30 keychainWrapperWithIdentifier:
+0x1003cf6c1 35 34 initialTimestampFilePathForAPIKey:
+0x1003cf72d 59 58 oldInitialTimestampFilePathUptilAgentVersion109WithAPIKey:
+0x1003cf85a 26 25 startReportingWithApiKey:
+0x1003cf874 36 35 startBackgroundReportingWithApiKey:
+0x1003d0a49 27 26 onqueue_startUpWithApiKey:
+0x1003d0a64 11 10 setApiKey:
+0x1003d0b17 94 93 dataWithApiKey:agentPlatform:agentVersion:agentReportType:includeBackgroundSessionsInMetrics:
+0x1003d0c4e 8 7 _apiKey
+0x1003d0ca0 26 25 T@"NSString",&,N,V_apiKey
+0x1003d1c27 94 93 initWithAgentPlatform:agentVersion:apiKey:agentReportType:includeBackgroundSessionsInMetrics:
+0x1003d1cf1 105 104 sessionInitInfoWithAgentPlatform:agentVersion:apiKey:agentReportType:includeBackgroundSessionsInMetrics:
+0x1003d2477 94 93 initWithApiKey:agentPlatform:agentVersion:agentReportType:includeBackgroundSessionsInMetrics:
+0x1003d89bb 16 15 setDeviceToken:
+0x1003db65d 33 32 initWithDeviceToken:pushEnabled:
+0x1003db6ad 13 12 _deviceToken
+0x1003db6ba 31 30 T@"NSString",&,N,V_deviceToken
+0x1003dd5a8 35 34 initWithDeviceToken:isPushEnabled:
+0x1003dd5cb 35 34 dataWithDeviceToken:isPushEnabled:
+0x1003dec9d 24 23 onqueue_setDeviceToken:
+0x1003dece3 18 17 notificationToken
+0x1003ded1f 22 21 setNotificationToken:
+0x1003ded5d 19 18 _notificationToken
+0x1003deda4 37 36 T@"NSString",&,N,V_notificationToken
+0x1003e3879 22 21 defaultNumberOfTokens
+0x1003e6389 26 25 initWithPassword:handler:
+0x1003e66ef 62 61 initWithSettings:password:IV:encryptionSalt:HMACSalt:handler:
+0x1003e672d 35 34 initWithSettings:password:handler:
+0x1003e6d1f 30 29 keyForPassword:salt:settings:
+0x1003e6d3d 17 16 keychainBindings
+0x1003e770d 15 14 numberOfTokens
+0x1003e7b1d 9 8 password
+0x1003e95c0 13 12 setPassword:
+0x1003e9843 33 32 sharedKeychainBindingsController
+0x1003eae26 29 28 PDKeychainBindingsController
+0x1003eaffc 19 18 JailbreakDetection
+0x1003eb1ec 19 18 PDKeychainBindings
+0x1003eb7b8 22 21 CBLPasswordAuthorizer
+0x1003ebcbc 12 11 CBL_OAToken
+0x1003ebdaf 19 18 CBLTokenAuthorizer
+0x1003ed138 22 21 FlurryKeychainWrapper
+0x1003ef046 330 329 {_RNCryptorSettings="algorithm"I"blockSize"Q"IVSize"Q"options"I"HMACAlgorithm"I"HMACLength"Q"keySettings"{_RNCryptorKeyDerivationSettings="keySize"Q"saltSize"Q"PBKDFAlgorithm"I"PRF"I"rounds"I"hasV2Password"B}"HMACKeySettings"{_RNCryptorKeyDerivationSettings="keySize"Q"saltSize"Q"PBKDFAlgorithm"I"PRF"I"rounds"I"hasV2Password"B}}
+0x1003efce1 21 20 ^{_CCCryptor=}16@0:8
+0x1003efcf6 15 14 ^{_CCCryptor=}
+0x1003efe7d 22 21 @"PDKeychainBindings"
+0x1003f04ef 27 26 ^{__SecCertificate=}16@0:8
+0x1003f0668 21 20 ^{__SecCertificate=}
+0x1003f1192 15 14 @"CBL_OAToken"
+0x1003f1c9c 45 44 v60@0:8I16@20Q28Q36q44^{__SecCertificate=}52
+0x1003ffb80 33 32 JailbreakDetectionViewController
+0x100400a80 23 22 KeychainViewController
+0x100403aa2 1074 953 uUiIaeiabiataţieaaţiaauaiuaaţieeleileiileieiateiiiuluiuleloriloriilorţtistabilibilivicatiticalaicivaativaitivaicaleaţiuneiţiuneatoareitoareătoareicitateabilitateibilitateivitateiciveativeitiveicaliatoriicatoriitoriătoriicitatiabilitatiivitatiiciviativiitiviicităiabilităiivităiicităţiabilităţiivităţiicalatoricatoritorătoricivativitivicalăicivăativăitivăicaabilaibilaoasaataitaantaistautaivaiciceabileibileismeiuneoaseateitateiteanteisteuteiveiciabiliibiliiuniatoriosiatiitatiitiantiistiutiiştiiviităioşiităţiabilibilismatorosatitantistutivicăabilăibilăoasăatăităantăistăutăivăueaiaescăscindândareereireâreseaseseseiseuseâseeşteăşteezeaieaiiaiseieştiăştiuieziaşiseşiaseşiseseşiiseşiuseşiâseşiişiuşiâşiâiaţieaţiiaţieţiiţiarăţiserăţiaserăţiseserăţiiserăţiuserăţiâserăţiirăţiurăţiârăţiâţiameamiamemasemsesemisemusemâsemimămarămserămaserămseserămiserămuserămâserămirămurămârămâmaueauiauinduânduezeascăarăserăaserăseserăiserăuserăâserăirăurăârăeazăaeieiăiuIU
+0x100404114 615 532 csdzsgylynysztyzsalelbbccddffggjjkkllmmnnpprrccssszzsttvvggyllynnyttysszzzbarabereignaknekvalvelulnálnélbólróltólbõlrõltõlülnanbanenbenképpenonönképpkortatetkéntankéntenkéntonkéntotértöthezhozhözvávéaeáéeaaánénánkéntaestulastulástulstülestüléstüláéeaeaeéiáéiééiékéakéekéokéákéékéökéééaeaeaeaeaeajadadedodádédödejenkunkánkénkünkukjukájukükjükéjükmamemomámémoáéaeaeaeaeaeaeidaidjaideidjeidáidéidiaijaieijeiáiéiitekeitekjeitekéitekikaikjaikeikjeikáikéikinkainkjainkeinkjeinkáinkéinkaitokjaitokáitokimaimjaimeimjeimáiméimaekakekokákékök
+0x1004079c2 13 12 isSSLPinning
+0x1004079d0 19 18 isPublicKeyPinning
+0x100407a60 23 22 realmPasswordTextField
+0x100407ab0 18 17 passwordTextField
+0x100407b00 19 18 jailbreakDetection
+0x100407cf0 25 24 cookiesPasswordTextField
+0x100407d60 18 17 passwordTextField
+0x100407db7 9 8 password
+0x100407de0 18 17 passwordTextField
+0x1004080f0 19 18 jailbreakDetection
+0x100408140 18 17 passwordTextField
+0x1004082a0 18 17 passwordTextField
+0x100408380 18 17 keychainTextField
+0x1004083c0 18 17 couchbasePassword
+0x1004083db 9 8 password
+0x100408406 9 8 password
+0x100408490 31 30 returningUserPasswordTextField
+0x1004084b0 18 17 passwordTextField
+0x100408590 20 19 yapDatabasePassword
+0x1004085f0 25 24 jailbreakDetetionArticle
+0x100408720 18 17 passwordTextField
+0x100408780 31 30 returningUserPasswordTextField
+0x1004087cc 9 8 keychain
+0x1004f9958 45 44 @_NSURLAuthenticationMethodClientCertificate
+0x1004f9f47 40 39 @_kCFStreamSSLAllowsExpiredCertificates
+0x1004f9f9d 27 26 @_kCFStreamSSLCertificates
+0x1004fa022 40 39 @_kCFStreamSSLValidatesCertificateChain
+0x1004fa437 33 32 @_NSLinguisticTagSchemeTokenType
+0x1004faf10 36 35 @_OBJC_CLASS_$_RLMNotificationToken
+0x1004fb132 74 73 @_$s10RealmSwift6ObjectC7observeySo20RLMNotificationTokenCyAA0C6ChangeOcF
+0x1004fb3f5 21 20 @_kSecAttrAccessible
+0x1004fb416 51 50 @_kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+0x1004fb455 33 32 @_kSecAttrAccessibleWhenUnlocked
+0x1004fb479 18 17 @_kSecAttrAccount
+0x1004fb48e 25 24 @_kSecAttrApplicationTag
+0x1004fb4aa 23 22 @_kSecAttrCreationDate
+0x1004fb4cd 22 21 @_kSecAttrDescription
+0x1004fb4e6 18 17 @_kSecAttrGeneric
+0x1004fb504 22 21 @_kSecAttrIsPermanent
+0x1004fb51d 19 18 @_kSecAttrKeyClass
+0x1004fb53c 25 24 @_kSecAttrKeyClassPublic
+0x1004fb556 24 23 @_kSecAttrKeySizeInBits
+0x1004fb571 18 17 @_kSecAttrKeyType
+0x1004fb58f 34 33 A_kSecAttrKeyTypeECSECPrimeRandom
+0x1004fb5b4 21 20 @_kSecAttrKeyTypeRSA
+0x1004fb5ca 16 15 @_kSecAttrLabel
+0x1004fb5dd 27 26 @_kSecAttrModificationDate
+0x1004fb604 18 17 @_kSecAttrService
+0x1004fb632 23 22 @_kSecClassCertificate
+0x1004fb64c 27 26 @_kSecClassGenericPassword
+0x1004fb73d 22 21 @_kSecPrivateKeyAttrs
+0x1004fb798 23 22 @_kSecReturnAttributes
+0x1004fb7bb 17 16 @_kSecReturnData
+0x1004fb7cf 16 15 @_kSecReturnRef
+0x1005027ec 85 84 @_$s10RealmSwift0A0V5write16withoutNotifying_ySaySo20RLMNotificationTokenCG_yyKXEtKF
+0x1005028b0 29 28 @_SecIdentityCopyCertificate
+0x100502907 25 24 @_SecCertificateCopyData
+0x10050296c 26 25 @_SecCertificateGetTypeID
+0x10050298d 20 19 @_SSLSetCertificate
+0x1005029a8 16 15 @_SecItemUpdate
+0x100502a1a 30 29 @_SecCertificateCopyPublicKey
+0x100502a3f 22 21 @_SecItemCopyMatching
+0x100502afc 36 35 @_SecTrustSetAnchorCertificatesOnly
+0x100502b27 31 30 @_SecCertificateCreateWithData
+0x100502b4d 35 34 @_SecCertificateCopySubjectSummary
+0x100502b77 13 12 @_SecItemAdd
+0x100502b8b 32 31 @_SecTrustGetCertificateAtIndex
+0x100502bc4 32 31 @_SecTrustSetAnchorCertificates
+0x100502c30 16 15 @_SecItemDelete
+0x100502c5d 30 29 @_SecTrustGetCertificateCount
+0x100503782 17 16 @_CCCryptorFinal
+0x100503812 19 18 @_CCCryptorRelease
+0x100503851 18 17 @_CCCryptorCreate
+0x1005038ce 18 17 @_CCCryptorUpdate
+0x100503912 10 9 @_CCCrypt
+0x100503923 27 26 @_CCCryptorGetOutputLength
+0x100508d73 67 66 28forJailbreakTestIsJailbroken14viewControllerySb_So06UIViewL0CtFZ
+0x100509901 23 22 =JailbreakDetectionyyF
+0x10050a37a 34 33 passwordTextFieldSo06UITextH0CSgv
+0x10050a627 34 33 PasswordTextFieldSo06UITextI0CSgv
+0x10050abeb 34 33 PasswordTextFieldSo06UITextI0CSgv
+0x10050b19a 36 35 m7passwordTextFieldSo06UITextI0CSgv
+0x10050b31b 36 35 p7keychainTextFieldSo06UITextH0CSgv
+0x10050b95d 25 24 oKeychainViewControllerC
+0x10050bcc7 35 34 7passwordTextFieldSo06UITextI0CSgv
+0x10050c018 28 27 PasswordSo11UITextFieldCSgv
+0x10050c53c 28 27 PasswordSo11UITextFieldCSgv
+0x10050d9af 18 17 jailbreakTest3yyF
+0x10050de18 16 15 20jailbreakTest
+0x10050de93 34 33 JailbreakDetectionViewControllerC
+0x10050ec84 12 11 passwordSSv
+0x10050f11b 16 15 isSSLPinningSbv
+0x10050f29d 22 21 isPublicKeyPinningSbv
+0x10050f546 24 23 15usingSSLPinningyyp_tF
+0x10050f561 30 29 21usingPublicKeyPinningyyp_tF
+0x10050f959 35 34 7passwordTextFieldSo06UITextJ0CSgv
+0x10050fb37 49 48 30returningUserPasswordTextFieldSo06UITextL0CSgv
+0x10051003f 34 33 passwordTextFieldSo06UITextJ0CSgv
+0x1005100e7 26 25 9jailbreakTestTappedyyypF
+0x10051041b 34 33 passwordTextFieldSo06UITextJ0CSgv
+0x100510943 35 34 7passwordTextFieldSo06UITextK0CSgv
+0x100510b52 49 48 30returningUserPasswordTextFieldSo06UITextM0CSgv
+0x100510ba3 73 72 6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itF
+0x100510ece 12 11 passwordSSv
+0x1005110a8 18 17 8passwordSSSgvpMV
+0x10051166f 15 14 8passwordSSSgv
+0x100513ed5 21 20 CertificateDigestSHA
+0x100514cdb 6 5 Token
+0x1005169fd 18 17 DKeychainBindings
+0x1005173ae 23 22 KeychainViewController
+0x10051764a 33 32 JailbreakDetectionViewController
+0x100517ed2 6 5 token
+0x100518fc9 7 6 secret
+0x100519160 7 6 Token.
+0x10051be92 6 5 Token
+0x10051dbb4 18 17 DKeychainBindings
+0x10051e565 23 22 KeychainViewController
+0x10051e801 33 32 JailbreakDetectionViewController
+0x100521a41 19 18 KeychainIdentifier
+0x100521a80 24 23 WatchKeychainIdentifier
+0x100522dcc 27 26 gister_unicodesn_tokenizer
+0x100522f69 20 19 3UnicodeSnTokenizer
+0x10066fe1a 104 103 _$s7DVIA_v213DVIAUtilitiesC9showAlert28forJailbreakTestIsJailbroken14viewControllerySb_So06UIViewL0CtFZ
+0x10066fe82 106 105 _$s7DVIA_v213DVIAUtilitiesC9showAlert28forJailbreakTestIsJailbroken14viewControllerySb_So06UIViewL0CtFZTq
+0x100671c38 60 59 _$s7DVIA_v218RootViewControllerC22showJailbreakDetectionyyF
+0x1006739c8 70 69 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvM
+0x100673a0e 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvMTq
+0x100673a56 70 69 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvg
+0x100673a9c 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvgTq
+0x100673ae4 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvpMV
+0x100673b2c 73 72 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvpWvd
+0x100673b75 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvpfi
+0x100673bbd 70 69 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvs
+0x100673c03 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvsTq
+0x10067433d 75 74 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvM
+0x100674388 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvMTq
+0x1006743d5 75 74 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvg
+0x100674420 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvgTq
+0x10067446d 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvpMV
+0x1006744ba 78 77 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvpWvd
+0x100674508 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvpfi
+0x100674555 75 74 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvs
+0x1006745a0 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvsTq
+0x10067526b 79 78 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvM
+0x1006752ba 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvMTq
+0x10067530b 79 78 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvg
+0x10067535a 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvgTq
+0x1006753ab 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvpMV
+0x1006753fc 82 81 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvpWvd
+0x10067544e 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvpfi
+0x10067549f 79 78 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvs
+0x1006754ee 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvsTq
+0x100676738 73 72 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvM
+0x100676781 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvMTq
+0x1006767cc 73 72 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvg
+0x100676815 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvgTq
+0x100676860 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvpMV
+0x1006768ab 76 75 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvpWvd
+0x1006768f7 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvpfi
+0x100676942 73 72 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvs
+0x10067698b 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvsTq
+0x100676b89 58 57 _$s7DVIA_v222KeychainViewControllerC06saveInC6TappedyyypF
+0x100676bc3 60 59 _$s7DVIA_v222KeychainViewControllerC06saveInC6TappedyyypFTq
+0x100676bff 53 52 _$s7DVIA_v222KeychainViewControllerC11viewDidLoadyyF
+0x100676c34 73 72 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvM
+0x100676c7d 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvMTq
+0x100676cc8 73 72 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvg
+0x100676d11 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvgTq
+0x100676d5c 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvpMV
+0x100676da7 76 75 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvpWvd
+0x100676df3 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvpfi
+0x100676e3e 73 72 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvs
+0x100676e87 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvsTq
+0x100676ed2 63 62 _$s7DVIA_v222KeychainViewControllerC5coderACSgSo7NSCoderC_tcfC
+0x100676f11 63 62 _$s7DVIA_v222KeychainViewControllerC5coderACSgSo7NSCoderC_tcfc
+0x100676f50 77 76 _$s7DVIA_v222KeychainViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfC
+0x100676f9d 77 76 _$s7DVIA_v222KeychainViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc
+0x100676fea 39 38 _$s7DVIA_v222KeychainViewControllerCMa
+0x100677011 39 38 _$s7DVIA_v222KeychainViewControllerCMn
+0x100677038 38 37 _$s7DVIA_v222KeychainViewControllerCN
+0x10067705e 39 38 _$s7DVIA_v222KeychainViewControllerCfD
+0x100678aae 75 74 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvM
+0x100678af9 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvMTq
+0x100678b46 75 74 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvg
+0x100678b91 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvgTq
+0x100678bde 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvpMV
+0x100678c2b 78 77 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvpWvd
+0x100678c79 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvpfi
+0x100678cc6 75 74 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvs
+0x100678d11 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvsTq
+0x10067925b 75 74 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvM
+0x1006792a6 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvMTq
+0x1006792f3 75 74 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvg
+0x10067933e 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvgTq
+0x10067938b 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvpMV
+0x1006793d8 78 77 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvpWvd
+0x100679426 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvpfi
+0x100679473 75 74 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvs
+0x1006794be 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvsTq
+0x10067a36b 81 80 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvM
+0x10067a3bc 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvMTq
+0x10067a40f 81 80 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvg
+0x10067a460 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvgTq
+0x10067a4b3 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvpMV
+0x10067a506 84 83 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvpWvd
+0x10067a55a 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvpfi
+0x10067a5ad 81 80 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvs
+0x10067a5fe 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvsTq
+0x10067deac 64 63 _$s7DVIA_v232JailbreakDetectionViewControllerC10menuTappedyyypF
+0x10067deec 66 65 _$s7DVIA_v232JailbreakDetectionViewControllerC10menuTappedyyypFTq
+0x10067df2e 63 62 _$s7DVIA_v232JailbreakDetectionViewControllerC11viewDidLoadyyF
+0x10067df6d 65 64 _$s7DVIA_v232JailbreakDetectionViewControllerC12isJailbrokenSbyF
+0x10067dfae 67 66 _$s7DVIA_v232JailbreakDetectionViewControllerC12isJailbrokenSbyFTq
+0x10067dff1 66 65 _$s7DVIA_v232JailbreakDetectionViewControllerC14jailbreakTest3yyF
+0x10067e033 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC14jailbreakTest3yyFTq
+0x10067e077 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC14viewWillAppearyySbF
+0x10067e0bb 71 70 _$s7DVIA_v232JailbreakDetectionViewControllerC17readArticleTappedyyypF
+0x10067e102 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC17readArticleTappedyyypFTq
+0x10067e14b 66 65 _$s7DVIA_v232JailbreakDetectionViewControllerC1oAA10ObfuscatorCvg
+0x10067e18d 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC1oAA10ObfuscatorCvpMV
+0x10067e1d1 69 68 _$s7DVIA_v232JailbreakDetectionViewControllerC1oAA10ObfuscatorCvpWvd
+0x10067e216 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC1oAA10ObfuscatorCvpfi
+0x10067e25a 74 73 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest1TappedyyypF
+0x10067e2a4 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest1TappedyyypFTq
+0x10067e2f0 74 73 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest2TappedyyypF
+0x10067e33a 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest2TappedyyypFTq
+0x10067e386 74 73 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest3TappedyyypF
+0x10067e3d0 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest3TappedyyypFTq
+0x10067e41c 74 73 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest4TappedyyypF
+0x10067e466 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest4TappedyyypFTq
+0x10067e4b2 74 73 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest5TappedyyypF
+0x10067e4fc 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest5TappedyyypFTq
+0x10067e548 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC5coderACSgSo7NSCoderC_tcfC
+0x10067e591 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC5coderACSgSo7NSCoderC_tcfc
+0x10067e5da 87 86 _$s7DVIA_v232JailbreakDetectionViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfC
+0x10067e631 87 86 _$s7DVIA_v232JailbreakDetectionViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc
+0x10067e688 96 95 _$s7DVIA_v232JailbreakDetectionViewControllerC7prepare3for6senderySo17UIStoryboardSegueC_ypSgtF
+0x10067e6e8 85 84 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV10DhaulagiriSays5UInt8VGvau
+0x10067e73d 85 84 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV10DhaulagiriSays5UInt8VGvgZ
+0x10067e792 85 84 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV10DhaulagiriSays5UInt8VGvpZ
+0x10067e7e7 88 87 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV13KangchenjungaSays5UInt8VGvau
+0x10067e83f 88 87 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV13KangchenjungaSays5UInt8VGvgZ
+0x10067e897 88 87 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV13KangchenjungaSays5UInt8VGvpZ
+0x10067e8ef 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV2k2Says5UInt8VGvau
+0x10067e93b 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV2k2Says5UInt8VGvgZ
+0x10067e987 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV2k2Says5UInt8VGvpZ
+0x10067e9d3 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6ChoOyuSays5UInt8VGvau
+0x10067ea23 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6ChoOyuSays5UInt8VGvgZ
+0x10067ea73 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6ChoOyuSays5UInt8VGvpZ
+0x10067eac3 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6LhotseSays5UInt8VGvau
+0x10067eb13 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6LhotseSays5UInt8VGvgZ
+0x10067eb63 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6LhotseSays5UInt8VGvpZ
+0x10067ebb3 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6MakaluSays5UInt8VGvau
+0x10067ec03 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6MakaluSays5UInt8VGvgZ
+0x10067ec53 80 79 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6MakaluSays5UInt8VGvpZ
+0x10067eca3 81 80 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV7everestSays5UInt8VGvau
+0x10067ecf4 81 80 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV7everestSays5UInt8VGvgZ
+0x10067ed45 81 80 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV7everestSays5UInt8VGvpZ
+0x10067ed96 64 63 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVAEycfC
+0x10067edd6 60 59 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVMa
+0x10067ee12 60 59 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVMn
+0x10067ee4e 59 58 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVN
+0x10067ee89 49 48 _$s7DVIA_v232JailbreakDetectionViewControllerCMa
+0x10067eeba 49 48 _$s7DVIA_v232JailbreakDetectionViewControllerCMn
+0x10067eeeb 48 47 _$s7DVIA_v232JailbreakDetectionViewControllerCN
+0x10067ef1b 49 48 _$s7DVIA_v232JailbreakDetectionViewControllerCfD
+0x100681213 62 61 _$s7DVIA_v234SensitiveInformationViewControllerC8passwordSSvg
+0x100681251 64 63 _$s7DVIA_v234SensitiveInformationViewControllerC8passwordSSvpMV
+0x100681291 65 64 _$s7DVIA_v234SensitiveInformationViewControllerC8passwordSSvpWvd
+0x1006812d2 64 63 _$s7DVIA_v234SensitiveInformationViewControllerC8passwordSSvpfi
+0x100681e7b 71 70 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvM
+0x100681ec2 73 72 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvMTq
+0x100681f0b 71 70 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvg
+0x100681f52 73 72 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvgTq
+0x100681f9b 73 72 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvpMV
+0x100681fe4 74 73 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvpWvd
+0x10068202e 73 72 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvpfi
+0x100682077 71 70 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvs
+0x1006820be 73 72 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvsTq
+0x10068234c 77 76 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvM
+0x100682399 79 78 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvMTq
+0x1006823e8 77 76 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvg
+0x100682435 79 78 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvgTq
+0x100682484 79 78 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvpMV
+0x1006824d3 80 79 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvpWvd
+0x100682523 79 78 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvpfi
+0x100682572 77 76 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvs
+0x1006825bf 79 78 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvsTq
+0x10068308c 81 80 _$s7DVIA_v238TransportLayerProtectionViewControllerC4send15usingSSLPinningyyp_tF
+0x1006830dd 87 86 _$s7DVIA_v238TransportLayerProtectionViewControllerC4send21usingPublicKeyPinningyyp_tF
+0x100683e3f 90 89 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM
+0x100683e99 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvMTq
+0x100683ef5 90 89 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvg
+0x100683f4f 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTq
+0x100683fab 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpMV
+0x100684007 93 92 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpWvd
+0x100684064 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpfi
+0x1006840c0 90 89 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvs
+0x10068411a 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTq
+0x100684541 103 102 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvM
+0x1006845a8 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvMTq
+0x100684611 103 102 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvg
+0x100684678 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvgTq
+0x1006846e1 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvpMV
+0x10068474a 106 105 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvpWvd
+0x1006847b4 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvpfi
+0x10068481d 103 102 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvs
+0x100684884 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvsTq
+0x1006856d1 91 90 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM
+0x10068572c 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvMTq
+0x100685789 91 90 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvg
+0x1006857e4 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTq
+0x100685841 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpMV
+0x10068589e 94 93 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpWvd
+0x1006858fc 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpfi
+0x100685959 91 90 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvs
+0x1006859b4 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTq
+0x100685d51 81 80 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC19jailbreakTestTappedyyypF
+0x100685da2 83 82 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC19jailbreakTestTappedyyypFTq
+0x1006866d1 91 90 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM
+0x10068672c 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvMTq
+0x100686789 91 90 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvg
+0x1006867e4 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTq
+0x100686841 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpMV
+0x10068689e 94 93 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpWvd
+0x1006868fc 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpfi
+0x100686959 91 90 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvs
+0x1006869b4 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTq
+0x100687d3b 93 92 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvM
+0x100687d98 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvMTq
+0x100687df7 93 92 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvg
+0x100687e54 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvgTq
+0x100687eb3 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvpMV
+0x100687f12 96 95 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvpWvd
+0x100687f72 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvpfi
+0x100687fd1 93 92 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvs
+0x10068802e 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvsTq
+0x1006884cb 106 105 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvM
+0x100688535 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvMTq
+0x1006885a1 106 105 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvg
+0x10068860b 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvgTq
+0x100688677 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvpMV
+0x1006886e3 109 108 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvpWvd
+0x100688750 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvpfi
+0x1006887bc 106 105 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvs
+0x100688826 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvsTq
+0x100688938 129 128 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itF
+0x1006892f9 77 76 _$s7DVIA_v249SensitiveInformationInMemoryDetailsViewControllerC8passwordSSvg
+0x100689346 79 78 _$s7DVIA_v249SensitiveInformationInMemoryDetailsViewControllerC8passwordSSvpMV
+0x100689395 80 79 _$s7DVIA_v249SensitiveInformationInMemoryDetailsViewControllerC8passwordSSvpWvd
+0x1006893e5 79 78 _$s7DVIA_v249SensitiveInformationInMemoryDetailsViewControllerC8passwordSSvpfi
+0x1006897cc 35 34 _$s7DVIA_v24UserC8passwordSSSgvpMV
+0x10068a0d1 38 37 _$s7DVIA_v29RealmUserC8passwordSSSgvM
+0x10068a0f7 40 39 _$s7DVIA_v29RealmUserC8passwordSSSgvMTq
+0x10068a11f 38 37 _$s7DVIA_v29RealmUserC8passwordSSSgvg
+0x10068a145 40 39 _$s7DVIA_v29RealmUserC8passwordSSSgvgTq
+0x10068a16d 40 39 _$s7DVIA_v29RealmUserC8passwordSSSgvpMV
+0x10068a195 41 40 _$s7DVIA_v29RealmUserC8passwordSSSgvpWvd
+0x10068a1be 40 39 _$s7DVIA_v29RealmUserC8passwordSSSgvpfi
+0x10068a1e6 38 37 _$s7DVIA_v29RealmUserC8passwordSSSgvs
+0x10068a20c 40 39 _$s7DVIA_v29RealmUserC8passwordSSSgvsTq
+0x10068d6a3 28 27 _MYGetCertificateDigestSHA1
+0x10068d6bf 30 29 _MYGetCertificateDigestSHA256
+0x10068e00e 36 35 _OBJC_CLASS_$_CBLPasswordAuthorizer
+0x10068e404 33 32 _OBJC_CLASS_$_CBLTokenAuthorizer
+0x10068e8ea 26 25 _OBJC_CLASS_$_CBL_OAToken
+0x10068f6a5 36 35 _OBJC_CLASS_$_FlurryKeychainWrapper
+0x100691238 33 32 _OBJC_CLASS_$_JailbreakDetection
+0x100691370 33 32 _OBJC_CLASS_$_PDKeychainBindings
+0x100691391 43 42 _OBJC_CLASS_$_PDKeychainBindingsController
+0x1006925c0 51 50 _OBJC_CLASS_$__TtC7DVIA_v222KeychainViewController
+0x100692974 61 60 _OBJC_CLASS_$__TtC7DVIA_v232JailbreakDetectionViewController
+0x100693591 40 39 _OBJC_IVAR_$_CBLOAuth1Authorizer._token
+0x100695487 35 34 _OBJC_IVAR_$_CBL_OAConsumer.secret
+0x1006955c3 43 42 _OBJC_IVAR_$_CBL_OAMutableURLRequest.token
+0x100695641 36 35 _OBJC_IVAR_$_CBL_OAToken.attributes
+0x100695665 33 32 _OBJC_IVAR_$_CBL_OAToken.created
+0x100695686 34 33 _OBJC_IVAR_$_CBL_OAToken.duration
+0x1006956a8 36 35 _OBJC_IVAR_$_CBL_OAToken.forRenewal
+0x1006956cc 29 28 _OBJC_IVAR_$_CBL_OAToken.key
+0x1006956e9 35 34 _OBJC_IVAR_$_CBL_OAToken.renewable
+0x10069570c 32 31 _OBJC_IVAR_$_CBL_OAToken.secret
+0x10069572c 33 32 _OBJC_IVAR_$_CBL_OAToken.session
+0x10069574d 34 33 _OBJC_IVAR_$_CBL_OAToken.verifier
+0x100699ea6 40 39 _OBJC_METACLASS_$_CBLPasswordAuthorizer
+0x10069a320 37 36 _OBJC_METACLASS_$_CBLTokenAuthorizer
+0x10069a89e 30 29 _OBJC_METACLASS_$_CBL_OAToken
+0x10069b7f9 40 39 _OBJC_METACLASS_$_FlurryKeychainWrapper
+0x10069d660 37 36 _OBJC_METACLASS_$_JailbreakDetection
+0x10069d7c4 37 36 _OBJC_METACLASS_$_PDKeychainBindings
+0x10069d7e9 47 46 _OBJC_METACLASS_$_PDKeychainBindingsController
+0x10069ebfc 55 54 _OBJC_METACLASS_$__TtC7DVIA_v222KeychainViewController
+0x10069eff4 65 64 _OBJC_METACLASS_$__TtC7DVIA_v232JailbreakDetectionViewController
+0x1006a2c2e 27 26 _kFlurryKeychainIdentifier
+0x1006a2d73 32 31 _kFlurryWatchKeychainIdentifier
+0x1006a3e77 30 29 _register_unicodesn_tokenizer
+0x1006a3fb4 31 30 _sqlite3Fts3UnicodeSnTokenizer
+0x1006a5165 84 83 _$s10RealmSwift0A0V5write16withoutNotifying_ySaySo20RLMNotificationTokenCG_yyKXEtKF
+0x1006a5381 73 72 _$s10RealmSwift6ObjectC7observeySo20RLMNotificationTokenCyAA0C6ChangeOcF
+0x1006a7cc4 9 8 _CCCrypt
+0x1006a7ccd 17 16 _CCCryptorCreate
+0x1006a7cde 16 15 _CCCryptorFinal
+0x1006a7cee 26 25 _CCCryptorGetOutputLength
+0x1006a7d08 18 17 _CCCryptorRelease
+0x1006a7d1a 17 16 _CCCryptorUpdate
+0x1006a8cb0 32 31 _NSLinguisticTagSchemeTokenType
+0x1006a8ff4 44 43 _NSURLAuthenticationMethodClientCertificate
+0x1006a9dd0 35 34 _OBJC_CLASS_$_RLMNotificationToken
+0x1006aa674 19 18 _SSLSetCertificate
+0x1006aa753 24 23 _SecCertificateCopyData
+0x1006aa76b 29 28 _SecCertificateCopyPublicKey
+0x1006aa788 34 33 _SecCertificateCopySubjectSummary
+0x1006aa7aa 30 29 _SecCertificateCreateWithData
+0x1006aa7c8 25 24 _SecCertificateGetTypeID
+0x1006aa7e1 28 27 _SecIdentityCopyCertificate
+0x1006aa7fd 12 11 _SecItemAdd
+0x1006aa809 21 20 _SecItemCopyMatching
+0x1006aa81e 15 14 _SecItemDelete
+0x1006aa82d 15 14 _SecItemUpdate
+0x1006aa958 31 30 _SecTrustGetCertificateAtIndex
+0x1006aa977 29 28 _SecTrustGetCertificateCount
+0x1006aa994 31 30 _SecTrustSetAnchorCertificates
+0x1006aa9b3 35 34 _SecTrustSetAnchorCertificatesOnly
+0x1006ac26e 39 38 _kCFStreamSSLAllowsExpiredCertificates
+0x1006ac2b5 26 25 _kCFStreamSSLCertificates
+0x1006ac30e 39 38 _kCFStreamSSLValidatesCertificateChain
+0x1006ac40d 20 19 _kSecAttrAccessible
+0x1006ac421 50 49 _kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+0x1006ac453 32 31 _kSecAttrAccessibleWhenUnlocked
+0x1006ac473 17 16 _kSecAttrAccount
+0x1006ac484 24 23 _kSecAttrApplicationTag
+0x1006ac49c 22 21 _kSecAttrCreationDate
+0x1006ac4b2 21 20 _kSecAttrDescription
+0x1006ac4c7 17 16 _kSecAttrGeneric
+0x1006ac4d8 21 20 _kSecAttrIsPermanent
+0x1006ac4ed 18 17 _kSecAttrKeyClass
+0x1006ac4ff 24 23 _kSecAttrKeyClassPublic
+0x1006ac517 23 22 _kSecAttrKeySizeInBits
+0x1006ac52e 17 16 _kSecAttrKeyType
+0x1006ac53f 33 32 _kSecAttrKeyTypeECSECPrimeRandom
+0x1006ac560 20 19 _kSecAttrKeyTypeRSA
+0x1006ac574 15 14 _kSecAttrLabel
+0x1006ac583 26 25 _kSecAttrModificationDate
+0x1006ac59d 17 16 _kSecAttrService
+0x1006ac5b9 22 21 _kSecClassCertificate
+0x1006ac5cf 26 25 _kSecClassGenericPassword
+0x1006ac691 21 20 _kSecPrivateKeyAttrs
+0x1006ac6cd 22 21 _kSecReturnAttributes
+0x1006ac6e3 16 15 _kSecReturnData
+0x1006ac6f3 15 14 _kSecReturnRef
+0x1006bb039 56 55 +[RNDecryptor decryptData:withSettings:password:error:]
+0x1006bb071 74 73 ___55+[RNDecryptor decryptData:withSettings:password:error:]_block_invoke
+0x1006bb157 47 46 +[RNDecryptor decryptData:withPassword:error:]
+0x1006bb186 65 64 ___46+[RNDecryptor decryptData:withPassword:error:]_block_invoke
+0x1006bb287 41 40 -[RNDecryptor initWithPassword:handler:]
+0x1006bb455 24 23 -[RNDecryptor password]
+0x1006bb46d 28 27 -[RNDecryptor setPassword:]
+0x1006bdb13 65 64 +[YapDatabaseFullTextSearchSnippetOptions defaultNumberOfTokens]
+0x1006bdcaa 62 61 -[YapDatabaseFullTextSearchSnippetOptions setNumberOfTokens:]
+0x1006bde02 58 57 -[YapDatabaseFullTextSearchSnippetOptions numberOfTokens]
+0x1006cb893 57 56 -[RNOpenSSLEncryptor initWithSettings:password:handler:]
+0x1006ce1df 63 62 +[RNOpenSSLDecryptor decryptData:withSettings:password:error:]
+0x1006ce21e 81 80 ___62+[RNOpenSSLDecryptor decryptData:withSettings:password:error:]_block_invoke
+0x1006ce350 57 56 -[RNOpenSSLDecryptor initWithSettings:password:handler:]
+0x1006ce3c6 48 47 -[RNOpenSSLDecryptor initWithPassword:handler:]
+0x1006ce3f6 54 53 +[RNOpenSSLDecryptor decryptData:withPassword:error:]
+0x1006ce49c 31 30 -[RNOpenSSLDecryptor password]
+0x1006ce4bb 35 34 -[RNOpenSSLDecryptor setPassword:]
+0x1006d6121 44 43 -[PDKeychainBindingsController serviceName]
+0x1006d614d 46 45 -[PDKeychainBindingsController stringForKey:]
+0x1006d617b 52 51 -[PDKeychainBindingsController storeString:forKey:]
+0x1006d61af 65 64 +[PDKeychainBindingsController sharedKeychainBindingsController]
+0x1006d61f0 83 82 ___64+[PDKeychainBindingsController sharedKeychainBindingsController]_block_invoke
+0x1006d6243 49 48 -[PDKeychainBindingsController keychainBindings]
+0x1006d6274 39 38 -[PDKeychainBindingsController values]
+0x1006d629b 49 48 -[PDKeychainBindingsController valueForKeyPath:]
+0x1006d62cc 53 52 -[PDKeychainBindingsController setValue:forKeyPath:]
+0x1006d6301 46 45 -[PDKeychainBindingsController .cxx_destruct]
+0x1006d82a0 56 55 +[RNEncryptor encryptData:withSettings:password:error:]
+0x1006d82d8 74 73 ___55+[RNEncryptor encryptData:withSettings:password:error:]_block_invoke
+0x1006d8322 83 82 +[RNEncryptor encryptData:withSettings:password:IV:encryptionSalt:HMACSalt:error:]
+0x1006d8375 101 100 ___82+[RNEncryptor encryptData:withSettings:password:IV:encryptionSalt:HMACSalt:error:]_block_invoke
+0x1006d8599 50 49 -[RNEncryptor initWithSettings:password:handler:]
+0x1006d85cb 77 76 -[RNEncryptor initWithSettings:password:IV:encryptionSalt:HMACSalt:handler:]
+0x1006d8aed 35 34 +[JailbreakDetection isJailbroken]
+0x1006db642 43 42 +[RNCryptor keyForPassword:salt:settings:]
+0x1006dcd4d 45 44 +[PDKeychainBindings sharedKeychainBindings]
+0x1006dcd7a 36 35 -[PDKeychainBindings objectForKey:]
+0x1006dcd9e 40 39 -[PDKeychainBindings setObject:forKey:]
+0x1006dcdc6 40 39 -[PDKeychainBindings setString:forKey:]
+0x1006dcdee 42 41 -[PDKeychainBindings removeObjectForKey:]
+0x1006dce18 36 35 -[PDKeychainBindings stringForKey:]
+0x1006dd83b 75 74 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvpACTK
+0x1006dd886 75 74 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvpACTk
+0x1006dd8d1 80 79 _$s7DVIA_v238TransportLayerProtectionViewControllerC12isSSLPinningSbvM.resume.0
+0x1006dd921 81 80 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvpACTK
+0x1006dd972 81 80 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvpACTk
+0x1006dd9c3 86 85 _$s7DVIA_v238TransportLayerProtectionViewControllerC18isPublicKeyPinningSbvM.resume.0
+0x1006de0f4 83 82 _$s7DVIA_v238TransportLayerProtectionViewControllerC4send15usingSSLPinningyyp_tFTo
+0x1006de147 89 88 _$s7DVIA_v238TransportLayerProtectionViewControllerC4send21usingPublicKeyPinningyyp_tFTo
+0x1006df427 69 68 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV7everest_WZ
+0x1006df46c 64 63 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV2k2_WZ
+0x1006df4ac 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV13Kangchenjunga_WZ
+0x1006df4f8 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6Lhotse_WZ
+0x1006df53c 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6Makalu_WZ
+0x1006df580 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6ChoOyu_WZ
+0x1006df5c4 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV10Dhaulagiri_WZ
+0x1006df60d 65 64 _$s7DVIA_v232JailbreakDetectionViewControllerC11viewDidLoadyyFTo
+0x1006df64e 70 69 _$s7DVIA_v232JailbreakDetectionViewControllerC14viewWillAppearyySbFTo
+0x1006df694 98 97 _$s7DVIA_v232JailbreakDetectionViewControllerC7prepare3for6senderySo17UIStoryboardSegueC_ypSgtFTo
+0x1006df6f6 66 65 _$s7DVIA_v232JailbreakDetectionViewControllerC10menuTappedyyypFTo
+0x1006df738 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC17readArticleTappedyyypFTo
+0x1006df781 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest1TappedyyypFTo
+0x1006df7cd 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest2TappedyyypFTo
+0x1006df819 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest3TappedyyypFTo
+0x1006df922 85 84 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest4TappedyyypFyyScMYccfU_
+0x1006dfa82 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest4TappedyyypFTo
+0x1006dface 85 84 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest5TappedyyypFyyScMYccfU_
+0x1006dfb23 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC20jailbreakTest5TappedyyypFTo
+0x1006dfb6f 89 88 _$s7DVIA_v232JailbreakDetectionViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfcTo
+0x1006dfbc8 75 74 _$s7DVIA_v232JailbreakDetectionViewControllerC5coderACSgSo7NSCoderC_tcfcTo
+0x1006dfc13 51 50 _$s7DVIA_v232JailbreakDetectionViewControllerCfETo
+0x1006dff84 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvgTo
+0x1006dffd1 77 76 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvsTo
+0x1006e001e 79 78 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvpACTK
+0x1006e006d 79 78 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvpACTk
+0x1006e00bc 84 83 _$s7DVIA_v219RealmViewControllerC22realmPasswordTextFieldSo06UITextI0CSgvM.resume.0
+0x1006e0205 87 86 _$s10RealmSwift0A0V5write16withoutNotifying_ySaySo20RLMNotificationTokenCG_yyKXEtKFfA_
+0x1006e0345 31 30 _$sSo20RLMNotificationTokenCMa
+0x1006e0575 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvgTo
+0x1006e05bd 72 71 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvsTo
+0x1006e0605 74 73 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvpACTK
+0x1006e064f 74 73 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvpACTk
+0x1006e0699 79 78 _$s7DVIA_v219PListViewControllerC17passwordTextFieldSo06UITextH0CSgvM.resume.0
+0x1006e0f4d 68 67 _$s7DVIA_v214CookiePassword33_70476AE55730F26C74EE82FAB6B050B5LL_WZ
+0x1006e0f91 70 69 _$s7DVIA_v214CookiePassword33_70476AE55730F26C74EE82FAB6B050B5LLSSvau
+0x1006e11ff 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvgTo
+0x1006e1250 81 80 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvsTo
+0x1006e12a1 83 82 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvpACTK
+0x1006e12f4 83 82 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvpACTk
+0x1006e1347 88 87 _$s7DVIA_v221CookiesViewControllerC24cookiesPasswordTextFieldSo06UITextI0CSgvM.resume.0
+0x1006e21de 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvgTo
+0x1006e2229 75 74 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvsTo
+0x1006e2274 77 76 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvpACTK
+0x1006e22c1 77 76 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvpACTk
+0x1006e230e 82 81 _$s7DVIA_v222CoreDataViewControllerC17passwordTextFieldSo06UITextI0CSgvM.resume.0
+0x1006e44ab 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTo
+0x1006e4508 93 92 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTo
+0x1006e4565 95 94 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTK
+0x1006e45c4 95 94 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTk
+0x1006e4623 100 99 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM.resume.0
+0x1006e476f 83 82 _$s7DVIA_v240ApplicationPatchingDetailsViewControllerC19jailbreakTestTappedyyypFTo
+0x1006e7164 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTo
+0x1006e71c1 93 92 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTo
+0x1006e721e 95 94 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTK
+0x1006e727d 95 94 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTk
+0x1006e72dc 100 99 _$s7DVIA_v240RuntimeManipulationDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM.resume.0
+0x1006e92d2 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvgTo
+0x1006e931f 77 76 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvsTo
+0x1006e936c 79 78 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvpACTK
+0x1006e93bb 79 78 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvpACTk
+0x1006e940a 84 83 _$s7DVIA_v224DeviceLogsViewControllerC17passwordTextFieldSo06UITextI0CSgvM.resume.0
+0x1006eb110 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvgTo
+0x1006eb15b 75 74 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvsTo
+0x1006eb1a6 77 76 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvpACTK
+0x1006eb1f3 77 76 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvpACTk
+0x1006eb240 82 81 _$s7DVIA_v222KeychainViewControllerC17keychainTextFieldSo06UITextH0CSgvM.resume.0
+0x1006eb292 55 54 _$s7DVIA_v222KeychainViewControllerC11viewDidLoadyyFTo
+0x1006eb2c9 60 59 _$s7DVIA_v222KeychainViewControllerC06saveInC6TappedyyypFTo
+0x1006eb305 79 78 _$s7DVIA_v222KeychainViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfcTo
+0x1006eb354 65 64 _$s7DVIA_v222KeychainViewControllerC5coderACSgSo7NSCoderC_tcfcTo
+0x1006eb395 41 40 _$s7DVIA_v222KeychainViewControllerCfETo
+0x1006eb568 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvgTo
+0x1006eb5bb 83 82 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvsTo
+0x1006eb60e 85 84 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvpACTK
+0x1006eb663 85 84 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvpACTk
+0x1006eb6b8 90 89 _$s7DVIA_v227CouchbaseLiteViewControllerC17couchbasePasswordSo11UITextFieldCSgvM.resume.0
+0x1006ecef9 42 41 _$s7DVIA_v29RealmUserC8passwordSSSgvpACTK
+0x1006ecf23 42 41 _$s7DVIA_v29RealmUserC8passwordSSSgvpACTk
+0x1006ecf4d 47 46 _$s7DVIA_v29RealmUserC8passwordSSSgvM.resume.0
+0x1006edb43 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvgTo
+0x1006edbaf 108 107 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvsTo
+0x1006edc1b 110 109 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvpACTK
+0x1006edc89 110 109 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvpACTk
+0x1006edcf7 115 114 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextM0CSgvM.resume.0
+0x1006edd6a 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvgTo
+0x1006eddc9 95 94 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvsTo
+0x1006ede28 97 96 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvpACTK
+0x1006ede89 97 96 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvpACTk
+0x1006edeea 102 101 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC17passwordTextFieldSo06UITextK0CSgvM.resume.0
+0x1006ee305 154 153 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itFs5Int32VSpys5UInt8VGXEfU_
+0x1006ee39f 156 155 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itFs5Int32VSpys5UInt8VGXEfU_TA
+0x1006ee43b 167 166 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itFs5Int32VSpys5UInt8VGXEfU_ANSPyAPGXEfU_
+0x1006eeb19 169 168 _$s7DVIA_v242BrokenCryptographyPinDetailsViewControllerC6pbkdf28password4salt12keyByteCount6rounds10Foundation4DataVSgSS_AKS2itFs5Int32VSpys5UInt8VGXEfU_ANSPyAPGXEfU_TA
+0x1006f13f5 68 67 _$sSo17OS_dispatch_queueC8DispatchE10AttributesVAEs10SetAlgebraACWl
+0x1006f168c 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvgTo
+0x1006f16d9 77 76 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvsTo
+0x1006f1726 79 78 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvpACTK
+0x1006f1775 79 78 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvpACTk
+0x1006f17c4 84 83 _$s7DVIA_v225YapDatabaseViewControllerC03yapD8PasswordSo11UITextFieldCSgvM.resume.0
+0x1006f24f0 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvgTo
+0x1006f254c 92 91 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvsTo
+0x1006f25a8 94 93 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTK
+0x1006f2606 94 93 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvpACTk
+0x1006f2664 99 98 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC17passwordTextFieldSo06UITextJ0CSgvM.resume.0
+0x1006f2a7f 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvgTo
+0x1006f2ae8 105 104 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvsTo
+0x1006f2b51 107 106 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvpACTK
+0x1006f2bbc 107 106 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvpACTk
+0x1006f2c27 112 111 _$s7DVIA_v239BrokenCryptographyDetailsViewControllerC30returningUserPasswordTextFieldSo06UITextL0CSgvM.resume.0
+0x1006faf73 47 46 -[CBLOpenIDConnectAuthorizer parseTokensFrom:]
+0x1006fb1db 61 60 +[CBLOpenIDConnectAuthorizer forgetIDTokensForServer:error:]
+0x1006fb218 49 48 -[CBLOpenIDConnectAuthorizer keychainAttributes]
+0x1006fb249 41 40 -[CBLOpenIDConnectAuthorizer loadTokens]
+0x1006fb272 48 47 -[CBLOpenIDConnectAuthorizer saveTokens:error:]
+0x1006fb2a2 44 43 -[CBLOpenIDConnectAuthorizer _deleteTokens]
+0x1006fb2ce 44 43 -[CBLOpenIDConnectAuthorizer deleteTokens:]
+0x1006fcae4 44 43 -[CBLClientCertAuthorizer certificateChain]
+0x1006fccfb 57 56 +[CBLAuthenticator basicAuthenticatorWithName:password:]
+0x1006fcd34 52 51 +[CBLAuthenticator facebookAuthenticatorWithToken:]
+0x1006fcd9f 105 104 +[CBLAuthenticator OAuth1AuthenticatorWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:]
+0x1007002a3 64 63 +[CBLFacebookAuthorizer registerToken:forEmailAddress:forSite:]
+0x1007002e3 31 30 -[CBLFacebookAuthorizer token]
+0x10070034f 93 92 -[CBLOAuth1Authorizer initWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:]
+0x100700422 58 57 -[OAHMAC_SHA1SignatureProvider signClearText:withSecret:]
+0x100700519 45 44 -[CBLPasswordAuthorizer initWithCredential:]
+0x100700546 48 47 -[CBLPasswordAuthorizer initWithUser:password:]
+0x100700576 38 37 -[CBLPasswordAuthorizer initWithURL:]
+0x10070059c 37 36 -[CBLPasswordAuthorizer description]
+0x1007005c1 34 33 -[CBLPasswordAuthorizer username]
+0x1007005e3 44 43 -[CBLPasswordAuthorizer basicAuthorization]
+0x10070060f 46 45 -[CBLPasswordAuthorizer authorizeURLRequest:]
+0x10070063d 50 49 -[CBLPasswordAuthorizer removeStoredCredentials:]
+0x10070066f 36 35 -[CBLPasswordAuthorizer credential]
+0x100700693 39 38 -[CBLPasswordAuthorizer .cxx_destruct]
+0x1007083d8 36 35 -[CBLReplication serverCertificate]
+0x100708ddd 73 72 -[CBLSyncListenerImpl checkClientCertificateAuthentication:fromAddress:]
+0x10070957f 33 32 -[CBLSyncListener setPasswords:]
+0x10070b0db 49 48 -[CBLSymmetricKey initWithPassword:salt:rounds:]
+0x10070b10c 37 36 -[CBLSymmetricKey initWithPassword:]
+0x10070b131 42 41 -[CBLSymmetricKey initWithKeyOrPassword:]
+0x10070b15b 52 51 -[CBLSymmetricKey initWithKeychainItemNamed:error:]
+0x10070b18f 50 49 +[CBLSymmetricKey deleteKeychainItemNamed:error:]
+0x10070b1dc 48 47 -[CBLSymmetricKey saveKeychainItemNamed:error:]
+0x10070ca42 38 37 -[CBL_OAConsumer initWithKey:secret:]
+0x10070caf2 25 24 -[CBL_OAConsumer secret]
+0x10070cb0b 29 28 -[CBL_OAConsumer setSecret:]
+0x10070d186 29 28 -[CBLListener setPasswords:]
+0x10070d1a3 32 31 -[CBLListener passwordForUser:]
+0x10070d255 42 41 -[CBLListener SSLIdentityAndCertificates]
+0x10070d31d 36 35 -[CBLListener SSLExtraCertificates]
+0x10070d341 40 39 -[CBLListener setSSLExtraCertificates:]
+0x10070e741 79 78 -[CBL_OAMutableURLRequest initWithURL:consumer:token:realm:signatureProvider:]
+0x10070e790 95 94 -[CBL_OAMutableURLRequest initWithURL:consumer:token:realm:signatureProvider:nonce:timestamp:]
+0x10070f2ee 62 61 -[CBL_OAPlaintextSignatureProvider signClearText:withSecret:]
+0x10070f616 20 19 -[CBL_OAToken init]
+0x10070f62a 35 34 -[CBL_OAToken initWithKey:secret:]
+0x10070f64d 81 80 -[CBL_OAToken initWithKey:secret:session:duration:attributes:created:renewable:]
+0x10070f69e 30 29 -[CBL_OAToken initWithCoder:]
+0x10070f6bc 41 40 -[CBL_OAToken initWithHTTPResponseBody:]
+0x10070f6e5 68 67 -[CBL_OAToken initWithUserDefaultsUsingServiceProviderName:prefix:]
+0x10070f729 23 22 -[CBL_OAToken dealloc]
+0x10070f740 23 22 -[CBL_OAToken isValid]
+0x10070f757 66 65 -[CBL_OAToken storeInUserDefaultsWithServiceProviderName:prefix:]
+0x10070f799 32 31 -[CBL_OAToken encodeWithCoder:]
+0x10070f7b9 38 37 -[CBL_OAToken setDurationWithString:]
+0x10070f7df 26 25 -[CBL_OAToken hasExpired]
+0x10070f7f9 27 26 -[CBL_OAToken isRenewable]
+0x10070f814 35 34 -[CBL_OAToken setAttribute:value:]
+0x10070f837 30 29 -[CBL_OAToken setAttributes:]
+0x10070f855 29 28 -[CBL_OAToken hasAttributes]
+0x10070f872 31 30 -[CBL_OAToken attributeString]
+0x10070f891 26 25 -[CBL_OAToken attribute:]
+0x10070f8ab 40 39 -[CBL_OAToken setAttributesWithString:]
+0x10070f8d3 26 25 -[CBL_OAToken parameters]
+0x10070f8ed 24 23 -[CBL_OAToken isEqual:]
+0x10070f905 31 30 -[CBL_OAToken isEqualToToken:]
+0x10070f924 44 43 +[CBL_OAToken settingsKey:provider:prefix:]
+0x10070f950 44 43 +[CBL_OAToken loadSetting:provider:prefix:]
+0x10070f97c 51 50 +[CBL_OAToken saveSetting:object:provider:prefix:]
+0x10070f9af 69 68 +[CBL_OAToken removeFromUserDefaultsWithServiceProviderName:prefix:]
+0x10070f9f4 35 34 +[CBL_OAToken durationWithString:]
+0x10070fa17 37 36 +[CBL_OAToken attributesWithString:]
+0x10070fa3c 27 26 -[CBL_OAToken description]
+0x10070fa57 19 18 -[CBL_OAToken key]
+0x10070fa6a 23 22 -[CBL_OAToken setKey:]
+0x10070fa81 22 21 -[CBL_OAToken secret]
+0x10070fa97 26 25 -[CBL_OAToken setSecret:]
+0x10070fab1 23 22 -[CBL_OAToken session]
+0x10070fac8 27 26 -[CBL_OAToken setSession:]
+0x10070fae3 24 23 -[CBL_OAToken duration]
+0x10070fafb 28 27 -[CBL_OAToken setDuration:]
+0x10070fb17 24 23 -[CBL_OAToken verifier]
+0x10070fb2f 28 27 -[CBL_OAToken setVerifier:]
+0x10070fb4b 26 25 -[CBL_OAToken attributes]
+0x10070fb65 28 27 -[CBL_OAToken isForRenewal]
+0x10070fb81 30 29 -[CBL_OAToken setForRenewal:]
+0x100712044 56 55 -[CBLTokenAuthorizer initWithLoginPath:postParameters:]
+0x10071207c 35 34 -[CBLTokenAuthorizer loginRequest]
+0x10071209f 36 35 -[CBLTokenAuthorizer .cxx_destruct]
+0x10071419e 74 73 -[BLIPPocketSocketListener acceptOnInterface:port:SSLCertificates:error:]
+0x10071434b 42 41 -[BLIPPocketSocketListener setPasswords:]
+0x100714375 45 44 -[BLIPPocketSocketListener passwordForUser:]
+0x1007143a2 62 61 +[BLIPPocketSocketListener fromRequest:getUsername:password:]
+0x100714416 78 77 -[BLIPPocketSocketListener checkClientCertificateAuthentication:fromAddress:]
+0x1007161be 37 36 -[PSWebSocket SSLClientCertificates]
+0x1007161e3 41 40 -[PSWebSocket setSSLClientCertificates:]
+0x100716e97 58 57 +[PSWebSocketServer serverWithHost:port:SSLCertificates:]
+0x100716ed1 56 55 -[PSWebSocketServer initWithHost:port:SSLCertificates:]
+0x10071c14a 49 48 -[CBL_HTTPConnection sslIdentityAndCertificates]
+0x10071c1ad 43 42 -[CBL_HTTPConnection isPasswordProtected:]
+0x10071c228 39 38 -[CBL_HTTPConnection passwordForUser:]
+0x10071ee6b 42 41 -[CBLHTTPConnection isPasswordProtected:]
+0x10071eee3 38 37 -[CBLHTTPConnection passwordForUser:]
+0x10071ef2d 48 47 -[CBLHTTPConnection sslIdentityAndCertificates]
+0x10071ff6d 47 46 -[CBL_Router(Handlers) do_POST_facebook_token]
+0x10072bf15 22 21 +[FlurryWatch apiKey]
+0x10072bf2b 40 39 ___21+[FlurryWatch apiKey]_block_invoke
+0x10072cdc6 51 50 -[FlurryReportingSource startReportingWithApiKey:]
+0x10072cdf9 69 68 ___50-[FlurryReportingSource startReportingWithApiKey:]_block_invoke
+0x10072ce3e 61 60 -[FlurryReportingSource startBackgroundReportingWithApiKey:]
+0x10072ce7b 79 78 ___60-[FlurryReportingSource startBackgroundReportingWithApiKey:]_block_invoke
+0x10072d4b4 87 86 -[FlurryReportingSource onqueue_createInitialTimestampIfNeededWithApiKey:startUpTime:]
+0x10072d50b 69 68 +[FlurryReportingSource initialTimestampWithApiKey:withStartUpTime:]
+0x10072d550 60 59 +[FlurryReportingSource initialTimestampFilePathForAPIKey:]
+0x10072d58c 84 83 +[FlurryReportingSource oldInitialTimestampFilePathUptilAgentVersion109WithAPIKey:]
+0x100730262 52 51 -[FlurrySessionInfoDataProvider startUpWithApiKey:]
+0x100730296 70 69 ___51-[FlurrySessionInfoDataProvider startUpWithApiKey:]_block_invoke
+0x100730364 60 59 -[FlurrySessionInfoDataProvider onqueue_startUpWithApiKey:]
+0x100730626 40 39 -[FlurrySessionInfoDataProvider apiKey]
+0x10073064e 44 43 -[FlurrySessionInfoDataProvider setApiKey:]
+0x100731ea3 119 118 -[FlurrySessionInitInfo initWithAgentPlatform:agentVersion:apiKey:agentReportType:includeBackgroundSessionsInMetrics:]
+0x100731f1a 130 129 +[FlurrySessionInitInfo sessionInitInfoWithAgentPlatform:agentVersion:apiKey:agentReportType:includeBackgroundSessionsInMetrics:]
+0x100732074 32 31 -[FlurrySessionInitInfo apiKey]
+0x100732094 36 35 -[FlurrySessionInitInfo setApiKey:]
+0x100733039 119 118 -[FlurrySessionInfoData initWithApiKey:agentPlatform:agentVersion:agentReportType:includeBackgroundSessionsInMetrics:]
+0x1007330b0 119 118 +[FlurrySessionInfoData dataWithApiKey:agentPlatform:agentVersion:agentReportType:includeBackgroundSessionsInMetrics:]
+0x100733167 32 31 -[FlurrySessionInfoData apiKey]
+0x100733187 36 35 -[FlurrySessionInfoData setApiKey:]
+0x1007398c2 56 55 +[FlurryKeychainWrapper keychainWrapperWithIdentifier:]
+0x1007398fa 45 44 -[FlurryKeychainWrapper initWithIdentifier:]
+0x100739927 44 43 -[FlurryKeychainWrapper setupSearchForKey:]
+0x100739953 37 36 -[FlurryKeychainWrapper dataForKey:]
+0x100739978 39 38 -[FlurryKeychainWrapper stringForKey:]
+0x10073999f 43 42 -[FlurryKeychainWrapper setObject:forKey:]
+0x1007399ca 53 52 -[FlurryKeychainWrapper setThisDeviceObject:forKey:]
+0x1007399ff 47 46 -[FlurryKeychainWrapper objectForKey:ofClass:]
+0x100739a2e 43 42 -[FlurryKeychainWrapper setString:forKey:]
+0x100739a59 53 52 -[FlurryKeychainWrapper setThisDeviceString:forKey:]
+0x100739a8e 41 40 -[FlurryKeychainWrapper setData:forKey:]
+0x100739ab7 51 50 -[FlurryKeychainWrapper setThisDeviceData:forKey:]
+0x100739aea 49 48 -[FlurryKeychainWrapper updateValueData:forKey:]
+0x100739b1b 45 44 -[FlurryKeychainWrapper removeObjectForKey:]
+0x100739b48 36 35 -[FlurryKeychainWrapper identifier]
+0x100739b6c 40 39 -[FlurryKeychainWrapper setIdentifier:]
+0x100739b94 39 38 -[FlurryKeychainWrapper .cxx_destruct]
+0x10074240b 26 25 +[Flurry setDeviceToken:]
+0x100742cda 17 16 +[Flurry apiKey]
+0x10074a010 62 61 -[FlurryStreamMessagingInfo initWithDeviceToken:pushEnabled:]
+0x10074a04e 71 70 +[FlurryStreamMessagingInfo messagingInfoWithDeviceToken:pushEnabled:]
+0x10074a156 41 40 -[FlurryStreamMessagingInfo deviceToken]
+0x10074a17f 45 44 -[FlurryStreamMessagingInfo setDeviceToken:]
+0x10074eaa5 62 61 -[FlurryMessagingInfoData initWithDeviceToken:isPushEnabled:]
+0x10074eb07 62 61 +[FlurryMessagingInfoData dataWithDeviceToken:isPushEnabled:]
+0x10074eb45 39 38 -[FlurryMessagingInfoData deviceToken]
+0x10074eb6c 43 42 -[FlurryMessagingInfoData setDeviceToken:]
+0x100753ee7 51 50 -[FlurryMessagingInfoDataProvider setDeviceToken:]
+0x100753f1a 69 68 ___50-[FlurryMessagingInfoDataProvider setDeviceToken:]_block_invoke
+0x100754100 59 58 -[FlurryMessagingInfoDataProvider onqueue_setDeviceToken:]
+0x1007541a9 53 52 -[FlurryMessagingInfoDataProvider notificationToken]
+0x1007541de 57 56 -[FlurryMessagingInfoDataProvider setNotificationToken:]
+0x10075f74c 36 35 _objc_msgSend$defaultNumberOfTokens
+0x1007634ca 40 39 _objc_msgSend$initWithPassword:handler:
+0x10076392c 76 75 _objc_msgSend$initWithSettings:password:IV:encryptionSalt:HMACSalt:handler:
+0x100763978 49 48 _objc_msgSend$initWithSettings:password:handler:
+0x100764322 44 43 _objc_msgSend$keyForPassword:salt:settings:
+0x10076434e 31 30 _objc_msgSend$keychainBindings
+0x100765314 29 28 _objc_msgSend$numberOfTokens
+0x1007659a8 23 22 _objc_msgSend$password
+0x100768355 27 26 _objc_msgSend$setPassword:
+0x1007687b4 47 46 _objc_msgSend$sharedKeychainBindingsController
+0x10076c29d 26 25 _kRNCryptorAES256Settings
+0x10076c2b7 26 25 _kRNCryptorAES256Settings
+0x10076cb2a 26 25 _kRNCryptorAES256Settings
+0x100771d7b 60 59 _symbolic _____ 7DVIA_v232JailbreakDetectionViewControllerC
+0x100771ddd 71 70 _symbolic _____ 7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV
+0x1007731d9 50 49 _symbolic _____ 7DVIA_v222KeychainViewControllerC
+0x100773ec9 49 48 _$s7DVIA_v232JailbreakDetectionViewControllerCMF
+0x100773efa 60 59 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVMF
+0x100774527 39 38 _$s7DVIA_v222KeychainViewControllerCMF
+0x100777a15 60 59 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsVMf
+0x10077b5e0 38 37 _sqlite3Fts3UnicodeSnTokenizer.module
+0x100784d3a 52 51 __OBJC_$_CLASS_METHODS_PDKeychainBindingsController
+0x100784d6e 51 50 __OBJC_METACLASS_RO_$_PDKeychainBindingsController
+0x100784da1 55 54 __OBJC_$_INSTANCE_METHODS_PDKeychainBindingsController
+0x100784dd8 57 56 __OBJC_$_INSTANCE_VARIABLES_PDKeychainBindingsController
+0x100784e11 47 46 __OBJC_CLASS_RO_$_PDKeychainBindingsController
+0x100785ef4 42 41 __OBJC_$_CLASS_METHODS_JailbreakDetection
+0x100785f1e 41 40 __OBJC_METACLASS_RO_$_JailbreakDetection
+0x100785f47 37 36 __OBJC_CLASS_RO_$_JailbreakDetection
+0x1007874e1 42 41 __OBJC_$_CLASS_METHODS_PDKeychainBindings
+0x10078750b 41 40 __OBJC_METACLASS_RO_$_PDKeychainBindings
+0x100787534 45 44 __OBJC_$_INSTANCE_METHODS_PDKeychainBindings
+0x100787561 37 36 __OBJC_CLASS_RO_$_PDKeychainBindings
+0x1007879c5 64 63 __METACLASS_DATA__TtC7DVIA_v232JailbreakDetectionViewController
+0x100787a05 55 54 __IVARS__TtC7DVIA_v232JailbreakDetectionViewController
+0x100788a54 54 53 __METACLASS_DATA__TtC7DVIA_v222KeychainViewController
+0x100788a8a 45 44 __IVARS__TtC7DVIA_v222KeychainViewController
+0x100788ab7 50 49 __PROPERTIES__TtC7DVIA_v222KeychainViewController
+0x10079156b 45 44 __OBJC_$_CLASS_METHODS_FlurryKeychainWrapper
+0x100791598 44 43 __OBJC_METACLASS_RO_$_FlurryKeychainWrapper
+0x1007915c4 48 47 __OBJC_$_INSTANCE_METHODS_FlurryKeychainWrapper
+0x1007915f4 50 49 __OBJC_$_INSTANCE_VARIABLES_FlurryKeychainWrapper
+0x100791626 41 40 __OBJC_$_PROP_LIST_FlurryKeychainWrapper
+0x10079164f 40 39 __OBJC_CLASS_RO_$_FlurryKeychainWrapper
+0x10079e5e1 35 34 _OBJC_IVAR_$_RNDecryptor._password
+0x10079ea04 68 67 _OBJC_IVAR_$_YapDatabaseFullTextSearchSnippetOptions.numberOfTokens
+0x1007a0fc7 42 41 _OBJC_IVAR_$_RNOpenSSLDecryptor._password
+0x1007a1368 60 59 _OBJC_IVAR_$_PDKeychainBindingsController._keychainBindings
+0x1007a13a4 55 54 _OBJC_IVAR_$_PDKeychainBindingsController._valueBuffer
+0x1007a3bfe 49 48 _OBJC_IVAR_$_CBLOpenIDConnectAuthorizer._IDToken
+0x1007a3c2f 54 53 _OBJC_IVAR_$_CBLOpenIDConnectAuthorizer._refreshToken
+0x1007a3d03 55 54 _OBJC_IVAR_$_CBLOpenIDConnectAuthorizer._checkedTokens
+0x1007a43a2 55 54 _OBJC_IVAR_$_CBLClientCertAuthorizer._certificateChain
+0x1007a5057 47 46 _OBJC_IVAR_$_CBLPasswordAuthorizer._credential
+0x1007a5086 55 54 _OBJC_IVAR_$_CBLPasswordAuthorizer._basicAuthorization
+0x1007a66f6 47 46 _OBJC_IVAR_$_CBLReplication._serverCertificate
+0x1007a80bc 36 35 _OBJC_IVAR_$_CBLListener._passwords
+0x1007a812a 47 46 _OBJC_IVAR_$_CBLListener._SSLExtraCertificates
+0x1007a8b47 43 42 _OBJC_IVAR_$_CBLTokenAuthorizer._loginPath
+0x1007a8b72 45 44 _OBJC_IVAR_$_CBLTokenAuthorizer._loginParams
+0x1007a9174 49 48 _OBJC_IVAR_$_BLIPPocketSocketListener._passwords
+0x1007a975d 48 47 _OBJC_IVAR_$_PSWebSocket._SSLClientCertificates
+0x1007a9f87 48 47 _OBJC_IVAR_$_PSWebSocketServer._SSLCertificates
+0x1007ad331 51 50 _OBJC_IVAR_$_FlurrySessionInfoDataProvider._apiKey
+0x1007ad7f3 43 42 _OBJC_IVAR_$_FlurrySessionInitInfo._apiKey
+0x1007adb97 43 42 _OBJC_IVAR_$_FlurrySessionInfoData._apiKey
+0x1007aec6a 46 45 _OBJC_IVAR_$_FlurryKeychainWrapper.identifier
+0x1007b142e 52 51 _OBJC_IVAR_$_FlurryStreamMessagingInfo._deviceToken
+0x1007b251d 50 49 _OBJC_IVAR_$_FlurryMessagingInfoData._deviceToken
+0x1007b368e 64 63 _OBJC_IVAR_$_FlurryMessagingInfoDataProvider._notificationToken
+0x1007b51f6 66 65 __INSTANCE_METHODS__TtC7DVIA_v232JailbreakDetectionViewController
+0x1007b5238 54 53 __DATA__TtC7DVIA_v232JailbreakDetectionViewController
+0x1007b526e 49 48 _$s7DVIA_v232JailbreakDetectionViewControllerCMf
+0x1007b613b 56 55 __INSTANCE_METHODS__TtC7DVIA_v222KeychainViewController
+0x1007b6173 44 43 __DATA__TtC7DVIA_v222KeychainViewController
+0x1007b619f 39 38 _$s7DVIA_v222KeychainViewControllerCMf
+0x1007b809f 31 30 _$sSo20RLMNotificationTokenCML
+0x1007b946a 68 67 _$sSo17OS_dispatch_queueC8DispatchE10AttributesVAEs10SetAlgebraACWL
+0x1007ba8d5 27 26 _initialize.DDLogOnceToken
+0x1007ba95d 37 36 _sharedInstance.DDTTYLoggerOnceToken
+0x1007ba9c1 37 36 _sharedInstance.DDASLLoggerOnceToken
+0x1007baa32 22 21 _initialize.onceToken
+0x1007baa92 44 43 _sharedKeychainBindingsController.onceQueue
+0x1007baafb 27 26 _applicationName.onceToken
+0x1007bab4d 69 68 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV7everest_Wz
+0x1007bab92 64 63 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV2k2_Wz
+0x1007babd2 76 75 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV13Kangchenjunga_Wz
+0x1007bac1e 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6Lhotse_Wz
+0x1007bac62 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6Makalu_Wz
+0x1007baca6 68 67 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV6ChoOyu_Wz
+0x1007bacea 73 72 _$s7DVIA_v232JailbreakDetectionViewControllerC9ConstantsV10Dhaulagiri_Wz
+0x1007bae52 68 67 _$s7DVIA_v214CookiePassword33_70476AE55730F26C74EE82FAB6B050B5LL_Wz
+0x1007bae96 69 68 _$s7DVIA_v214CookiePassword33_70476AE55730F26C74EE82FAB6B050B5LLSSvp
+0x1007bbb2c 34 33 _asCanonicalJSON:error:.onceToken
+0x1007bbbab 27 26 _userAgentHeader.onceToken
+0x1007bbbc6 23 22 _InitLogging.onceToken
+0x1007bbbdd 23 22 _loggingMode.onceToken
+0x1007bbc7c 36 35 _ShouldCompressAttachment.onceToken
+0x1007bbca0 19 18 _sRegisteredTokens
+0x1007bbce6 33 32 _initializeReduceFuncs.onceToken
+0x1007bbd42 26 25 _sharedInstance.onceToken
+0x1007bbd67 26 25 _sharedInstance.onceToken
+0x1007bbd92 26 25 _sharedInstance.onceToken
+0x1007bbe09 39 38 _CBLQueryRowValueIsEntireDoc.onceToken
+0x1007bbe91 23 22 _readCString.onceToken
+0x1007bbefe 33 32 _CBLCollateJSONLimited.onceToken
+0x1007bbf65 51 50 _openInDirectory:readOnly:manager:error:.onceToken
+0x1007bbfeb 22 21 _initialize.onceToken
+0x1007bc033 25 24 _dateAsString:.onceToken
+0x1007bc296 18 17 _apiKey.predicate
+0x1007bc2a8 9 8 _gApiKey
+0x1007bc302 16 15 _util.onceToken
+0x1007bc332 26 25 _sharedInstance.onceToken
+0x1007bc360 25 24 _callbackQueue.onceToken
+0x1007bc3af 26 25 _sharedInstance.onceToken
+0x1007bc3c9 25 24 _startMonitor:.onceToken
+0x1007bc3f3 22 21 _initialize.onceToken
+0x1007bc42e 19 18 _manager.onceToken
+0x1007bc463 23 22 _getInstance.onceToken
+0x1007bc47a 26 25 _setupSwizzling.onceToken
+0x1007bc4ad 29 28 _tealDownSwizzling.onceToken
+0x1007bc514 23 22 _getInstance.onceToken
+0x1007bc52b 32 31 _hookUIViewController.onceToken
+0x1007bc556 19 18 _dataKey.onceToken
+0x1007bc582 26 25 _sharedInstance.onceToken
+0x1007bc5d1 34 33 _userPropertiesDropRule.onceToken
+0x1007bc62a 25 24 _allFrameTypes.onceToken
+0x1007bc66b 33 32 _frameTypeToModelClass.onceToken
+0x1007bc6b3 28 27 _classToFrameType.onceToken
+0x1007bc6df 25 24 _onceTokenFlurryGDPRUtil
+0x1007bc6f8 16 15 _load.onceToken
+0x1007bc71f 23 22 _getInstance.onceToken
+0x1007bc736 24 23 _reportFullyDrawn.token
+0x1007bc783 30 29 _getCarrierInstance.onceToken
+0x1007bc7a1 26 25 _sharedInstance.onceToken
+0x1007bc80c 26 25 _sharedInstance.onceToken
+0x1007bc826 26 25 _sharedInstance.onceToken
+0x1007bc8aa 14 13 _flurryApiKey
+0x1007bc8ce 39 38 _applicationWillResignActive.onceToken
+0x1007bc918 46 45 _setLaunchOptionsForPushOpenLaunch:.onceToken
+0x1007bc946 38 37 _applicationDidBecomeActive.onceToken
+0x1007bc97d 44 43 _logStandardEvent:withParameters:.onceToken
+0x1007bc9a9 16 15 _load.onceToken
+0x1007bc9db 35 34 _crashReportDataProvider.onceToken
+0x1007bc9fe 26 25 _startCapturing.onceToken
+0x1007bca3a 26 25 _sharedInstance.onceToken
+0x1007bca8c 35 34 _isPushNotificationEvent.onceToken
+0x1007bcacd 25 24 _crashReporter.onceToken
+0x1007bcb03 26 25 _sharedInstance.onceToken
+0x1007bcb9b 44 43 _sharedInstance.onceTokenFlurryLocationUtil
+0x1007bcbc7 56 55 _createLocationManagerIfNeeded.onceTokenLocationManager
+0x1007bcc18 42 41 _transactionResultArrayInstance.onceToken
+0x1007bcc90 26 25 _sharedInstance.onceToken
+0x1007bccaa 19 18 _manager.onceToken
+0x1007bccfc 78 77 _refreshFlushStatusForMessage:prependingMessages:appendingMessages:.onceToken
+0x1007bcd69 33 32 _purgeTVOSUserDefaults.onceToken
+0x1007bce1a 28 27 _buildEnvironment.onceToken
+0x1007bce7d 26 25 _sharedInstance.onceToken
+0x1007bceed 26 25 _sharedInstance.onceToken
+0x1007bcf07 57 56 _checkIAdCampaignAttributionWithHitParameters:.onceToken
+0x1007bcf40 61 60 _checkIAdCampaignAttributionWithHitParameters:.onceToken.316
+0x1007bcf9c 36 35 _kNumChanges_block_invoke.onceToken
+0x1007bd01f 26 25 _sharedInstance.onceToken
+0x1007bd059 33 32 _databaseDirectoryPath.onceToken
+0x1007bd101 23 22 _cacheBuster.onceToken
+0x1007c310f 86 85 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/DVIA-v2/Vendor/PDKeychainBindings/
+0x1007c3165 31 30 PDKeychainBindingsController.m
+0x1007c3184 223 222 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Intermediates.noindex/DVIA-v2.build/Debug-iphoneos/DVIA-v2.build/Objects-normal/arm64/PDKeychainBindingsController.o
+0x1007c4247 116 115 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Jailbreak Detection/Objective-C Methods/
+0x1007c42bb 21 20 JailbreakDetection.m
+0x1007c42d0 213 212 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Intermediates.noindex/DVIA-v2.build/Debug-iphoneos/DVIA-v2.build/Objects-normal/arm64/JailbreakDetection.o
+0x1007c587a 86 85 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/DVIA-v2/Vendor/PDKeychainBindings/
+0x1007c58d0 21 20 PDKeychainBindings.m
+0x1007c58e5 213 212 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Intermediates.noindex/DVIA-v2.build/Debug-iphoneos/DVIA-v2.build/Objects-normal/arm64/PDKeychainBindings.o
+0x1007c5df7 107 106 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/DVIA-v2/Vulnerabilities/Jailbreak Detection/Controller/
+0x1007c5e62 39 38 JailbreakDetectionViewController.swift
+0x1007c5e89 227 226 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Intermediates.noindex/DVIA-v2.build/Debug-iphoneos/DVIA-v2.build/Objects-normal/arm64/JailbreakDetectionViewController.o
+0x1007c87b4 29 28 KeychainViewController.swift
+0x1007c87d1 217 216 /Users/PrateekGianchandani/Library/Developer/Xcode/DerivedData/DVIA-v2-dgvndnxqpyzdundlpvzjuxemnebv/Build/Intermediates.noindex/DVIA-v2.build/Debug-iphoneos/DVIA-v2.build/Objects-normal/arm64/KeychainViewController.o
+0x1007d1438 10 9 OAToken.m
+0x1007d1442 124 123 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/Pods/couchbase-lite-ios/CouchbaseLite.framework/CouchbaseLite(OAToken.o)
+0x1007d25f9 21 20 CBLTokenAuthorizer.m
+0x1007d260e 135 134 /Users/PrateekGianchandani/Desktop/DVIA-v2/DVIA-v2/Pods/couchbase-lite-ios/CouchbaseLite.framework/CouchbaseLite(CBLTokenAuthorizer.o)
+0x1007e8b3d 400 399 <?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>application-identifier</key>\n\t<string>UAVZNE8PJA.com.highaltitudehacks.DVIAswiftv2</string>\n\t<key>com.apple.developer.team-identifier</key>\n\t<string>UAVZNE8PJA</string>\n\t<key>get-task-allow</key>\n\t<true/>\n</dict>\n</plist>\n
+0x1007e9054 44 43 (http://ocsp.apple.com/ocsp03-applerootca0.
+0x1007e9090 31 30 http://crl.apple.com/root.crl0
+0x1007e94c9 32 31 https://www.apple.com/appleca/0
+0x1007e94fa 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0\r
+0x1007e999f 37 36 !http://certs.apple.com/wwdrg3.der01
+0x1007e99ce 40 39 %http://ocsp.apple.com/ocsp03-wwdrg3040
+0x1007e9a2a 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.07
+0x1007e9aea 46 45 +https://www.apple.com/certificateauthority/0
+0x1007e9e03 281 280 <?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>cdhashes</key>\n\t<array>\n\t\t<data>\n\t\tqFFxC2nvdfjsEhwzf+h9jqfqBtI=\n\t\t</data>\n\t</array>\n</dict>\n</plist>\n0\r

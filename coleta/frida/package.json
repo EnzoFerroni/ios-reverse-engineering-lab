@@ -1,0 +1,17 @@
+{
+  "name": "frida",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cripto_observa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "frida-compile": "^19.0.5",
+    "frida-objc-bridge": "^8.0.6"
+  }
+}

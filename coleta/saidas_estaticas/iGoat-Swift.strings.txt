@@ -1,0 +1,298 @@
+0x1001dc520 19 18 KeychainExerciseVC
+0x1001dcf60 14 13 KeychainError
+0x1001dcf90 21 20 KeychainPasswordItem
+0x1001df7da 1074 953 uUiIaeiabiataţieaaţiaauaiuaaţieeleileiileieiateiiiuluiuleloriloriilorţtistabilibilivicatiticalaicivaativaitivaicaleaţiuneiţiuneatoareitoareătoareicitateabilitateibilitateivitateiciveativeitiveicaliatoriicatoriitoriătoriicitatiabilitatiivitatiiciviativiitiviicităiabilităiivităiicităţiabilităţiivităţiicalatoricatoritorătoricivativitivicalăicivăativăitivăicaabilaibilaoasaataitaantaistautaivaiciceabileibileismeiuneoaseateitateiteanteisteuteiveiciabiliibiliiuniatoriosiatiitatiitiantiistiutiiştiiviităioşiităţiabilibilismatorosatitantistutivicăabilăibilăoasăatăităantăistăutăivăueaiaescăscindândareereireâreseaseseseiseuseâseeşteăşteezeaieaiiaiseieştiăştiuieziaşiseşiaseşiseseşiiseşiuseşiâseşiişiuşiâşiâiaţieaţiiaţieţiiţiarăţiserăţiaserăţiseserăţiiserăţiuserăţiâserăţiirăţiurăţiârăţiâţiameamiamemasemsesemisemusemâsemimămarămserămaserămseserămiserămuserămâserămirămurămârămâmaueauiauinduânduezeascăarăserăaserăseserăiserăuserăâserăirăurăârăeazăaeieiăiuIU
+0x1001dfe4c 615 532 csdzsgylynysztyzsalelbbccddffggjjkkllmmnnpprrccssszzsttvvggyllynnyttysszzzbarabereignaknekvalvelulnálnélbólróltólbõlrõltõlülnanbanenbenképpenonönképpkortatetkéntankéntenkéntonkéntotértöthezhozhözvávéaeáéeaaánénánkéntaestulastulástulstülestüléstüláéeaeaeéiáéiééiékéakéekéokéákéékéökéééaeaeaeaeaeajadadedodádédödejenkunkánkénkünkukjukájukükjükéjükmamemomámémoáéaeaeaeaeaeaeidaidjaideidjeidáidéidiaijaieijeiáiéiitekeitekjeitekéitekikaikjaikeikjeikáikéikinkainkjainkeinkjeinkáinkéinkaitokjaitokáitokimaimjaimeimjeimáiméimaekakekokákékök
+0x1001e6510 623 622 The architecture surrounding mappings is designed to move from one longLivedReadTransaction to another. This allows you to freeze the data-source (databaseConnection) of your UI on a particular commit. And then atomically move the data-source from an older commit to a newer commit in response to YapDatabaseModifiedNotifications. This ensures that the data-source for your UI remains in a steady state at all times, and that updates are properly handled using the appropriate update mechanisms (and properly animated if desired). For example code, please see the wiki: https://github.com/yapstudios/YapDatabase/wiki/Views
+0x1001ea82b 380 379 The given mappings have not been properly initialized. You need to invoke [mappings updateWithTransaction:transaction] once in order to initialize the mappings object. You should do this after invoking [databaseConnection beginLongLivedReadTransaction]. For example code, please see YapDatabaseViewMappings.h, or see the wiki: https://github.com/yapstudios/YapDatabase/wiki/Views
+0x1001ec314 15 14 numberOfTokens
+0x1001ec323 21 20 Ti,N,VnumberOfTokens
+0x1001f0f60 18 17 passwordTextField
+0x1001f0f80 39 38 T@"UITextField",N,W,VpasswordTextField
+0x1001f1fe0 337 336 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<link rel="stylesheet" href="stylesheet.css" type="text/css" media="all" />\n</head>\n<body>\n<h1>
+0x1001f2390 32 31 http://localhost:8081/checkout/
+0x1001f2790 33 32 http://localhost:8080/igoat/user
+0x1001f2900 59 58 http://s3.us-east-2.amazonaws.com/igoat774396510/catty.gif
+0x1001f2be0 23 22 Password Field empty!!
+0x1001f2ca0 44 43 http://localhost:8080/igoat/token?username=
+0x1001f2fc0 26 25 forceJailbreakEnvironment
+0x1001f3000 44 43 T@"UISwitch",N,W,VforceJailbreakEnvironment
+0x1001f3030 17 16 Jailbreak Status
+0x1001f30b0 24 23 /Applications/Cydia.app
+0x1001f30d0 22 21 MobileSubstrate.dylib
+0x1001f3330 17 16 passwordTxtField
+0x1001f3380 38 37 T@"UITextField",N,W,VpasswordTxtField
+0x1001f36e0 38 37 _TtC11iGoat_Swift18KeychainExerciseVC
+0x1001f3710 40 38 Error reading password from keychain -
+0x1001f3740 140 139 /Users/swaroopsy/git/iGoat-Swift/iGoat-Swift/iGoat-Swift/Source/Exercises/InsecureLocalDataStorage/KeychainAnalyze/KeychainExerciseVC.swift
+0x1001f37e0 27 25 Error updating keychain -
+0x1001f3890 19 18 Incorrect Password
+0x1001f38b0 27 26 Enter the correct password
+0x1001f3af0 33 32 http://localhost:8081/webkit.php
+0x1001f3c60 23 22 You found the secret!!
+0x1001f3cc4 14 13 passwordField
+0x1001f3cf8 15 14 secretKeyField
+0x1001f3d40 35 34 T@"UITextField",N,W,VpasswordField
+0x1001f3da0 36 35 T@"UITextField",N,W,VsecretKeyField
+0x1001f3df0 103 102 CREATE TABLE IF NOT EXISTS creds (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT);
+0x1001f3e90 51 50 INSERT INTO creds(username, password) VALUES(?, ?)
+0x1001f3f50 51 50 UPDATE creds SET username=?, password=? WHERE id=?
+0x1001f4800 40 39 Username and Password must not be blank
+0x1001f48f0 34 33 http://www.github.com/OWASP/iGoat
+0x1001f4ad0 36 35 http://localhost:8081/cryptoKey.php
+0x1001f4c73 9 8 password
+0x1001f5da4 52 51 Unexpected error %d deleting identity from keychain
+0x1001f5e20 39 38 SecItemCopyMatching failed; input = %@
+0x1001f687e 37 36 T^{__SecCertificate=},R,V_serverCert
+0x1001f8d2e 9 8 id_token
+0x1001f8d37 14 13 refresh_token
+0x1001f8d50 29 28 _oidc_refresh?refresh_token=
+0x1001f8db0 37 36 Server didn't return an OpenID token
+0x1001f8f86 49 48 -[CBLOpenIDConnectAuthorizer keychainAttributes]
+0x1001f9050 25 24 %@ OpenID Connect tokens
+0x1001f9069 34 33 %@: No ID token found in Keychain
+0x1001f908b 41 40 -[CBLOpenIDConnectAuthorizer loadTokens]
+0x1001f90b4 40 39 %@: Couldn't load ID token: OSStatus %d
+0x1001f90dc 32 31 %@: Read ID token from Keychain
+0x1001f90fc 21 20 OpenID Connect token
+0x1001f9111 48 47 -[CBLOpenIDConnectAuthorizer saveTokens:error:]
+0x1001f9141 40 39 %@: Couldn't save ID token: OSStatus %d
+0x1001f9169 36 35 Unable to save ID token to Keychain
+0x1001f918d 31 30 %@: Saved ID token to Keychain
+0x1001f91ac 33 32 %@: Deleted tokens from Keychain
+0x1001f91cd 44 43 -[CBLOpenIDConnectAuthorizer deleteTokens:]
+0x1001f91f9 42 41 %@: Couldn't delete ID token: OSStatus %d
+0x1001f9223 29 28 Unable to delete auth tokens
+0x1001f9ef8 17 16 certificateChain
+0x1001f9f09 33 32 T@"NSArray",R,V_certificateChain
+0x1001fa0b2 13 12 access_token
+0x1001fc209 93 92 -[CBLOAuth1Authorizer initWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:]
+0x1001fc2c9 45 44 -[CBLPasswordAuthorizer initWithCredential:]
+0x1001fc368 23 22 credential.hasPassword
+0x1001fe75a 16 15 consumer_secret
+0x1001fe76a 6 5 token
+0x1001fe770 13 12 token_secret
+0x1001fe8c2 24 23 T^{__SecCertificate=},R
+0x1001ffd35 18 17 serverCertificate
+0x1001ffd47 44 43 T^{__SecCertificate=},R,V_serverCertificate
+0x100200549 34 33 %@: Untrustworthy SSL certificate
+0x10020056b 30 29 Untrustworthy SSL certificate
+0x100201813 49 48 -[CBLSymmetricKey initWithPassword:salt:rounds:]
+0x100201908 42 41 -[CBLSymmetricKey initWithKeyOrPassword:]
+0x100201932 46 45 [keyOrPassword isKindOfClass: [NSData class]]
+0x10020197f 48 47 -[CBLSymmetricKey saveKeychainItemNamed:error:]
+0x1002019af 40 39 CBLSymmetricKey: SecItemAdd returned %d
+0x10020274b 23 22 T@"NSString",C,Vsecret
+0x100202b06 27 26 SSLIdentityAndCertificates
+0x100202be3 21 20 SSLExtraCertificates
+0x100202bf8 39 38 T@"NSArray",&,N,V_SSLExtraCertificates
+0x10020375d 7 6 secret
+0x100203793 12 11 oauth_token
+0x10020379f 19 18 oauth_token_secret
+0x1002037c7 21 20 oauth_token_duration
+0x1002037dc 23 22 oauth_token_attributes
+0x1002037f3 22 21 oauth_token_renewable
+0x10020382b 21 20 Key "%@" Secret:"%@"
+0x100203854 23 22 T@"NSString",&,Vsecret
+0x100204d0d 43 42 unallowed token at this point in JSON text
+0x100204d38 30 29 invalid token, internal error
+0x100206635 47 46 Huh, couldn't get password of %@; trying again
+0x100206684 44 43 %@: Unable to get password of credential %@
+0x100206e08 22 21 SSLClientCertificates
+0x100206e1e 40 39 T@"NSArray",&,N,V_SSLClientCertificates
+0x10020a2f4 386 385         CREATE VIRTUAL TABLE IF NOT EXISTS fulltext             USING fts4(content, tokenize=unicodesn %@);        CREATE INDEX IF NOT EXISTS  'maps_#_by_fulltext' ON 'maps_#'(fulltext_id);         CREATE TRIGGER IF NOT EXISTS 'del_maps_#_fulltext'             DELETE ON 'maps_#' WHEN old.fulltext_id not null BEGIN                 DELETE FROM fulltext WHERE rowid=old.fulltext_id| END
+0x10020bc99 28 27 SELECT fts3_tokenizer(?, ?)
+0x10020bce7 12 11 tokenchars=
+0x10020ce63 15 14 numberOfTokens
+0x100214ff4 22 21 defaultNumberOfTokens
+0x10021503f 19 18 setNumberOfTokens:
+0x100218e1e 18 17 passwordTextField
+0x100218e30 22 21 setPasswordTextField:
+0x10021964d 62 61 application:didRegisterForRemoteNotificationsWithDeviceToken:
+0x10021a3d6 26 25 forceJailbreakEnvironment
+0x10021a3f0 30 29 setForceJailbreakEnvironment:
+0x10021a41c 34 33 evadeJailbreakButtonDidGetTapped:
+0x10021a4ba 13 12 setPassword:
+0x10021a4db 9 8 password
+0x10021a554 17 16 passwordTxtField
+0x10021a565 21 20 setPasswordTxtField:
+0x10021a8b6 14 13 passwordField
+0x10021a8c4 18 17 setPasswordField:
+0x10021a90a 15 14 secretKeyField
+0x10021a919 19 18 setSecretKeyField:
+0x10021cd03 17 16 certificateChain
+0x10021d579 11 10 loadTokens
+0x10021d584 14 13 deleteTokens:
+0x10021d592 17 16 parseTokensFrom:
+0x10021d5a3 18 17 saveTokens:error:
+0x10021d5dd 19 18 keychainAttributes
+0x10021d5f0 14 13 _deleteTokens
+0x10021d5fe 31 30 forgetIDTokensForServer:error:
+0x10021d62c 15 14 _checkedTokens
+0x10021d644 9 8 _IDToken
+0x10021d64d 14 13 _refreshToken
+0x10021e0ed 49 48 credentialWithIdentity:certificates:persistence:
+0x10021e174 18 17 _certificateChain
+0x10021e230 23 22 initWithUser:password:
+0x10021e269 70 69 initWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:
+0x10021e2f9 37 36 basicAuthenticatorWithName:password:
+0x10021e31e 32 31 facebookAuthenticatorWithToken:
+0x10021e361 85 84 OAuth1AuthenticatorWithConsumerKey:consumerSecret:token:tokenSecret:signatureMethod:
+0x10021f309 40 39 tagsInRange:scheme:options:tokenRanges:
+0x10021f44f 6 5 token
+0x10021f455 39 38 registerToken:forEmailAddress:forSite:
+0x10021f4d0 20 19 initWithKey:secret:
+0x10021f4e8 52 51 initWithURL:consumer:token:realm:signatureProvider:
+0x10021f553 7 6 _token
+0x10021f56d 26 25 signClearText:withSecret:
+0x10021f59d 12 11 hasPassword
+0x10021f5a9 41 40 credentialWithUser:password:persistence:
+0x100221a3f 23 22 initWithKeyOrPassword:
+0x100222a41 18 17 serverCertificate
+0x100222ba7 19 18 _serverCertificate
+0x1002231e9 50 49 checkClientCertificateAuthentication:fromAddress:
+0x1002232eb 14 13 setPasswords:
+0x1002232f9 27 26 SSLIdentityAndCertificates
+0x100223314 46 45 acceptOnInterface:port:SSLCertificates:error:
+0x100223bf5 30 29 initWithPassword:salt:rounds:
+0x100223c13 18 17 initWithPassword:
+0x100223c25 31 30 deleteKeychainItemNamed:error:
+0x100223c44 33 32 initWithKeychainItemNamed:error:
+0x100223c65 29 28 saveKeychainItemNamed:error:
+0x100224a23 17 16 passwordForUser:
+0x100224a44 25 24 setSSLExtraCertificates:
+0x100224ac7 21 20 SSLExtraCertificates
+0x100224aea 11 10 _passwords
+0x100224b21 22 21 _SSLExtraCertificates
+0x100224d49 7 6 secret
+0x100224e19 68 67 initWithURL:consumer:token:realm:signatureProvider:nonce:timestamp:
+0x10022505c 66 65 initWithKey:secret:session:duration:attributes:created:renewable:
+0x10022509e 11 10 setSecret:
+0x100225198 16 15 isEqualToToken:
+0x10022644b 37 36 serverWithHost:port:SSLCertificates:
+0x1002264b8 34 33 fromRequest:getUsername:password:
+0x100226896 13 12 certificates
+0x1002268a3 26 25 setSSLClientCertificates:
+0x100226cfb 22 21 SSLClientCertificates
+0x100226e0a 23 22 _SSLClientCertificates
+0x1002274c6 35 34 initWithHost:port:SSLCertificates:
+0x100227739 17 16 _SSLCertificates
+0x100229793 22 21 CBLPasswordAuthorizer
+0x100229cad 12 11 CBL_OAToken
+0x100229d8c 19 18 CBLTokenAuthorizer
+0x10022bd85 21 20 ^{__SecCertificate=}
+0x10022c861 15 14 @"CBL_OAToken"
+0x10022d1bd 27 26 ^{__SecCertificate=}16@0:8
+0x10022d398 45 44 v60@0:8I16@20Q28Q36q44^{__SecCertificate=}52
+0x10022fad2 37 36 11iGoat_Swift20KeychainPasswordItemV
+0x10022faf8 46 45 11iGoat_Swift20KeychainPasswordItemV0C5ErrorO
+0x10022fcd0 18 17 passwordTextField
+0x10022ff30 18 17 passwordTextField
+0x100230020 18 17 passwordTextField
+0x100230260 26 25 forceJailbreakEnvironment
+0x1002302c0 18 17 passwordTextField
+0x100230300 17 16 passwordTxtField
+0x100230360 18 17 passwordTextField
+0x100230380 18 17 passwordTextField
+0x10023040e 14 13 passwordField
+0x100230438 15 14 secretKeyField
+0x10023075b 11 10 noPassword
+0x100230770 23 22 unexpectedPasswordData
+0x1002b83d0 10 9 CSRFtoken
+0x1002bf4a3 33 32 @_NSLinguisticTagSchemeTokenType
+0x1002bf642 45 44 @_NSURLAuthenticationMethodClientCertificate
+0x1002c07c2 27 26 @_kCFStreamSSLCertificates
+0x1002c080d 40 39 @_kCFStreamSSLValidatesCertificateChain
+0x1002c12dc 22 21 @_kSecAttrAccessGroup
+0x1002c12f6 18 17 @_kSecAttrAccount
+0x1002c1309 23 22 @_kSecAttrCreationDate
+0x1002c1321 22 21 @_kSecAttrDescription
+0x1002c1338 22 21 @_kSecAttrIsPermanent
+0x1002c134f 24 23 @_kSecAttrKeySizeInBits
+0x1002c1368 18 17 @_kSecAttrKeyType
+0x1002c137b 21 20 @_kSecAttrKeyTypeRSA
+0x1002c1391 16 15 @_kSecAttrLabel
+0x1002c13a2 27 26 @_kSecAttrModificationDate
+0x1002c13be 18 17 @_kSecAttrService
+0x1002c13de 23 22 @_kSecClassCertificate
+0x1002c13f6 27 26 @_kSecClassGenericPassword
+0x1002c144e 22 21 @_kSecPrivateKeyAttrs
+0x1002c1490 23 22 @_kSecReturnAttributes
+0x1002c14a8 17 16 @_kSecReturnData
+0x1002c14ba 16 15 @_kSecReturnRef
+0x1002c2019 36 35 @_OBJC_CLASS_$_RLMNotificationToken
+0x1002c4d9f 10 9 @_CCCrypt
+0x1002c4daf 18 17 @_CCCryptorCreate
+0x1002c4dc7 17 16 @_CCCryptorFinal
+0x1002c4dde 19 18 @_CCCryptorRelease
+0x1002c4df7 18 17 @_CCCryptorUpdate
+0x1002c5e5c 25 24 @_SecCertificateCopyData
+0x1002c5e7c 35 34 @_SecCertificateCopySubjectSummary
+0x1002c5ea6 31 30 @_SecCertificateCreateWithData
+0x1002c5ecc 26 25 @_SecCertificateGetTypeID
+0x1002c5eed 29 28 @_SecIdentityCopyCertificate
+0x1002c5f11 13 12 @_SecItemAdd
+0x1002c5f25 22 21 @_SecItemCopyMatching
+0x1002c5f42 16 15 @_SecItemDelete
+0x1002c5f59 16 15 @_SecItemUpdate
+0x1002c6015 32 31 @_SecTrustGetCertificateAtIndex
+0x1002c603c 30 29 @_SecTrustGetCertificateCount
+0x1002c6061 32 31 @_SecTrustSetAnchorCertificates
+0x1002c6088 36 35 @_SecTrustSetAnchorCertificatesOnly
+0x1002c99f8 19 18 /8passwordSSSgvpMV
+0x1002c9b1b 19 18 1CertificateDigest
+0x1002ca817 27 26 gister_unicodesn_tokenizer
+0x1002ca916 20 19 3UnicodeSnTokenizer
+0x1002cba64 7 6 otoken
+0x1002cbada 8 7 qToken.
+0x1002cbaeb 8 7 psecret
+0x1002cd5c2 6 5 Token
+0x1002cd627 6 5 Token
+0x1002d853a 9 8 _CCCrypt
+0x1002d8543 17 16 _CCCryptorCreate
+0x1002d8554 16 15 _CCCryptorFinal
+0x1002d8564 18 17 _CCCryptorRelease
+0x1002d8576 17 16 _CCCryptorUpdate
+0x1002d921c 32 31 _NSLinguisticTagSchemeTokenType
+0x1002d9472 44 43 _NSURLAuthenticationMethodClientCertificate
+0x1002da02f 35 34 _OBJC_CLASS_$_RLMNotificationToken
+0x1002da92a 24 23 _SecCertificateCopyData
+0x1002da942 34 33 _SecCertificateCopySubjectSummary
+0x1002da964 30 29 _SecCertificateCreateWithData
+0x1002da982 25 24 _SecCertificateGetTypeID
+0x1002da99b 28 27 _SecIdentityCopyCertificate
+0x1002da9b7 12 11 _SecItemAdd
+0x1002da9c3 21 20 _SecItemCopyMatching
+0x1002da9d8 15 14 _SecItemDelete
+0x1002da9e7 15 14 _SecItemUpdate
+0x1002daa6b 31 30 _SecTrustGetCertificateAtIndex
+0x1002daa8a 29 28 _SecTrustGetCertificateCount
+0x1002daaa7 31 30 _SecTrustSetAnchorCertificates
+0x1002daac6 35 34 _SecTrustSetAnchorCertificatesOnly
+0x1002dbcd7 26 25 _kCFStreamSSLCertificates
+0x1002dbd1a 39 38 _kCFStreamSSLValidatesCertificateChain
+0x1002dbe33 21 20 _kSecAttrAccessGroup
+0x1002dbe48 17 16 _kSecAttrAccount
+0x1002dbe59 22 21 _kSecAttrCreationDate
+0x1002dbe6f 21 20 _kSecAttrDescription
+0x1002dbe84 21 20 _kSecAttrIsPermanent
+0x1002dbe99 23 22 _kSecAttrKeySizeInBits
+0x1002dbeb0 17 16 _kSecAttrKeyType
+0x1002dbec1 20 19 _kSecAttrKeyTypeRSA
+0x1002dbed5 15 14 _kSecAttrLabel
+0x1002dbee4 26 25 _kSecAttrModificationDate
+0x1002dbefe 17 16 _kSecAttrService
+0x1002dbf1a 22 21 _kSecClassCertificate
+0x1002dbf30 26 25 _kSecClassGenericPassword
+0x1002dbf80 21 20 _kSecPrivateKeyAttrs
+0x1002dbfbc 22 21 _kSecReturnAttributes
+0x1002dbfd2 16 15 _kSecReturnData
+0x1002dbfe2 15 14 _kSecReturnRef
+0x1002e0ae5 486 485 <?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>application-identifier</key>\n\t<string>TNAJ496RHB.OWASP.iGoat-Swift</string>\n\t<key>com.apple.developer.team-identifier</key>\n\t<string>TNAJ496RHB</string>\n\t<key>get-task-allow</key>\n\t<true/>\n\t<key>keychain-access-groups</key>\n\t<array>\n\t\t<string>TNAJ496RHB.OWASP.iGoat-Swift</string>\n\t</array>\n</dict>\n</plist>\n
+0x1002e6c92 31 30 http://crl.apple.com/root.crl0
+0x1002e70ac 32 31 https://www.apple.com/appleca/0
+0x1002e70dd 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0\r
+0x1002e7596 38 37 #http://ocsp.apple.com/ocsp03-wwdr190
+0x1002e75f0 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.06
+0x1002e76b0 45 44 *http://www.apple.com/certificateauthority/0
+0x1002e7a00 332 331 H<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>cdhashes</key>\n\t<array>\n\t\t<data>\n\t\tVRMEVt6VTYnerkyKVgl781P9UoA=\n\t\t</data>\n\t\t<data>\n\t\t6xZPZrQmCjwuuHCF4zhJeClt/nk=\n\t\t</data>\n\t</array>\n</dict>\n</plist>\n0\r

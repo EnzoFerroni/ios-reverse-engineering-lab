@@ -1,0 +1,6 @@
+alvo,funcoes_recuperadas,strings_sensiveis,simbolos_instrumentaveis,metodo
+DVIA-v2,,,,"binario thin arm64: nao possui fatia armv7; sem valor comparavel"
+iGoat-Swift,9268,299,22,"fatia armv7 fixada (lipo -thin armv7 + r2/rabin2 -a arm -b 32); mesmos filtros da coleta arm64"
+UnCrackable-Level1,188,10,0,"idem"
+UnCrackable-Level2,206,34,10,"idem"
+UnCrackable-L1+L2,394,44,10,"soma das duas levels (linha consolidada da tabela)"

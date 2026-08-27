@@ -1,0 +1,6 @@
+alvo,funcoes_recuperadas,strings_sensiveis,simbolos_instrumentaveis,metodo
+DVIA-v2,19015,1288,60,"fatia arm64 fixada (binario thin arm64) | radare2 aa (afl) | rabin2 -zz filtrado por termos | rabin2 -i/-s filtrado por APIs"
+iGoat-Swift,9087,298,22,"fatia arm64 fixada (lipo -thin arm64 + r2/rabin2 -a arm -b 64) | idem"
+UnCrackable-Level1,156,10,0,"idem"
+UnCrackable-Level2,170,34,10,"idem"
+UnCrackable-L1+L2,326,44,10,"soma das duas levels (linha consolidada da tabela)"

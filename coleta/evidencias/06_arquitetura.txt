@@ -1,0 +1,238 @@
+======================================================================
+ 06_arquitetura.txt - cabecalhos Mach-O dos binarios-alvo
+======================================================================
+Data da coleta   : 2026-08-17 00:18:04 -03
+Host             : macOS 26.6.1 (arm64)
+lipo             : /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo
+lipo (versao)    : CLTools 26.6.0.0.1781586589
+file             : file-5.41
+rabin2           : rabin2 6.1.6 +0 abi:107 @ darwin-arm_64
+r2               : radare2 6.1.6 +0 abi:107 @ darwin-arm_64
+
+Motivo: a analise estatica original chamava r2/rabin2 sem fixar arquitetura.
+Em binario universal (gordo) o radare2 carrega a PRIMEIRA fatia. Este arquivo
+documenta quais alvos sao gordos e qual e a ordem das fatias.
+
+----------------------------------------------------------------------
+ALVO: DVIA-v2
+IPA : alvos/DVIA-v2/DVIA-v2.ipa
+sha256(ipa): dabf92a5ca1cc00221fa3a12f1b58f1095da5698ea4dcb92ab0c64699cff6d5f
+executavel : DVIA-v2
+sha256(exe): f39782e9f22e32a7e59660cb826b7b1d367fffc5b1bed5b12cafda79672f6473
+
+$ file
+Payload/DVIA-v2.app/DVIA-v2: Mach-O 64-bit executable arm64
+
+$ lipo -info
+Non-fat file: Payload/DVIA-v2.app/DVIA-v2 is architecture: arm64
+
+$ lipo -detailed_info
+input file Payload/DVIA-v2.app/DVIA-v2 is not a fat file
+Non-fat file: Payload/DVIA-v2.app/DVIA-v2 is architecture: arm64
+
+$ otool -hv
+Payload/DVIA-v2.app/DVIA-v2:
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+MH_MAGIC_64    ARM64        ALL  0x00     EXECUTE    74       8480   NOUNDEFS DYLDLINK TWOLEVEL WEAK_DEFINES BINDS_TO_WEAK PIE
+
+$ rabin2 -A   (fatias vistas pelo radare2; a 1a e a carregada por padrao)
+0   0x00000000 8311760 arm_64 machine=all
+
+$ rabin2 -I | grep -E 'arch|bits|machine'   (SEM fixar fatia)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+$ rabin2 -a arm -b 64 -I | grep -E 'arch|bits|machine'   (fatia fixada)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+----------------------------------------------------------------------
+ALVO: iGoat-Swift
+IPA : alvos/iGoat-Swift/iGoat-Swift.ipa
+sha256(ipa): 364273106c7fdb7b627bf7821a1539af4044025bf7190ebb760afb4b85c15a47
+executavel : iGoat-Swift
+sha256(exe): f302294eece7b466dd7ef1d69f641b560fec5bc42cd60172cfb96ee023464960
+
+$ file
+Payload/iGoat-Swift.app/iGoat-Swift: Mach-O universal binary with 2 architectures: [arm_v7:
+- Mach-O executable arm_v7] [arm64]
+Payload/iGoat-Swift.app/iGoat-Swift (for architecture armv7):	Mach-O executable arm_v7
+Payload/iGoat-Swift.app/iGoat-Swift (for architecture arm64):	Mach-O 64-bit executable arm64
+
+$ lipo -info
+Architectures in the fat file: Payload/iGoat-Swift.app/iGoat-Swift are: armv7 arm64 
+
+$ lipo -detailed_info
+Fat header in: Payload/iGoat-Swift.app/iGoat-Swift
+fat_magic 0xcafebabe
+nfat_arch 2
+architecture armv7
+    cputype CPU_TYPE_ARM
+    cpusubtype CPU_SUBTYPE_ARM_V7
+    capabilities 0x0
+    offset 16384
+    size 2569280
+    align 2^14 (16384)
+architecture arm64
+    cputype CPU_TYPE_ARM64
+    cpusubtype CPU_SUBTYPE_ARM64_ALL
+    capabilities 0x0
+    offset 2588672
+    size 3059680
+    align 2^14 (16384)
+
+$ otool -hv
+Payload/iGoat-Swift.app/iGoat-Swift (architecture armv7):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+   MH_MAGIC      ARM         V7  0x00     EXECUTE    44       5124   NOUNDEFS DYLDLINK TWOLEVEL WEAK_DEFINES BINDS_TO_WEAK PIE
+Payload/iGoat-Swift.app/iGoat-Swift (architecture arm64):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+MH_MAGIC_64    ARM64        ALL  0x00     EXECUTE    44       5888   NOUNDEFS DYLDLINK TWOLEVEL WEAK_DEFINES BINDS_TO_WEAK PIE
+
+$ rabin2 -A   (fatias vistas pelo radare2; a 1a e a carregada por padrao)
+000 0x00004000 2569280 arm_32 v7
+001 0x00278000 3059680 arm_64 all
+
+$ rabin2 -I | grep -E 'arch|bits|machine'   (SEM fixar fatia)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+$ rabin2 -a arm -b 64 -I | grep -E 'arch|bits|machine'   (fatia fixada)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+----------------------------------------------------------------------
+ALVO: UnCrackable-Level1
+IPA : alvos/owasp-mastg/Crackmes/iOS/Level_01/UnCrackable-Level1.ipa
+sha256(ipa): 8ade899b5f574f92dc2f1fb9fcf7093d9c6297e288985526391279cc5ae1db0f
+executavel : UnCrackable Level 1
+sha256(exe): 8075b65a3fd45b80666b65e71954c48124d27f2adc78251179ca018ad8581dcc
+
+$ file
+Payload/UnCrackable Level 1.app/UnCrackable Level 1: Mach-O universal binary with 2 architectures: [arm_v7:
+- Mach-O executable arm_v7] [arm64:Mach-O 64-bit executable arm64]
+Payload/UnCrackable Level 1.app/UnCrackable Level 1 (for architecture armv7):	Mach-O executable arm_v7
+Payload/UnCrackable Level 1.app/UnCrackable Level 1 (for architecture arm64):	Mach-O 64-bit executable arm64
+
+$ lipo -info
+Architectures in the fat file: Payload/UnCrackable Level 1.app/UnCrackable Level 1 are: armv7 arm64 
+
+$ lipo -detailed_info
+Fat header in: Payload/UnCrackable Level 1.app/UnCrackable Level 1
+fat_magic 0xcafebabe
+nfat_arch 2
+architecture armv7
+    cputype CPU_TYPE_ARM
+    cpusubtype CPU_SUBTYPE_ARM_V7
+    capabilities 0x0
+    offset 16384
+    size 82672
+    align 2^14 (16384)
+architecture arm64
+    cputype CPU_TYPE_ARM64
+    cpusubtype CPU_SUBTYPE_ARM64_ALL
+    capabilities 0x0
+    offset 114688
+    size 82416
+    align 2^14 (16384)
+
+$ otool -hv
+Payload/UnCrackable Level 1.app/UnCrackable Level 1 (architecture armv7):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+   MH_MAGIC      ARM         V7  0x00     EXECUTE    22       2512   NOUNDEFS DYLDLINK TWOLEVEL PIE
+Payload/UnCrackable Level 1.app/UnCrackable Level 1 (architecture arm64):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+MH_MAGIC_64    ARM64        ALL  0x00     EXECUTE    22       3040   NOUNDEFS DYLDLINK TWOLEVEL PIE
+
+$ rabin2 -A   (fatias vistas pelo radare2; a 1a e a carregada por padrao)
+000 0x00004000 82672 arm_32 v7
+001 0x0001c000 82416 arm_64 all
+
+$ rabin2 -I | grep -E 'arch|bits|machine'   (SEM fixar fatia)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+$ rabin2 -a arm -b 64 -I | grep -E 'arch|bits|machine'   (fatia fixada)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+----------------------------------------------------------------------
+ALVO: UnCrackable-Level2
+IPA : alvos/owasp-mastg/Crackmes/iOS/Level_02/UnCrackable-Level2.ipa
+sha256(ipa): a1743889e47be52fe4967e8766fedb88e8d55c76bd0a52b4c6535e554790ecdc
+executavel : UnCrackable Level 2
+sha256(exe): 2cc5f51bac3eb500caad1bd2db307706e2c83bc4d9b8cd785b2a823e4845259f
+
+$ file
+Payload/UnCrackable Level 2.app/UnCrackable Level 2: Mach-O universal binary with 2 architectures: [arm_v7:
+- Mach-O executable arm_v7] [arm64:Mach-O 64-bit executable arm64]
+Payload/UnCrackable Level 2.app/UnCrackable Level 2 (for architecture armv7):	Mach-O executable arm_v7
+Payload/UnCrackable Level 2.app/UnCrackable Level 2 (for architecture arm64):	Mach-O 64-bit executable arm64
+
+$ lipo -info
+Architectures in the fat file: Payload/UnCrackable Level 2.app/UnCrackable Level 2 are: armv7 arm64 
+
+$ lipo -detailed_info
+Fat header in: Payload/UnCrackable Level 2.app/UnCrackable Level 2
+fat_magic 0xcafebabe
+nfat_arch 2
+architecture armv7
+    cputype CPU_TYPE_ARM
+    cpusubtype CPU_SUBTYPE_ARM_V7
+    capabilities 0x0
+    offset 16384
+    size 85248
+    align 2^14 (16384)
+architecture arm64
+    cputype CPU_TYPE_ARM64
+    cpusubtype CPU_SUBTYPE_ARM64_ALL
+    capabilities 0x0
+    offset 114688
+    size 85200
+    align 2^14 (16384)
+
+$ otool -hv
+Payload/UnCrackable Level 2.app/UnCrackable Level 2 (architecture armv7):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+   MH_MAGIC      ARM         V7  0x00     EXECUTE    22       2648   NOUNDEFS DYLDLINK TWOLEVEL PIE
+Payload/UnCrackable Level 2.app/UnCrackable Level 2 (architecture arm64):
+Mach header
+      magic  cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+MH_MAGIC_64    ARM64        ALL  0x00     EXECUTE    22       3120   NOUNDEFS DYLDLINK TWOLEVEL PIE
+
+$ rabin2 -A   (fatias vistas pelo radare2; a 1a e a carregada por padrao)
+000 0x00004000 85248 arm_32 v7
+001 0x0001c000 85200 arm_64 all
+
+$ rabin2 -I | grep -E 'arch|bits|machine'   (SEM fixar fatia)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+$ rabin2 -a arm -b 64 -I | grep -E 'arch|bits|machine'   (fatia fixada)
+arch     arm
+bits     64
+endian   little
+machine  all
+
+----------------------------------------------------------------------
+FIM

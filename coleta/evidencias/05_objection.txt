@@ -1,0 +1,820 @@
+======================================================================
+ 05_objection.txt - sessao de Objection sobre o iGoat-Swift
+======================================================================
+Data da coleta   : 2026-08-17 00:35:36 -03
+Objection        : objection: 1.12.5
+Frida (python)   : 17.12.0
+Host             : macOS 26.6.1 (arm64)
+Simulador        : iPhone 17 Pro Max (8C885AEE-95AE-4629-8CA8-6327662F07CB) (Booted) 
+Runtime iOS      : iOS 26.5 (runtime do Simulador)
+Alvo             : iGoat-Swift (bundle OWASP.iGoat-Swifth), em execucao no Simulador
+
+IMPORTANTE - a coleta e POSTERIOR a coleta original do artigo.
+A coleta quantitativa do artigo (Tabelas 1 e 5) rodou em macOS 26.5. Esta
+sessao roda em 26.6.1, apos o upgrade do sistema. Ela nao alimenta
+nenhum numero publicado: serve apenas para lastrear a afirmacao de que o
+Objection foi efetivamente empregado na exploracao em tempo de execucao.
+
+SUBSTITUICOES DE COMANDO em relacao ao roteiro de coleta:
+  - 'objection explore' esta DEPRECIADO no Objection 1.12.5 e foi substituido
+    por 'objection start' (o proprio CLI emite o aviso de depreciacao).
+  - a conexao usa '-L/--local', exigida para alvos no Simulador iOS; a forma
+    '-g/--gadget' do plano pressupoe dispositivo via USB.
+  - 'ios keychain dump' NAO foi executado: o Simulador nao possui Secure
+    Enclave e o chaveiro e o do host, de modo que o resultado nao seria
+    representativo do aparelho. A limitacao ja consta do artigo.
+
+Comando efetivo:
+  python3 -m objection.console.cli -L -n iGoat-Swift start -q -c <arquivo>
+Arquivo de comandos:
+  env
+  ios nsuserdefaults get
+  ios plist cat Info.plist
+  ios hooking list classes
+
+----------------------------------------------------------------------
+SAIDA BRUTA - 'env', 'ios nsuserdefaults get', 'ios plist cat Info.plist'
+----------------------------------------------------------------------
+Running commands from file...
+Running: 'env':
+
+
+Name               Path
+-----------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BundlePath         /Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Bundle/Application/512D28F7-2CDD-4E86-8B91-4C83F7779CCA/iGoat-Swift.app
+CachesDirectory    /Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Data/Application/2371B9F3-D9A2-4E08-9137-5E4F8AC5C844/Library/Caches
+DocumentDirectory  /Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Data/Application/2371B9F3-D9A2-4E08-9137-5E4F8AC5C844/Documents
+LibraryDirectory   /Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Data/Application/2371B9F3-D9A2-4E08-9137-5E4F8AC5C844/Library
+Running: 'ios nsuserdefaults get':
+
+{
+    ACDMonthlyAnalyticsLastPosted = "803917157.8824281";
+    AKLastIDMSEnvironment = 0;
+    AKLastLocale = "pt_BR";
+    ActivePrototypingEnabled = 0;
+    AddingEmojiKeybordHandled = 1;
+    AppleKeyboards =     (
+        "pt_BR@sw=QWERTY;hw=Automatic;ml=2",
+        "en_US@sw=QWERTY;hw=Automatic;ml=2",
+        "en_US@sw=QWERTY;hw=Automatic;ml=1",
+        "pt_BR@sw=QWERTY;hw=Automatic;ml=1",
+        "emoji@sw=Emoji"
+    );
+    AppleKeyboardsExpanded = 1;
+    AppleLanguages =     (
+        "pt-BR",
+        "en-BR"
+    );
+    AppleLanguagesSchemaVersion = 5400;
+    AppleLocale = "pt_BR";
+    ApplePasscodeKeyboards =     (
+        "pt_BR@sw=QWERTY;hw=Automatic;ml=2",
+        "en_US@ml=2",
+        "en_US@sw=QWERTY;hw=Automatic;ml=1",
+        "pt_BR@ml=1",
+        "emoji@sw=Emoji"
+    );
+    ArchivedInflection = {length = 33, bytes = 0x7b226772 616d6d61 74696361 6c47656e ... 63756c69 6e65227d };
+    ClearPrototypeCachesForMigration = 0;
+    ClearSettingsArchivesForMigration = 0;
+    InvisibleAutoplayNotPermitted = 0;
+    MultiWindowEnabled = 0;
+    NSInterfaceStyle = macintosh;
+    NSLanguages =     (
+        "en-001"
+    );
+    PKLogNotificationServiceResponsesKey = 0;
+    PrototypeSettingsEnabled = 0;
+    RemotePrototypingEnabled = 0;
+    RingerButtonShowsUI = 0;
+    RingerSwitchShowsUI = 0;
+    TestRecipeEatsRingerButton = 0;
+    TestRecipeEatsRingerSwitch = 0;
+    TestRecipeEatsVolumeDown = 0;
+    TestRecipeEatsVolumeUp = 0;
+    VolumeDownShowsUI = 0;
+    VolumeUpShowsUI = 1;
+    WebDatabaseDirectory = "/Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Data/Application/2371B9F3-D9A2-4E08-9137-5E4F8AC5C844/Library/Caches";
+    WebKitAVFoundationEnabled = 1;
+    WebKitAcceleratedCompositingEnabled = 1;
+    WebKitAcceleratedCompositingForFixedPositionEnabled = 1;
+    WebKitAcceleratedDrawingEnabled = 0;
+    WebKitAcceleratedFiltersEnabled = 0;
+    WebKitAccentColorEnabled = 1;
+    WebKitAccessHandleEnabled = 0;
+    WebKitAccessibilityTextStitchingEnabled = 0;
+    WebKitAggressiveTileRetentionEnabled = 0;
+    WebKitAllowAnimatedImageLoopingPreferenceKey = 1;
+    WebKitAllowAnimatedImagesPreferenceKey = 1;
+    WebKitAllowContentSecurityPolicySourceStarToMatchAnyProtocol = 0;
+    WebKitAllowFileAccessFromFileURLs = 1;
+    WebKitAllowMediaContentTypesRequiringHardwareSupportAsFallback = 1;
+    WebKitAllowMultiElementImplicitFormSubmissionPreferenceKey = 0;
+    WebKitAllowMultipleCommitLayerTreePending = 0;
+    WebKitAllowPrivacySensitiveOperationsInNonPersistentDataStores = 0;
+    WebKitAllowTopNavigationToDataURLs = 1;
+    WebKitAllowUniversalAccessFromFileURLs = 1;
+    WebKitAllowViewportShrinkToFitContent = 0;
+    WebKitAllowWebGLInWorkers = 1;
+    WebKitAllowsInlineMediaPlaybackAfterFullscreen = 1;
+    WebKitAllowsPictureInPictureMediaPlayback = 1;
+    WebKitAlternateFullScreenControlDesignEnabled = 0;
+    WebKitAltitudeAngleEnabled = 0;
+    WebKitAlwaysAllowLocalWebarchive = 0;
+    WebKitAlwaysRequestGeolocationPermission = 0;
+    WebKitAnimatedImageAsyncDecodingEnabled = 1;
+    WebKitAppBadgeEnabled = 0;
+    WebKitAppHighlightsEnabled = 0;
+    WebKitAppleMailPaginationQuirkEnabled = 0;
+    WebKitApplePayCapabilityDisclosureAllowed = 1;
+    WebKitApplePayEnabled = 1;
+    WebKitApplicationCacheTotalQuota = 0;
+    WebKitAsyncClipboardAPIEnabled = 0;
+    WebKitAsynchronousSpellCheckingEnabled = 0;
+    WebKitAttachmentElementEnabled = 0;
+    WebKitAttachmentWideLayoutEnabled = 0;
+    WebKitAudioControlsScaleWithPageZoom = 0;
+    WebKitAudioDescriptionsEnabled = 0;
+    WebKitAudioPlaybackRequiresUserGesture = 0;
+    WebKitAudioSessionCategoryOverride = 0;
+    WebKitAuthorAndUserStylesEnabledPreferenceKey = 1;
+    WebKitAutomaticallyAdjustsViewScaleUsingMinimumEffectiveDeviceWidth = 0;
+    WebKitAutomaticallyForceEnableScrollingIfNeededToRevealUI = 1;
+    WebKitAuxclickEventEnabled = 1;
+    WebKitAzimuthAngleEnabled = 0;
+    WebKitBackForwardCacheExpirationIntervalKey = 1800;
+    WebKitBackspaceKeyNavigationEnabled = 0;
+    WebKitBeaconAPIEnabled = 0;
+    WebKitBidiContentAwarePasteEnabled = 0;
+    WebKitBlobFileAccessEnforcementEnabled = 1;
+    WebKitBlockMediaLayerRehostingInWebContentProcess = 0;
+    WebKitBlocksInInlineLayoutEnabled = 1;
+    WebKitBroadcastChannelEnabled = 0;
+    WebKitCSS3DTransformBackfaceVisibilityInteroperabilityEnabled = 0;
+    WebKitCSSAnchorPositioningEnabled = 1;
+    WebKitCSSAppearanceBaseEnabled = 0;
+    WebKitCSSAxisRelativePositionKeywordsEnabled = 1;
+    WebKitCSSBackgroundClipBorderAreaEnabled = 1;
+    WebKitCSSColorLayersEnabled = 0;
+    WebKitCSSConstrainedDynamicRangeLimitEnabled = 0;
+    WebKitCSSContrastColorEnabled = 1;
+    WebKitCSSCornerShapeEnabled = 0;
+    WebKitCSSCounterStyleAtRuleImageSymbolsEnabled = 0;
+    WebKitCSSDPropertyEnabled = 0;
+    WebKitCSSDynamicRangeLimitMixEnabled = 0;
+    WebKitCSSFieldSizingEnabled = 1;
+    WebKitCSSFontVariantEmojiEnabled = 0;
+    WebKitCSSFunctionAtRuleEnabled = 0;
+    WebKitCSSInputSecurityEnabled = 0;
+    WebKitCSSInternalAutoBaseParsingEnabled = 0;
+    WebKitCSSLineClampEnabled = 0;
+    WebKitCSSLineFitEdgeEnabled = 0;
+    WebKitCSSMathDepthEnabled = 1;
+    WebKitCSSPaintingAPIEnabled = 0;
+    WebKitCSSProgressFunctionEnabled = 1;
+    WebKitCSSRandomFunctionEnabled = 1;
+    WebKitCSSRhythmicSizingEnabled = 0;
+    WebKitCSSRubyAlignEnabled = 1;
+    WebKitCSSRubyOverhangEnabled = 1;
+    WebKitCSSScrollAnchoringEnabled = 0;
+    WebKitCSSScrollbarColorEnabled = 0;
+    WebKitCSSScrollbarGutterEnabled = 0;
+    WebKitCSSScrollbarWidthEnabled = 0;
+    WebKitCSSSelectorJITCompilerEnabled = 1;
+    WebKitCSSShapeFunctionEnabled = 1;
+    WebKitCSSTextAutospaceEnabled = 1;
+    WebKitCSSTextBoxTrimEnabled = 1;
+    WebKitCSSTextDecorationLineErrorValues = 1;
+    WebKitCSSTextGroupAlignEnabled = 0;
+    WebKitCSSTextJustifyEnabled = 0;
+    WebKitCSSTextSpacingTrimEnabled = 0;
+    WebKitCSSTextTransformMathAutoEnabled = 0;
+    WebKitCSSTextWrapPrettyEnabled = 1;
+    WebKitCSSTreeCountingFunctionsEnabled = 1;
+    WebKitCSSTypedOMColorEnabled = 0;
+    WebKitCSSURLIntegrityModifierEnabled = 0;
+    WebKitCSSURLModifiersEnabled = 1;
+    WebKitCSSUnprefixedBackdropFilterEnabled = 0;
+    WebKitCSSWordBreakAutoPhraseEnabled = 0;
+    WebKitCacheAPIEnabled = 0;
+    WebKitCacheModelPreferenceKey = 0;
+    WebKitCanvasColorSpaceEnabled = 1;
+    WebKitCanvasColorTypeEnabled = 0;
+    WebKitCanvasFiltersEnabled = 0;
+    WebKitCanvasFingerprintingQuirkEnabled = 0;
+    WebKitCanvasLayersEnabled = 0;
+    WebKitCanvasUsesAcceleratedDrawing = 0;
+    WebKitCaptionDisplaySettingsEnabled = 0;
+    WebKitCaretBrowsingEnabled = 0;
+    WebKitCaretPositionFromPointEnabled = 1;
+    WebKitClearSiteDataExecutionContextsSupportEnabled = 0;
+    WebKitClearSiteDataHTTPHeaderEnabled = 0;
+    WebKitCloseWatcherEnabled = 0;
+    WebKitColorFilterEnabled = 0;
+    WebKitCommandAttributesEnabled = 1;
+    WebKitCompressionStreamEnabled = 0;
+    WebKitContactPickerAPIEnabled = 0;
+    WebKitContentChangeObserverEnabled = 1;
+    WebKitContentDispositionAttachmentSandboxEnabled = 1;
+    WebKitContentInsetBackgroundFillEnabled = 0;
+    WebKitCookieEnabled = 1;
+    WebKitCookieStoreAPIEnabled = 0;
+    WebKitCookieStoreManagerEnabled = 0;
+    WebKitCoreMathMLEnabled = 0;
+    WebKitCrossDocumentViewTransitionsEnabled = 1;
+    WebKitCrossOriginEmbedderPolicyEnabled = 0;
+    WebKitCrossOriginOpenerPolicyEnabled = 0;
+    WebKitCursiveFont = "Snell Roundhand";
+    WebKitCustomPasteboardDataEnabled = 0;
+    WebKitDOMAudioSessionEnabled = 0;
+    WebKitDOMAudioSessionFullEnabled = 0;
+    WebKitDOMPasteAccessRequestsEnabled = 0;
+    WebKitDOMPasteAllowedPreferenceKey = 0;
+    WebKitDOMTestingAPIsEnabled = 0;
+    WebKitDOMTimersThrottlingEnabledPreferenceKey = 1;
+    WebKitDataDetectorTypes = 0;
+    WebKitDataListElementEnabled = 0;
+    WebKitDataTransferItemsEnabled = 1;
+    WebKitDatabasesEnabledPreferenceKey = 1;
+    WebKitDateTimeInputsEditableComponentsEnabled = 0;
+    WebKitDebugInAppBrowserPrivacyEnabled = 0;
+    WebKitDeclarativeWebPush = 0;
+    WebKitDefaultFixedFontSize = 13;
+    WebKitDefaultFontSize = 16;
+    WebKitDefaultTextEncodingName = "ISO-8859-1";
+    WebKitDeprecationReportingEnabled = 0;
+    WebKitDetachableMediaSourceEnabled = 0;
+    WebKitDetailsAutoExpandEnabled = 1;
+    WebKitDeveloperExtrasEnabledPreferenceKey = 0;
+    WebKitDeviceHeight = 0;
+    WebKitDeviceOrientationEventEnabled = 1;
+    WebKitDeviceOrientationPermissionAPIEnabled = 0;
+    WebKitDeviceWidth = 0;
+    WebKitDevolvableWidgetsEnabled = 1;
+    WebKitDiagnosticLoggingEnabled = 0;
+    WebKitDigitalCredentialsEnabled = 0;
+    WebKitDirectoryUploadEnabled = 0;
+    WebKitDisableScreenSizeOverride = 0;
+    WebKitDisabledAdaptationsMetaTagEnabled = 0;
+    WebKitDisplayImagesKey = 1;
+    WebKitDownloadAttributeEnabled = 0;
+    WebKitDynamicSiteInterventionsEnabled = 0;
+    WebKitEditableLinkBehavior = 0;
+    WebKitEmbedElementEnabled = 1;
+    WebKitEnableElementCurrentCSSZoom = 1;
+    WebKitEnableInheritURIQueryComponent = 0;
+    WebKitEnableOpaqueLoadingForMedia = 0;
+    WebKitEnablePasswordEchoPreferenceKey = 1;
+    WebKitEncryptedMediaAPIEnabled = 0;
+    WebKitEnhancedSecurityHeuristicsEnabled = 0;
+    WebKitEnterKeyHintEnabled = 0;
+    WebKitEnumeratedARIAAttributeReflectionEnabled = 0;
+    WebKitEvaluationTimeZoomEnabled = 1;
+    WebKitEventHandlerDrivenSmoothKeyboardScrollingEnabled = 0;
+    WebKitEventTimingEnabled = 0;
+    WebKitExposeRollAngleAsTwistEnabled = 0;
+    WebKitExtendedAudioDescriptionsEnabled = 0;
+    WebKitExtendedProofreadingEnabled = 0;
+    WebKitFTPDirectoryTemplatePath = "";
+    WebKitFTPEnabled = 0;
+    WebKitFacebookLiveRecordingQuirkEnabled = 0;
+    WebKitFantasyFont = Papyrus;
+    WebKitFileReaderAPIEnabled = 1;
+    WebKitFileSystemEnabled = 0;
+    WebKitFileSystemWritableStreamEnabled = 0;
+    WebKitFilterLinkDecorationByDefaultEnabled = 0;
+    WebKitFixedFont = Courier;
+    WebKitFlexFormattingContextIntegrationEnabled = 1;
+    WebKitFontFaceSetConstructorEnabled = 0;
+    WebKitForceFTPDirectoryListings = 0;
+    WebKitForceWebGLUsesLowPower = 1;
+    WebKitFormControlRefreshEnabled = 1;
+    WebKitFullScreenEnabled = 0;
+    WebKitFullScreenKeyboardLock = 1;
+    WebKitFullscreenRequirementForScreenOrientationLockingEnabled = 1;
+    WebKitGamepadTriggerRumbleEnabled = 0;
+    WebKitGamepadVibrationActuatorEnabled = 0;
+    WebKitGamepadsEnabled = 0;
+    WebKitGenericCueAPIEnabled = 0;
+    WebKitGeolocationAPIEnabled = 1;
+    WebKitGetBoundingClientRectZoomedEnabled = 0;
+    WebKitGetCoalescedEventsEnabled = 1;
+    WebKitGetPredictedEventsEnabled = 1;
+    WebKitGetUserMediaRequiresFocus = 1;
+    WebKitGoogleAntiFlickerOptimizationQuirkEnabled = 1;
+    WebKitGraphicsContextFiltersEnabled = 1;
+    WebKitGridFormattingContextIntegrationEnabled = 1;
+    WebKitGridLanesEnabled = 1;
+    WebKitHTMLEnhancedSelectParsingEnabled = 0;
+    WebKitHTMLEnhancedSelectSelectedContentEnabled = 0;
+    WebKitHTMLLegacyAttributeValueSerializationEnabled = 0;
+    WebKitHTTPEquivEnabled = 1;
+    WebKitHTTPSByDefaultEnabled = 0;
+    WebKitHiddenPageCSSAnimationSuspensionEnabled = 1;
+    WebKitHiddenPageDOMTimerThrottlingAutoIncreases = 0;
+    WebKitHiddenPageDOMTimerThrottlingEnabled = 0;
+    WebKitHiddenUntilFoundEnabled = 1;
+    WebKitHistoryAgeInDaysLimit = 7;
+    WebKitHistoryItemLimit = 1000;
+    WebKitHostedBlurMaterialInMediaControlsEnabled = 0;
+    WebKitICECandidateFilteringEnabled = 1;
+    WebKitIFrameResourceMonitoringEnabled = 0;
+    WebKitIFrameResourceMonitoringTestingSettingsEnabled = 0;
+    WebKitIOSurfaceLosslessCompressionEnabled = 0;
+    WebKitIPAddressAndLocalhostMixedContentUpgradeTestingEnabled = 0;
+    WebKitIgnoreIframeEmbeddingProtectionsEnabled = 0;
+    WebKitImageAnalysisDuringFindInPageEnabled = 0;
+    WebKitImageAnimationControlEnabled = 1;
+    WebKitInWindowFullscreenEnabled = 0;
+    WebKitIncompleteImageBorderEnabled = 0;
+    WebKitIncrementalPDFLoadingEnabled = 0;
+    WebKitIncrementalRenderingSuppressionTimeoutInSeconds = 5;
+    WebKitIndexedDBAPIEnabled = 1;
+    WebKitInlineMediaPlaybackRequiresPlaysInlineAttribute = 1;
+    WebKitInputTypeColorEnabled = 0;
+    WebKitInputTypeColorEnhancementsEnabled = 0;
+    WebKitInputTypeDateEnabled = 1;
+    WebKitInputTypeDateTimeLocalEnabled = 1;
+    WebKitInputTypeMonthEnabled = 1;
+    WebKitInputTypeTimeEnabled = 1;
+    WebKitInputTypeWeekEnabled = 0;
+    WebKitInspectorMaximumResourcesContentSize = 200;
+    WebKitInspectorSupportsShowingCertificate = 0;
+    WebKitInteractionRegionInlinePadding = 4;
+    WebKitInteractionRegionMinimumCornerRadius = 8;
+    WebKitInteractiveFormValidationEnabled = 0;
+    WebKitInterpolationQualityPreferenceKey = 2;
+    WebKitInterruptAudioOnPageVisibilityChangeEnabled = 0;
+    WebKitInterruptVideoOnPageVisibilityChangeEnabled = 1;
+    WebKitIsARIANotifyEnabled = 0;
+    WebKitIsAriaLiveRegionManagementEnabled = 0;
+    WebKitIsFirstPartyWebsiteDataRemovalDisabled = 0;
+    WebKitIsFirstPartyWebsiteDataRemovalLiveOnTestingEnabled = 0;
+    WebKitIsFirstPartyWebsiteDataRemovalReproTestingEnabled = 0;
+    WebKitIsSameSiteStrictEnforcementEnabled = 0;
+    WebKitIsThirdPartyCookieBlockingDisabled = 0;
+    WebKitItpDebugModeEnabled = 0;
+    WebKitJavaScriptCanAccessClipboard = 0;
+    WebKitJavaScriptCanOpenWindowsAutomatically = 0;
+    WebKitJavaScriptEnabled = 1;
+    WebKitJavaScriptMarkupEnabled = 1;
+    WebKitJavaScriptRuntimeFlagsPreferenceKey = 0;
+    WebKitLargeImageAsyncDecodingEnabled = 1;
+    WebKitLargestContentfulPaintEnabled = 1;
+    WebKitLayerBasedSVGEngineEnabled = 0;
+    WebKitLayoutFallbackWidth = 980;
+    WebKitLayoutViewportHeightExpansionFactor = 0;
+    WebKitLazyIframeLoadingEnabled = 0;
+    WebKitLazyImageLoadingEnabled = 0;
+    WebKitLegacyEncryptedMediaAPIEnabled = 1;
+    WebKitLegacyLineLayoutVisualCoverageEnabled = 0;
+    WebKitLegacyOverflowScrollingTouchEnabled = 1;
+    WebKitLegacyPluginQuirkForMailSignaturesEnabled = 0;
+    WebKitLegacyWebRTCOfferOptionsEnabled = 0;
+    WebKitLimitedMatroskaSupportEnabled = 0;
+    WebKitLinkDNSPrefetchEnabled = 1;
+    WebKitLinkPreconnect = 0;
+    WebKitLinkPreconnectEarlyHintsEnabled = 0;
+    WebKitLinkPrefetchEnabled = 0;
+    WebKitLinkPreloadEnabled = 0;
+    WebKitLinkSanitizerEnabled = 0;
+    WebKitLoadDeferringEnabled = 1;
+    WebKitLoadWebArchiveWithEphemeralStorageEnabled = 1;
+    WebKitLocalFileContentSniffingEnabledPreferenceKey = 0;
+    WebKitLocalNetworkAccessEnabledPreferenceKey = 0;
+    WebKitLocalStorageDatabasePathPreferenceKey = "/Users/enzo/Library/Developer/CoreSimulator/Devices/8C885AEE-95AE-4629-8CA8-6327662F07CB/data/Containers/Data/Application/2371B9F3-D9A2-4E08-9137-5E4F8AC5C844/Library/Caches";
+    WebKitLocalStorageEnabledPreferenceKey = 1;
+    WebKitLoginStatusAPIEnabled = 0;
+    WebKitLoginStatusAPIRequiresWebAuthnEnabled = 0;
+    WebKitLogsPageMessagesToSystemConsoleEnabled = 0;
+    WebKitLowPowerVideoAudioBufferSizeEnabled = 0;
+    WebKitMainContentUserGestureOverrideEnabled = 0;
+    WebKitManageCaptureStatusBarInGPUProcessEnabled = 0;
+    WebKitManagedMediaSourceEnabled = 0;
+    WebKitManagedMediaSourceNeedsAirPlay = 0;
+    WebKitMathFont = "";
+    WebKitMathMLEnabled = 1;
+    WebKitMaxParseDurationPreferenceKey = "-1";
+    WebKitMediaCapabilitiesEnabled = 0;
+    WebKitMediaCapabilitiesExtensionsEnabled = 0;
+    WebKitMediaCapabilityGrantsEnabled = 0;
+    WebKitMediaCaptureRequiresSecureConnection = 1;
+    WebKitMediaContentTypesRequiringHardwareSupport = "";
+    WebKitMediaControlsContextMenusEnabled = 0;
+    WebKitMediaControlsMacInlineSizeSpecsEnabled = 0;
+    WebKitMediaControlsScaleWithPageZoom = 0;
+    WebKitMediaDataLoadsAutomatically = 0;
+    WebKitMediaDevicesEnabled = 0;
+    WebKitMediaEnabled = 1;
+    WebKitMediaKeysStorageDirectory = "~/Library/WebKit/MediaKeys";
+    WebKitMediaPlaybackAllowsAirPlay = 1;
+    WebKitMediaPlaybackAllowsInline = 0;
+    WebKitMediaPlaybackEnabled = 1;
+    WebKitMediaPlaybackRequiresUserGesture = 1;
+    WebKitMediaPreferredFullscreenWidth = 960;
+    WebKitMediaPreloadingEnabled = 0;
+    WebKitMediaRecorderEnabled = 0;
+    WebKitMediaRecorderEnabledWebM = 0;
+    WebKitMediaSessionCaptureToggleAPIEnabled = 0;
+    WebKitMediaSessionEnabled = 1;
+    WebKitMediaSourceEnabled = 0;
+    WebKitMediaSourcePrefersDecompressionSession = 0;
+    WebKitMediaSourceUseRemoteAudioVideoRenderer = 0;
+    WebKitMediaStreamTrackProcessingEnabled = 0;
+    WebKitMediaUserGestureInheritsFromDocument = 0;
+    WebKitMetaViewportInteractiveWidgetEnabled = 0;
+    WebKitMinimumFontSize = 0;
+    WebKitMinimumLogicalFontSize = 9;
+    WebKitMinimumZoomFontSizePreferenceKey = 15;
+    WebKitMockCaptureDevicesEnabled = 0;
+    WebKitMockScrollbarsControllerEnabled = 0;
+    WebKitMockScrollbarsEnabled = 0;
+    WebKitModelDocumentEnabled = 0;
+    WebKitModelElementEnabled = 0;
+    WebKitMomentumScrollingAnimatorEnabled = 0;
+    WebKitMouseEventsSimulationEnabled = 0;
+    WebKitMutationEventsEnabled = 0;
+    WebKitMuteCameraOnMicrophoneInterruptionEnabled = 0;
+    WebKitNavigationAPIEnabled = 0;
+    WebKitNavigatorUserAgentDataJavaScriptAPIEnabled = 0;
+    WebKitNeedsAdobeFrameReloadingQuirk = 0;
+    WebKitNeedsFrameNameFallbackToIdQuirk = 0;
+    WebKitNeedsKeyboardEventDisambiguationQuirks = 0;
+    WebKitNeedsStorageAccessFromFileURLsQuirk = 1;
+    WebKitNetworkInterfaceNamePreferenceKey = "";
+    WebKitNotificationsEnabled = 0;
+    WebKitObservableEnabled = 0;
+    WebKitOffscreenCanvasEnabled = 1;
+    WebKitOffscreenCanvasInWorkersEnabled = 1;
+    WebKitOpenPseudoClassEnabled = 1;
+    WebKitOpportunisticSweepingAndGarbageCollectionEnabled = 0;
+    WebKitOptInPartitionedCookiesEnabled = 1;
+    WebKitOriginAPIEnabled = 1;
+    WebKitOverlappingBackingStoreProvidersEnabled = 1;
+    WebKitOverscrollBehaviorEnabled = 0;
+    WebKitPDFPluginHUDEnabled = 0;
+    WebKitPDFPluginPageNumberIndicatorEnabled = 0;
+    WebKitPageAtRuleMarginDescriptorsEnabled = 1;
+    WebKitPassiveTouchListenersAsDefaultOnDocument = 1;
+    WebKitPassiveWheelListenersAsDefaultOnDocument = 1;
+    WebKitPasswordEchoDurationPreferenceKey = 2;
+    WebKitPeerConnectionEnabled = 1;
+    WebKitPeerConnectionVideoScalingAdaptationDisabled = 0;
+    WebKitPermissionsAPIEnabled = 0;
+    WebKitPictographFont = AppleColorEmoji;
+    WebKitPictureInPictureAPIEnabled = 0;
+    WebKitPitchCorrectionAlgorithm = 2;
+    WebKitPointerLockEnabled = 0;
+    WebKitPointerLockOptionsEnabled = 1;
+    WebKitPopoverAttributeEnabled = 1;
+    WebKitPreferPageRenderingUpdatesNear60FPSEnabled = 1;
+    WebKitPrivateBrowsingEnabled = 0;
+    WebKitPrivateClickMeasurementDebugModeEnabled = 0;
+    WebKitPrivateClickMeasurementEnabled = 0;
+    WebKitPrivateTokenUsageByThirdPartyEnabled = 0;
+    WebKitPunchOutWhiteBackgroundsInDarkMode = 0;
+    WebKitPushAPIEnabled = 0;
+    WebKitRTCEncodedStreamsQuirkEnabled = 0;
+    WebKitReadableByteStreamAPIEnabled = 1;
+    WebKitReadableByteStreamFetchSourceEnabled = 1;
+    WebKitReadableStreamIterableEnabled = 0;
+    WebKitRemoteMediaSessionManagerEnabled = 0;
+    WebKitRemotePlaybackEnabled = 0;
+    WebKitRemoteSnapshottingEnabled = 0;
+    WebKitRequestIdleCallbackEnabled = 0;
+    WebKitRequestStorageAccessThrowsExceptionUntilReload = 0;
+    WebKitRequestVideoFrameCallbackEnabled = 1;
+    WebKitRequiresPageVisibilityToPlayAudio = 0;
+    WebKitRequiresUserGestureToLoadVideo = 1;
+    WebKitResourceLoadSchedulingEnabled = 0;
+    WebKitResourceLoadStatisticsEnabled = 0;
+    WebKitResourceUsageOverlayVisible = 0;
+    WebKitRespondToThermalPressureAggressively = 0;
+    WebKitSKAttributionEnabled = 1;
+    WebKitSampledPageTopColorMaxDifference = 0;
+    WebKitSampledPageTopColorMinHeight = 0;
+    WebKitSansSerifFont = Helvetica;
+    WebKitScopedCustomElementRegistryEnabled = 1;
+    WebKitScreenCaptureEnabled = 0;
+    WebKitScreenOrientationAPIEnabled = 0;
+    WebKitScreenOrientationLockingAPIEnabled = 0;
+    WebKitScreenTimeEnabled = 0;
+    WebKitScreenWakeLockAPIEnabled = 0;
+    WebKitScrollAnimatorEnabled = 0;
+    WebKitScrollDrivenAnimationsEnabled = 0;
+    WebKitScrollToTextFragmentEnabled = 0;
+    WebKitScrollToTextFragmentFeatureDetectionEnabled = 0;
+    WebKitScrollToTextFragmentGenerationEnabled = 0;
+    WebKitScrollToTextFragmentIndicatorEnabled = 1;
+    WebKitScrollToTextFragmentMarkingEnabled = 1;
+    WebKitScrollendEventEnabled = 0;
+    WebKitSecureContextChecksEnabled = 1;
+    WebKitSelectShowPickerEnabled = 0;
+    WebKitSelectTrailingWhitespaceEnabled = 0;
+    WebKitSerifFont = Times;
+    WebKitServiceWorkerInstallEventEnabled = 0;
+    WebKitServiceWorkerNavigationPreloadEnabled = 0;
+    WebKitServiceWorkersUserGestureEnabled = 0;
+    WebKitSessionStorageEnabled = 1;
+    WebKitShadowRootReferenceTargetEnabled = 0;
+    WebKitShadowRootReferenceTargetEnabledForAriaOwns = 0;
+    WebKitShapeDetection = 0;
+    WebKitSharedWorkerEnabled = 0;
+    WebKitShouldAllowUserInstalledFonts = 1;
+    WebKitShouldConvertInvalidURLsToBlank = 1;
+    WebKitShouldConvertPositionStyleOnCopy = 0;
+    WebKitShouldDecidePolicyBeforeLoadingQuickLookPreview = 0;
+    WebKitShouldDeferAsynchronousScriptsUntilAfterDocumentLoadOrFirstPaint = 1;
+    WebKitShouldDisplayCaptions = 0;
+    WebKitShouldDisplaySubtitles = 0;
+    WebKitShouldDisplayTextDescriptions = 0;
+    WebKitShouldDropNearSuspendedAssertionAfterDelay = 0;
+    WebKitShouldEnableTextAutosizingBoost = 0;
+    WebKitShouldIgnoreMetaViewport = 0;
+    WebKitShouldPrintBackgroundsPreferenceKey = 1;
+    WebKitShouldRespectImageOrientation = 1;
+    WebKitShouldRestrictBaseURLSchemes = 1;
+    WebKitShouldSuppressTextInputFromEditingDuringProvisionalNavigation = 0;
+    WebKitShouldUseServiceWorkerShortTimeout = 0;
+    WebKitShowDebugBorders = 0;
+    WebKitShowFrameProcessBordersEnabled = 0;
+    WebKitShowMediaStatsContextMenuItemEnabled = 0;
+    WebKitShowModalDialogEnabled = 0;
+    WebKitShowRepaintCounter = 0;
+    WebKitShowsToolTipOverTruncatedText = 0;
+    WebKitShowsURLsInToolTips = 0;
+    WebKitShrinksStandaloneImagesToFit = 1;
+    WebKitSidewaysWritingModesEnabled = 1;
+    WebKitSiteIsolationEnabled = 0;
+    WebKitSiteIsolationSharedProcessEnabled = 0;
+    WebKitSlowFrameIndicatorVisible = 0;
+    WebKitSmartInsertDeleteEnabled = 1;
+    WebKitSmartListsAvailable = 0;
+    WebKitSourceBufferChangeTypeEnabled = 1;
+    WebKitSpatialNavigationEnabled = 0;
+    WebKitSpeakerSelectionRequiresUserGesture = 1;
+    WebKitSpeculationRulesPrefetchEnabled = 0;
+    WebKitSpeechRecognitionEnabled = 0;
+    WebKitSpeechSynthesisAPIEnabled = 1;
+    WebKitSpringTimingFunctionEnabled = 0;
+    WebKitStandalonePreferenceKey = 0;
+    WebKitStandardFont = Times;
+    WebKitStorageAPIEnabled = 0;
+    WebKitStorageAPIEstimateEnabled = 0;
+    WebKitStorageAccessAPIEnabled = 1;
+    WebKitStorageBlockingPolicy = 0;
+    WebKitStorageTrackerEnabledPreferenceKey = 0;
+    WebKitSubpixelInlineLayoutEnabled = 0;
+    WebKitSupportHDRCompositorTonemappingEnabled = 0;
+    WebKitSupportHDRDisplayEnabled = 0;
+    WebKitSuppressesIncrementalRendering = 0;
+    WebKitSwitchControlEnabled = 1;
+    WebKitSystemLayoutDirection = 0;
+    WebKitSystemPreviewEnabled = 0;
+    WebKitTabToLinksPreferenceKey = 0;
+    WebKitTargetTextPseudoElementEnabled = 0;
+    WebKitTelephoneParsingEnabledPreferenceKey = 0;
+    WebKitTemporaryTileCohortRetentionEnabled = 1;
+    WebKitTextAnimationsEnabled = 1;
+    WebKitTextAreasAreResizable = 0;
+    WebKitTextAutosizingEnabled = 1;
+    WebKitTextAutosizingUsesIdempotentMode = 0;
+    WebKitTextInteractionEnabled = 1;
+    WebKitTextShapingAcrossInlineBoxes = 1;
+    WebKitTextTracksInMSEEnabled = 0;
+    WebKitThreadedScrollDrivenAnimationsEnabled = 0;
+    WebKitThreadedTimeBasedAnimationsEnabled = 0;
+    WebKitThumbAndTrackPseudoElementsEnabled = 0;
+    WebKitTiledScrollingIndicatorVisible = 0;
+    WebKitTopContentInsetBackgroundCanChangeAfterScrolling = 0;
+    WebKitTrackConfigurationEnabled = 0;
+    WebKitTreatsAnyTextCSSLinkAsStylesheet = 0;
+    WebKitTrustedTypesEnabled = 0;
+    WebKitUAVisualTransitionDetectionEnabled = 1;
+    WebKitURLPatternAPIEnabled = 1;
+    WebKitUndoManagerAPIEnabled = 0;
+    WebKitUnifiedPDFEnabled = 0;
+    WebKitUseAsyncUIKitInteractions = 0;
+    WebKitUseGPUProcessForWebGLEnabled = 0;
+    WebKitUseGiantTiles = 0;
+    WebKitUseIFCForSVGText = 0;
+    WebKitUseImageDocumentForSubframePDF = 1;
+    WebKitUsePreHTML5ParserQuirks = 0;
+    WebKitUseSiteSpecificSpoofing = 0;
+    WebKitUseSystemAppearance = 0;
+    WebKitUserActivationAPIEnabled = 0;
+    WebKitUserGesturePromisePropagationEnabled = 1;
+    WebKitUserInterfaceDirectionPolicy = 0;
+    WebKitUserStyleSheetEnabledPreferenceKey = 0;
+    WebKitUserStyleSheetLocationPreferenceKey = "";
+    WebKitUsesEncodingDetector = 0;
+    WebKitUsesPageCachePreferenceKey = 1;
+    WebKitVP9DecoderEnabled = 0;
+    WebKitVerifyWindowOpenUserGestureFromUIProcess = 0;
+    WebKitVerticalFormControlsEnabled = 1;
+    WebKitVideoFullsceenPrefersMostVisibleHeuristic = 0;
+    WebKitVideoFullscreenRequiresElementFullscreen = 0;
+    WebKitVideoPlaybackRequiresUserGesture = 0;
+    WebKitVideoPresentationManagerEnabled = 0;
+    WebKitVideoPresentationModeAPIEnabled = 1;
+    WebKitVideoQualityIncludesDisplayCompositingEnabled = 0;
+    WebKitViewTransitionsEnabled = 1;
+    WebKitVisibleDebugOverlayRegions = 0;
+    WebKitVisualViewportAPIEnabled = 0;
+    WebKitVisualViewportEnabled = 0;
+    WebKitVisuallyContiguousBidiTextSelectionEnabled = 0;
+    WebKitWantsBalancedSetDefersLoadingBehavior = 0;
+    WebKitWebAPIStatisticsEnabled = 0;
+    WebKitWebAPIsInShadowRealmEnabled = 0;
+    WebKitWebAnimationsCustomEffectsEnabled = 0;
+    WebKitWebAnimationsCustomFrameRateEnabled = 0;
+    WebKitWebAnimationsOverallProgressPropertyEnabled = 1;
+    WebKitWebArchiveDebugModeEnabledPreferenceKey = 0;
+    WebKitWebArchiveTestingModeEnabled = 0;
+    WebKitWebAssemblyESMIntegrationEnabled = 0;
+    WebKitWebAudioEnabled = 1;
+    WebKitWebAuthenticationASEnabled = 0;
+    WebKitWebAuthenticationEnabled = 0;
+    WebKitWebCodecsAV1Enabled = 0;
+    WebKitWebCodecsAudioEnabled = 0;
+    WebKitWebCodecsHEVCEnabled = 0;
+    WebKitWebCodecsVideoEnabled = 0;
+    WebKitWebCryptoSafeCurvesEnabled = 1;
+    WebKitWebCryptoX25519Enabled = 1;
+    WebKitWebGLDraftExtensionsEnabled = 0;
+    WebKitWebGLEnabled = 1;
+    WebKitWebGLTimerQueriesEnabled = 0;
+    WebKitWebGPUEnabled = 1;
+    WebKitWebGPUHDREnabled = 1;
+    WebKitWebInspectorEngineeringSettingsAllowed = 0;
+    WebKitWebLocksAPIEnabled = 0;
+    WebKitWebMUseRemoteAudioVideoRenderer = 0;
+    WebKitWebRTCAV1CodecEnabled = 0;
+    WebKitWebRTCAudioLatencyAdaptationEnabled = 1;
+    WebKitWebRTCDTMFEnabled = 1;
+    WebKitWebRTCEncodedTransformEnabled = 0;
+    WebKitWebRTCH264HardwareEncoderEnabled = 1;
+    WebKitWebRTCH265CodecEnabled = 0;
+    WebKitWebRTCInterfaceMonitoringViaNWEnabled = 0;
+    WebKitWebRTCL4SEnabled = 0;
+    WebKitWebRTCMediaPipelineAdditionalLoggingEnabled = 0;
+    WebKitWebRTCPlatformCodecsInGPUProcessEnabled = 0;
+    WebKitWebRTCRemoteVideoFrameEnabled = 0;
+    WebKitWebRTCSFrameTransformEnabled = 0;
+    WebKitWebRTCSocketsProxyingEnabled = 0;
+    WebKitWebRTCSocketsServiceClassEnabled = 0;
+    WebKitWebRTCUDPPortRange = "0:0";
+    WebKitWebRTCVP9Profile0CodecEnabled = 1;
+    WebKitWebRTCVP9Profile2CodecEnabled = 0;
+    WebKitWebSQLEnabled = 0;
+    WebKitWebSecurityEnabled = 1;
+    WebKitWebShareEnabled = 0;
+    WebKitWebShareFileAPIEnabled = 0;
+    WebKitWebSocketEnabled = 1;
+    WebKitWebTransportEnabled = 0;
+    WebKitWebXRWebGPUBindingsEnabled = 0;
+    WebKitWheelEventGesturesBecomeNonBlocking = 1;
+    WebKitWindowFocusRestricted = 1;
+    WebKitWirelessPlaybackTargetAPIEnabled = 1;
+    WebKitWorkerAsynchronousURLErrorHandlingEnabled = 1;
+    WebKitWriteRichTextDataWhenCopyingOrDragging = 1;
+    WebKitWritingSuggestionsAttributeEnabled = 1;
+    WebKitXSLTEnabled = 1;
+    WebKitZoomsTextOnly = 1;
+    "com.apple.gms.availability.key" =     (
+        0
+    );
+    "com.apple.gms.availability.unifiedReasons" = {length = 107, bytes = 0x7b22636f 6d2e6170 706c652e 53657474 ... 3a7b7d7d 7d7d5d7d };
+    "com.apple.gms.availability.useCaseReadiness" = {length = 2, bytes = 0x7b7d};
+}
+Running: 'ios plist cat Info.plist':
+
+{
+    BuildMachineOSBuild = 25F80;
+    CFBundleDevelopmentRegion = en;
+    CFBundleExecutable = "iGoat-Swift";
+    CFBundleIcons =     {
+        CFBundlePrimaryIcon =         {
+            CFBundleIconFiles =             (
+                AppIcon60x60
+            );
+            CFBundleIconName = AppIcon;
+        };
+    };
+    "CFBundleIcons~ipad" =     {
+        CFBundlePrimaryIcon =         {
+            CFBundleIconName = AppIcon;
+        };
+    };
+    CFBundleIdentifier = "OWASP.iGoat-Swifth";
+    CFBundleInfoDictionaryVersion = "6.0";
+    CFBundleName = "iGoat-Swift";
+    CFBundlePackageType = APPL;
+    CFBundleShortVersionString = "1.0";
+    CFBundleSupportedPlatforms =     (
+        iPhoneSimulator
+    );
+    CFBundleURLTypes =     (
+                {
+            CFBundleTypeRole = Editor;
+            CFBundleURLName = "com.iGoat.myCompany";
+            CFBundleURLSchemes =             (
+                iGoat
+            );
+        }
+    );
+    CFBundleVersion = 1;
+    DTCompiler = "com.apple.compilers.llvm.clang.1_0";
+    DTPlatformBuild = 23F81a;
+    DTPlatformName = iphonesimulator;
+    DTPlatformVersion = "26.5";
+    DTSDKBuild = 23F81a;
+    DTSDKName = "iphonesimulator26.5";
+    DTXcode = 2660;
+    DTXcodeBuild = 17F113;
+    LSRequiresIPhoneOS = 1;
+    MinimumOSVersion = "13.0";
+    NSAppTransportSecurity =     {
+        NSAllowsArbitraryLoads = 1;
+    };
+    NSFaceIDUsageDescription = "iGoat would like to use FaceID to authenticate you.";
+    UIDeviceFamily =     (
+        1,
+        2
+    );
+    UILaunchStoryboardName = LaunchScreen;
+    UIRequiredDeviceCapabilities =     (
+        armv7
+    );
+    UISupportedInterfaceOrientations =     (
+        UIInterfaceOrientationPortrait
+    );
+    "UISupportedInterfaceOrientations~ipad" =     (
+        UIInterfaceOrientationPortrait,
+        UIInterfaceOrientationPortraitUpsideDown,
+        UIInterfaceOrientationLandscapeLeft,
+        UIInterfaceOrientationLandscapeRight
+    );
+}
+Running: 'ios hooking list classes':
+
+----------------------------------------------------------------------
+SAIDA - 'ios hooking list classes'
+----------------------------------------------------------------------
+Total de classes enumeradas em tempo de execucao: 79049
+Dessas, pertencentes ao proprio aplicativo (prefixo iGoat_Swift): 45
+
+A listagem integral tem dezenas de milhares de linhas, majoritariamente
+classes dos frameworks do sistema carregados no processo. Ela NAO e
+versionada por inteiro. Abaixo vao TODAS as classes do proprio aplicativo,
+que sao as pertinentes a analise. A listagem completa e reproduzivel pelo
+comando acima.
+
+iGoat_Swift.AboutCell
+iGoat_Swift.AppDelegate
+iGoat_Swift.BackgroundingExerciseVC
+iGoat_Swift.BinaryCookiesExerciseVC
+iGoat_Swift.BinaryPatchingVC
+iGoat_Swift.BrokenCryptographyExerciseVC
+iGoat_Swift.BruteForceRuntimeVC
+iGoat_Swift.CenterContainmentSegue
+iGoat_Swift.CloudMisconfigurationExerciseVC
+iGoat_Swift.CoreDataExerciseVC
+iGoat_Swift.CoreDataHelper
+iGoat_Swift.CouchBaseExerciseVC
+iGoat_Swift.CrossSiteScriptingExerciseVC
+iGoat_Swift.CryptoChallengeVC
+iGoat_Swift.CutAndPasteExerciseVC
+iGoat_Swift.DeviceLogsExerciseVC
+iGoat_Swift.ExerciseDemoVC
+iGoat_Swift.ExerciseFlowController
+iGoat_Swift.ExerciseIntroductionVC
+iGoat_Swift.ExercisesVC
+iGoat_Swift.HintVC
+iGoat_Swift.HTMLViewController
+iGoat_Swift.KeychainExerciseVC
+iGoat_Swift.KeyStorageServerSideVC
+iGoat_Swift.KeystrokeLoggingExerciseVC
+iGoat_Swift.MemoryManagementVC
+iGoat_Swift.MenuTableViewController
+iGoat_Swift.MethodSwizzlingExerciseVC
+iGoat_Swift.NSUserDefaultsStorageExerciseVC
+iGoat_Swift.PlistStorageExerciseViewController
+iGoat_Swift.RandomKeyGenerationExerciseVC
+iGoat_Swift.RCreditInfo
+iGoat_Swift.RealmExerciseVC
+iGoat_Swift.RemoteAuthenticationExerciseVC
+iGoat_Swift.RuntimeAnalysisChallengeVC
+iGoat_Swift.ServerCommunicationExerciseVC
+iGoat_Swift.SideContainmentSegue
+iGoat_Swift.SideMenuController
+iGoat_Swift.SocialEngineeringVC
+iGoat_Swift.SQLInjectionArticlesVC
+iGoat_Swift.SQLInjectionExerciseVC
+iGoat_Swift.StringAnalysisExerciseVC
+iGoat_Swift.URLSchemeAttackExerciseVC
+iGoat_Swift.WebkitCacheExerciseVC
+iGoat_Swift.YapExerciseVC
+
+----------------------------------------------------------------------
+FIM

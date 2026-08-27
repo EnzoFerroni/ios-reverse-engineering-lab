@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: >-
+  Engenharia reversa com aplicativos de código aberto em ambientes
+  experimentais controlados
+message: >-
+  Se você usar este material, por favor cite o artigo conforme os
+  metadados abaixo.
+type: dataset
+authors:
+  - given-names: Enzo
+    family-names: Ferroni
+    affiliation: Universidade Presbiteriana Mackenzie
+    email: enzo.ferroni@mackenzista.com.br
+  - given-names: Rodrigo
+    family-names: Cardoso Silva
+    affiliation: Universidade Presbiteriana Mackenzie
+    email: rodrigoc.silva@mackenzie.br
+    role: orientador
+abstract: >-
+  Estudo experimental de engenharia reversa aplicada ao ecossistema iOS,
+  avaliando a viabilidade de métodos reprodutíveis de análise estática e
+  dinâmica sobre binários Mach-O ARM64 com ferramentas exclusivamente de
+  código aberto. A pesquisa foi conduzida em ambiente controlado, restrita
+  a aplicativos abertos da suíte educacional da OWASP. O repositório reúne
+  o artigo, os dados brutos das duas etapas de coleta, os scripts que os
+  produziram e um verificador que reconfere os números publicados a partir
+  dos dados.
+keywords:
+  - engenharia reversa
+  - segurança móvel
+  - iOS
+  - ARM64
+  - instrumentação dinâmica
+  - Frida
+  - Ghidra
+  - OWASP MASVS
+  - reprodutibilidade
+license: CC-BY-4.0
+repository-code: https://github.com/EnzoFerroni/ios-reverse-engineering-lab
+date-released: 2026-08-20
+version: 1.0.0

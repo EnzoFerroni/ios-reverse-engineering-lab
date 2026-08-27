@@ -1,0 +1,139 @@
+# Ambiente da coleta — 2026-08-16T17:56:15Z
+# Gerado por: docs/PLANO_VERIFICACAO.md, Fase 0
+
+## Sistema
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+Arquitetura:  arm64
+Processador:  Apple M4
+Nucleos:      10 (4P + 6E)
+Memoria:      24 GB
+
+## Xcode
+Xcode 26.6
+Build version 17F113
+
+## Simuladores disponiveis
+== Devices ==
+-- iOS 17.0 --
+-- iOS 18.0 --
+    iPhone 16 (749F611B-A654-4F20-9A94-AD2D391F1FB2) (Shutdown) 
+-- iOS 18.5 --
+    iPad Pro 13-inch (M4) (9EFF6F36-5423-4790-BDA0-06E0913F7104) (Shutdown) 
+    iPad mini (A17 Pro) (F9FD9708-032F-4ED0-BE4E-1BEC9824D059) (Shutdown) 
+-- iOS 26.5 --
+    iPhone 17 Pro Max (8C885AEE-95AE-4629-8CA8-6327662F07CB) (Shutdown) 
+-- watchOS 26.5 --
+    Apple Watch Series 11 (46mm) (6258CFFD-3A92-4E34-AE09-02EC63F97215) (Shutdown) 
+    Apple Watch Series 11 (42mm) (B3E758FE-0275-4A98-B8EC-3CED05A13526) (Shutdown) 
+    Apple Watch Ultra 3 (49mm) (8AC8A6C6-9861-46C0-92DE-2E19104E8FE9) (Shutdown) 
+    Apple Watch SE 3 (44mm) (0F947FC9-79B0-4E11-9F8C-7BEF4EE2803B) (Shutdown) 
+    Apple Watch SE 3 (40mm) (02F15174-FCA7-49DB-9E6A-064C99CF3B36) (Shutdown) 
+
+## radare2 / rabin2
+radare2 6.1.6 +0 abi:107 @ darwin-arm_64
+birth: git.6.1.6 2026-06-02__22:12:24
+rabin2 6.1.6 +0 abi:107 @ darwin-arm_64
+
+## Frida
+frida-python:  17.12.0
+frida-tools:   14.9.0
+CLI 'frida':   NAO esta no PATH; acessivel por 'python3 -m frida_tools.repl' -> 17.12.0
+
+## Objection
+objection:     1.12.5
+CLI 'objection': NAO esta no PATH; acessivel por 'python3 -m objection.console.cli'
+
+## Node
+node v24.16.0 / npm 11.16.0
+
+## Python
+Python 3.14.4
+executavel: /opt/homebrew/opt/python@3.14/bin/python3.14
+
+## Ghidra
+Ghidra 11.4.2 PUBLIC (application.properties)
+ghidraRun: /opt/homebrew/bin/ghidraRun -> /opt/homebrew/Cellar/ghidra/11.4.2/bin/ghidraRun
+
+## DIVERGENCIAS EM RELACAO AO ARTIGO (Figura 1)
+A Figura 1 declara: 'macOS ARM64 (Apple Silicon M4 Pro) — Xcode 26.5'.
+Medido nesta maquina:  Apple M4 (SEM sufixo 'Pro') e Xcode 26.6 (build 17F113).
+=> Dois valores da Figura 1 divergem do ambiente real. Corrigir a figura, nao o dado.
+A Figura 1 declara 'Frida 17': compativel com frida-python 17.12.0 (frida-tools 14.9.0).
+
+## LACUNAS DE FERRAMENTAL PARA REGERAR O ARTIGO (16/08/2026)
+matplotlib:   AUSENTE em todos os Python do sistema (o upgrade para Python 3.14.4
+              derrubou o pacote). fig_ambiente.py, fig_camadas.py e fig_tempos.py
+              nao rodam sem ele. Contornado com venv temporario:
+                  python3 -m venv .venv && .venv/bin/pip install matplotlib
+LibreOffice:  AUSENTE (soffice nao esta no PATH nem em /Applications). A conversao
+              docx -> pdf documentada no NOTAS_INTERNAS.md nao pode ser executada nesta
+              maquina. O .docx foi regerado; o .pdf continua com o conteudo antigo
+              ate que alguem converta.
+                  brew install --cask libreoffice
+
+## ===================================================================
+## AMBIENTE DA FASE 4 — CONTROLES NEGATIVOS (2026-08-16T19:04:03Z)
+## ===================================================================
+## ATENCAO: este bloco NAO descreve o ambiente da coleta original.
+## O host foi atualizado DEPOIS da coleta dinamica. Os controles negativos
+## rodaram em macOS 26.6.1; os dados das Tabelas 1 a 5 foram produzidos em
+## macOS 26.5.2. As duas versoes NAO devem ser confundidas nem unificadas.
+
+## Sistema (no momento dos controles negativos)
+ProductName:		macOS
+ProductVersion:		26.6.1        <-- POSTERIOR ao 26.5.2 da coleta original
+BuildVersion:		25G76         <-- POSTERIOR ao 25F84 da coleta original
+Arquitetura:  arm64
+Processador:  Apple M4
+
+## Xcode
+Xcode 26.6
+Build version 17F113              (inalterado em relacao a Fase 0)
+
+## Frida
+frida-python: 17.12.0             (inalterado em relacao a Fase 0)
+
+## Simulador usado
+iPhone 17 Pro Max — iOS 26.5 — UDID 8C885AEE-95AE-4629-8CA8-6327662F07CB
+Alvo: OWASP.iGoat-Swifth (ja instalado no dispositivo simulado)
+Observacao: o runtime do Simulador continua em iOS 26.5; o que mudou foi o
+host macOS. Ainda assim, os controles negativos NAO sao intercambiaveis com a
+coleta original — sao um experimento separado, sobre o instrumento, nao sobre
+os alvos.
+
+## O que rodou
+python3 coleta/frida/controles_negativos.py --sim booted \
+    --bundle OWASP.iGoat-Swifth --tentativas 10 --outdir coleta/evidencias
+
+Quatro controles, 10 tentativas cada, reutilizando a funcao 'uma()' do
+harness_instrumenta.py de producao — nenhuma logica de medicao foi reescrita.
+
+Resultado (detalhe em 04_controle_A.csv .. 04_controle_D.csv):
+  A. seletor inexistente  ->  0/10 sucesso   'hook nao instalado (timeout)'
+  B. processo ausente     ->  0/10 sucesso   'processo nao encontrado'
+  C. timeout impossivel   -> 10/10 sucesso   NAO FALHOU — ver nota abaixo
+  D. processo errado      ->  0/10 sucesso   'processo nao encontrado'
+
+## NOTA SOBRE O CONTROLE C — o unico que nao se comportou como previsto
+O plano previa que '--timeout 0.001' produzisse sucesso 0. Nao produziu:
+as 10 tentativas retornaram sucesso 1, com tempo medido entre 0,098 s e
+0,150 s, isto e, de duas ordens de grandeza ACIMA do timeout pedido.
+Causa, legivel em harness_instrumenta.py:41-65: 'sc.load()' e sincrono e a
+mensagem 'hook_ready' chega durante a propria chamada, antes que o laco de
+espera seja alcancado. O parametro de timeout so governa a espera por eventos
+ASSINCRONOS posteriores; ele nao limita o caminho de instalacao do hook.
+=> O controle C nao invalida o instrumento, mas invalida a si mesmo como
+   controle negativo: ele nao e uma alavanca de falha. Os controles A, B e D
+   e que sustentam a afirmacao E07.
+=> O harness NAO foi alterado para forcar a falha. Fabricar o resultado
+   esperado destruiria o proposito do controle.
+=> Efeito colateral util: os tempos de C (0,098-0,150 s) sao independentes e
+   compativeis com a media de 0,111 s +- 0,033 da tecnica ssl na Tabela 3.
+
+## Artefato novo criado para o controle A
+coleta/frida/ssl_inexistente_observa.js — copia de ssl_observa.js com um unico
+ponto alterado: o seletor '- dataTaskWithRequest:completionHandler:' virou
+'- metodoQueNaoExiste:'. Compilado para compiled/ssl_inexistente_observa.js.
+Nao faz parte da coleta; e instrumento de validacao.

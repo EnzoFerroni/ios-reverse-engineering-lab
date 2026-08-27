@@ -1,0 +1,10 @@
+0x15a8a 489 488 <?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>application-identifier</key>\n\t<string>LRUD9L355Y.sg.vp.UnCrackable1</string>\n\t<key>com.apple.developer.team-identifier</key>\n\t<string>LRUD9L355Y</string>\n\t<key>get-task-allow</key>\n\t<false/>\n\t<key>keychain-access-groups</key>\n\t<array>\n\t\t<string>LRUD9L355Y.sg.vp.UnCrackable1</string>\n\t</array>\n</dict>\n</plist>\n
+0x162b7 31 30 http://crl.apple.com/root.crl0
+0x166d1 32 31 https://www.apple.com/appleca/0
+0x16702 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0\r
+0x16b9f 38 37 #http://ocsp.apple.com/ocsp02-wwdr010
+0x16c46 182 181 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0)
+0x16d07 31 30 http://www.apple.com/appleca/0
+0x16fb8 332 331 H<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n\t<key>cdhashes</key>\n\t<array>\n\t\t<data>\n\t\tlfaJ71p4QDn5yn/TZbhNpYMFQ9A=\n\t\t</data>\n\t\t<data>\n\t\tsOe/qvOGacre9KiQKe1jysCNYjg=\n\t\t</data>\n\t</array>\n</dict>\n</plist>\n0\r
+0xe8dc 62 61 application:didRegisterForRemoteNotificationsWithDeviceToken:
+0xf26c 23 22 You found the secret!!

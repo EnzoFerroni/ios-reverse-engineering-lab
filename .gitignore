@@ -1,0 +1,23 @@
+# Material de terceiros e binarios grandes (ver docs/REPRODUCAO.md)
+alvos/
+arquivos/
+normas_upm/
+*.ipa
+*.dSYM/
+*.mobileprovision
+
+# Ferramental e saidas regeneraveis
+artigo/gerador/
+.venv/
+__pycache__/
+coleta/frida/node_modules/
+coleta/frida/package-lock.json
+coleta/frida/compiled/
+
+# Projetos do Ghidra e fatias extraidas dos binarios
+*.gpr
+*.rep/
+*.lock*
+tmp_fig2/
+
+.DS_Store
