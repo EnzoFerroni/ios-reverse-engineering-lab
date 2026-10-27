@@ -1,4 +1,16 @@
 # Engenharia reversa com aplicativos de código aberto em ambientes experimentais controlados
+[![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)](https://www.python.org)
+[![Frida](https://img.shields.io/badge/Frida-dynamic%20instrumentation-EF6456)](https://frida.re)
+[![Ghidra](https://img.shields.io/badge/Ghidra%20%7C%20radare2-static%20analysis-555555)](https://ghidra-sre.org)
+[![License](https://img.shields.io/badge/License-CC%20BY%204.0%20%2B%20MIT-green)](LICENSE.md)
+
+> **English summary.** Undergraduate research (PIBIC Mackenzie, 2026) on iOS reverse
+> engineering using only open-source tools in a controlled lab. Static analysis with
+> Ghidra and radare2 maps functions, sensitive strings and hookable symbols in four
+> OWASP training binaries; dynamic analysis with Frida runs 270 recorded attempts to
+> hook transport validation, Keychain and crypto APIs. Every published number can be
+> re-derived from the raw data with `python3 coleta/verificar_numeros.py`. The paper
+> and documentation below are in Portuguese.
 
 Pesquisa de Iniciação Científica sobre engenharia reversa aplicada a aplicativos iOS,
 conduzida em ambiente experimental controlado com ferramentas exclusivamente de código
